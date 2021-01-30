@@ -18,8 +18,8 @@ jobs:
      - name : Upload artifact  # uses는 이미 만들어진 액션을 수행한다는 것임.
        uses: actions/upload-artifact@v2
        with:
-        name: Woofriend.ipa 
-        path: ${{ github.workspace }} # Path to your IPA file will usually be root of the project (if you use Fastlane)
+        name: Woofriend.ipa
+        path: ${{ github.workspace }}/AdHoc # Path to your IPA file will usually be root of the project (if you use Fastlane)
      
    # 두번째 잡 수행
    distribute-ios:
