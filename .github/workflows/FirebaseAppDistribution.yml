@@ -1,0 +1,45 @@
+# 수행되는 Github Action의 이름
+name: Build & upload to Firebase App Distribution 
+
+# 해당 브랜치에 push나 pull request가 오는 경우 수행
+on: 
+	push:
+		branches: [ develop ]
+#	pull_request:
+#		branches: [ develop ]
+
+# on되면 수행하는 행동임.
+jobs:
+
+# build-iOS라는 잡을 생성함.
+   build-iOS:
+
+		# 타켓 OS임.
+    runs-on: macOS-latest # ubuntu-latest
+
+    steps:  
+    # build here 
+    - name : Upload artifact  # uses는 이미 만들어진 액션을 수행한다는 것임.
+    uses : actions/upload-artifact@v2
+    with :
+      name : Woofriend.ipa 
+      path : Woofriend.ipa # Path to your IPA file will usually be root of the project (if you use Fastlane)
+		
+    # 두번째 잡 수행
+    distribute-ios:
+    needs: build-ios # 해당 잡을 수행하려면 전에 build-io 처리 되야함.
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: Woofriend.ipa
+
+      - name: Upload artifact to Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: 1:967308732129:ios:2d61fe2c79d72454a179a0 #${{secrets.FIREBASE_IOS_APP_ID}}
+          file: Woofriend.ipa
+          groups: testers
+          token: 1//0ewZFwmZCjVgMCgYIARAAGA4SNwF-L9IrHI5mkITdTcpXrWYX_Ieeu09q5ohEzseXjLIKRYH5b_uK07kHzGPQPERIja8gojThMrM #${{secrets.FIREBASE_TOKEN}}
