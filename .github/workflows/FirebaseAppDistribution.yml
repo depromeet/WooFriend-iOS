@@ -3,13 +3,9 @@ name: Build & upload to Firebase App Distribution
 
 # 해당 브랜치에 push나 pull request가 오는 경우 수행
 on:
-  push:
+  pull_request:
     branches:
-    	- main
-    	#- develop
-    
-#	pull_request:
-#		branches: [ develop ]
+    	- master
 
 # on되면 수행하는 행동임.
 jobs:
