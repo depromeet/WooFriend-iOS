@@ -19,7 +19,7 @@ jobs:
        uses: actions/upload-artifact@v2
        with:
         name: Woofriend.ipa 
-        path: Woofriend.ipa # Path to your IPA file will usually be root of the project (if you use Fastlane)
+        path: ${{ github.workspace }} # Path to your IPA file will usually be root of the project (if you use Fastlane)
      
    # 두번째 잡 수행
    distribute-ios:
