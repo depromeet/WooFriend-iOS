@@ -7,14 +7,21 @@ target 'Woofriend' do
 
   # Pods for Woofriend
 	pod 'Firebase/Analytics'
+	pod 'RIBs', '~> 0.9'
 
   target 'WoofriendTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+
   end
 
   target 'WoofriendUITests' do
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
+
   end
 
 end
