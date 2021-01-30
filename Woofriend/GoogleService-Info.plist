@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>967308732129-n6tnrc5snhsef93206s0n4suqhia050h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.967308732129-n6tnrc5snhsef93206s0n4suqhia050h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAXFsZJbpL_8wMyHxUiUO5HeTfiZ0qJ86A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>967308732129</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.depromeet.woofriend</string>
+	<key>PROJECT_ID</key>
+	<string>woofriend-ios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>woofriend-ios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:967308732129:ios:2d61fe2c79d72454a179a0</string>
+</dict>
+</plist>

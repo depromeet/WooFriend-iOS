@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */; };
+		A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */; };
 		E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337E825BEBE34008580CA /* AppDelegate.swift */; };
 		E80337ED25BEBE34008580CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337EC25BEBE34008580CA /* ViewController.swift */; };
 		E80337F025BEBE34008580CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80337EE25BEBE34008580CA /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 		E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80337F625BEBE36008580CA /* LaunchScreen.storyboard */; };
 		E803380325BEBE36008580CA /* woofriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803380225BEBE36008580CA /* woofriendTests.swift */; };
 		E803380E25BEBE36008580CA /* woofriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803380D25BEBE36008580CA /* woofriendUITests.swift */; };
+		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
+		FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1021EC999F8855FD078DF99C /* Pods-WoofriendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.release.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.release.xcconfig"; sourceTree = "<group>"; };
+		16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WoofriendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A5D66928C143E89B1DEC1F5 /* Pods-Woofriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.release.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.release.xcconfig"; sourceTree = "<group>"; };
+		4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend_WoofriendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A5586BE55B323D5A7BC9DC /* Pods-Woofriend-WoofriendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B09272E57C9BFC1751A5BF2D /* Pods-Woofriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.debug.xcconfig"; sourceTree = "<group>"; };
+		CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.release.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E80337E525BEBE34008580CA /* Woofriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woofriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80337E825BEBE34008580CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E80337EC25BEBE34008580CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,8 @@
 		E803380925BEBE36008580CA /* WoofriendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoofriendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E803380D25BEBE36008580CA /* woofriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofriendUITests.swift; sourceTree = "<group>"; };
 		E803380F25BEBE36008580CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.debug.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001164F4F2A2A852317CF7E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */,
+				8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */,
+				16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2710CCC056B7B8DBB6799D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B09272E57C9BFC1751A5BF2D /* Pods-Woofriend.debug.xcconfig */,
+				4A5D66928C143E89B1DEC1F5 /* Pods-Woofriend.release.xcconfig */,
+				93A5586BE55B323D5A7BC9DC /* Pods-Woofriend-WoofriendUITests.debug.xcconfig */,
+				CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */,
+				E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */,
+				1021EC999F8855FD078DF99C /* Pods-WoofriendTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E80337DC25BEBE34008580CA = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +124,8 @@
 				E803380125BEBE36008580CA /* WoofriendTests */,
 				E803380C25BEBE36008580CA /* WoofriendUITests */,
 				E80337E625BEBE34008580CA /* Products */,
+				E2710CCC056B7B8DBB6799D6 /* Pods */,
+				001164F4F2A2A852317CF7E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +148,7 @@
 				E80337F425BEBE36008580CA /* Assets.xcassets */,
 				E80337F625BEBE36008580CA /* LaunchScreen.storyboard */,
 				E80337F925BEBE36008580CA /* Info.plist */,
+				E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */,
 				E80337F125BEBE34008580CA /* woofriend.xcdatamodeld */,
 			);
 			path = Woofriend;
@@ -135,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E803381225BEBE36008580CA /* Build configuration list for PBXNativeTarget "Woofriend" */;
 			buildPhases = (
+				471665A54EFCDFEC2F03344F /* [CP] Check Pods Manifest.lock */,
 				E80337E125BEBE34008580CA /* Sources */,
 				E80337E225BEBE34008580CA /* Frameworks */,
 				E80337E325BEBE34008580CA /* Resources */,
+				18408917F1774F422D30C247 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E803381525BEBE36008580CA /* Build configuration list for PBXNativeTarget "WoofriendTests" */;
 			buildPhases = (
+				76B30F7636C78B52BAAB70FA /* [CP] Check Pods Manifest.lock */,
 				E80337FA25BEBE36008580CA /* Sources */,
 				E80337FB25BEBE36008580CA /* Frameworks */,
 				E80337FC25BEBE36008580CA /* Resources */,
@@ -170,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E803381825BEBE36008580CA /* Build configuration list for PBXNativeTarget "WoofriendUITests" */;
 			buildPhases = (
+				6891AC7597E8E08300D861A1 /* [CP] Check Pods Manifest.lock */,
 				E803380525BEBE36008580CA /* Sources */,
 				E803380625BEBE36008580CA /* Frameworks */,
 				E803380725BEBE36008580CA /* Resources */,
+				14A0A81EDB9E3645AA48AE38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */,
+				E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
 				E80337F025BEBE34008580CA /* Main.storyboard in Resources */,
 			);
@@ -252,6 +302,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14A0A81EDB9E3645AA48AE38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18408917F1774F422D30C247 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend/Pods-Woofriend-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend/Pods-Woofriend-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Woofriend/Pods-Woofriend-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		471665A54EFCDFEC2F03344F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Woofriend-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6891AC7597E8E08300D861A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Woofriend-WoofriendUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76B30F7636C78B52BAAB70FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WoofriendTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E80337E125BEBE34008580CA /* Sources */ = {
@@ -433,6 +586,7 @@
 		};
 		E803381325BEBE36008580CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B09272E57C9BFC1751A5BF2D /* Pods-Woofriend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,6 +608,7 @@
 		};
 		E803381425BEBE36008580CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A5D66928C143E89B1DEC1F5 /* Pods-Woofriend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +630,7 @@
 		};
 		E803381625BEBE36008580CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +653,7 @@
 		};
 		E803381725BEBE36008580CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1021EC999F8855FD078DF99C /* Pods-WoofriendTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +676,7 @@
 		};
 		E803381925BEBE36008580CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A5586BE55B323D5A7BC9DC /* Pods-Woofriend-WoofriendUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +697,7 @@
 		};
 		E803381A25BEBE36008580CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
