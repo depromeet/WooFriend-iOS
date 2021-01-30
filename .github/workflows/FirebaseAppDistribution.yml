@@ -12,7 +12,7 @@ jobs:
    # build-iOS라는 잡을 생성함.
    build-iOS:
    # 타켓 OS임.
-     runs-on: macos-11.0 # Big Sur 11.0
+     runs-on: macos-latest #macos-11.0 # Big Sur 11.0
      steps:
      # build here 
      - name : Upload artifact  # uses는 이미 만들어진 액션을 수행한다는 것임.
