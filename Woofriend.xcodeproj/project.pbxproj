@@ -3,20 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */; };
 		A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */; };
 		E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337E825BEBE34008580CA /* AppDelegate.swift */; };
-		E80337ED25BEBE34008580CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337EC25BEBE34008580CA /* ViewController.swift */; };
-		E80337F025BEBE34008580CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80337EE25BEBE34008580CA /* Main.storyboard */; };
 		E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E80337F125BEBE34008580CA /* woofriend.xcdatamodeld */; };
 		E80337F525BEBE36008580CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80337F425BEBE36008580CA /* Assets.xcassets */; };
 		E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80337F625BEBE36008580CA /* LaunchScreen.storyboard */; };
 		E803380325BEBE36008580CA /* woofriendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803380225BEBE36008580CA /* woofriendTests.swift */; };
 		E803380E25BEBE36008580CA /* woofriendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803380D25BEBE36008580CA /* woofriendUITests.swift */; };
+		E818FC9B25DCE9A60035E306 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FC9A25DCE9A60035E306 /* AppComponent.swift */; };
+		E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FCDF25DCEF910035E306 /* RootRouter.swift */; };
+		E818FCE425DCEF910035E306 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FCE025DCEF910035E306 /* RootViewController.swift */; };
+		E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FCE125DCEF910035E306 /* RootBuilder.swift */; };
+		E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FCE225DCEF910035E306 /* RootInteractor.swift */; };
+		E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD2C25DD06860035E306 /* LoggedOutRouter.swift */; };
+		E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD2D25DD06860035E306 /* LoggedOutViewController.swift */; };
+		E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD2E25DD06860035E306 /* LoggedOutBuilder.swift */; };
+		E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD2F25DD06860035E306 /* LoggedOutInteractor.swift */; };
+		E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD3A25DD06B00035E306 /* MainRouter.swift */; };
+		E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD3B25DD06B00035E306 /* MainViewController.swift */; };
+		E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD3C25DD06B00035E306 /* MainBuilder.swift */; };
+		E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FD3D25DD06B00035E306 /* MainInteractor.swift */; };
+		E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E818FD5525DD0CB30035E306 /* LoggedOutViewController.storyboard */; };
+		E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FDED25DD37250035E306 /* RootLoggedOut.swift */; };
+		E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FDFB25DD39390035E306 /* Storyboard.swift */; };
+		E818FE0525DD39EC0035E306 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FE0425DD39EC0035E306 /* BaseViewController.swift */; };
+		E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FE0A25DD3FB30035E306 /* UIViewController+Extension.swift */; };
 		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
 		FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */; };
 /* End PBXBuildFile section */
@@ -49,8 +65,6 @@
 		CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.release.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E80337E525BEBE34008580CA /* Woofriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woofriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80337E825BEBE34008580CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E80337EC25BEBE34008580CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E80337EF25BEBE34008580CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E80337F225BEBE34008580CA /* woofriend.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = woofriend.xcdatamodel; sourceTree = "<group>"; };
 		E80337F425BEBE36008580CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80337F725BEBE36008580CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +75,24 @@
 		E803380925BEBE36008580CA /* WoofriendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WoofriendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E803380D25BEBE36008580CA /* woofriendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = woofriendUITests.swift; sourceTree = "<group>"; };
 		E803380F25BEBE36008580CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E818FC9A25DCE9A60035E306 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		E818FCDF25DCEF910035E306 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		E818FCE025DCEF910035E306 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		E818FCE125DCEF910035E306 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		E818FCE225DCEF910035E306 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		E818FD2C25DD06860035E306 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		E818FD2D25DD06860035E306 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		E818FD2E25DD06860035E306 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		E818FD2F25DD06860035E306 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		E818FD3A25DD06B00035E306 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		E818FD3B25DD06B00035E306 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E818FD3C25DD06B00035E306 /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		E818FD3D25DD06B00035E306 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		E818FD5525DD0CB30035E306 /* LoggedOutViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoggedOutViewController.storyboard; sourceTree = "<group>"; };
+		E818FDED25DD37250035E306 /* RootLoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootLoggedOut.swift; sourceTree = "<group>"; };
+		E818FDFB25DD39390035E306 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		E818FE0425DD39EC0035E306 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E818FE0A25DD3FB30035E306 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.debug.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,7 +145,6 @@
 				E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */,
 				1021EC999F8855FD078DF99C /* Pods-WoofriendTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,9 +173,11 @@
 		E80337E725BEBE34008580CA /* Woofriend */ = {
 			isa = PBXGroup;
 			children = (
-				E80337E825BEBE34008580CA /* AppDelegate.swift */,
-				E80337EC25BEBE34008580CA /* ViewController.swift */,
-				E80337EE25BEBE34008580CA /* Main.storyboard */,
+				E818FE0925DD3F8E0035E306 /* Extension */,
+				E818FDF225DD38550035E306 /* Utility */,
+				E818FC9925DCE9880035E306 /* AppStart */,
+				E818FC8725DCE4B60035E306 /* RIBs */,
+				E818FE0325DD39DA0035E306 /* View */,
 				E80337F425BEBE36008580CA /* Assets.xcassets */,
 				E80337F625BEBE36008580CA /* LaunchScreen.storyboard */,
 				E80337F925BEBE36008580CA /* Info.plist */,
@@ -170,6 +203,92 @@
 				E803380F25BEBE36008580CA /* Info.plist */,
 			);
 			path = WoofriendUITests;
+			sourceTree = "<group>";
+		};
+		E818FC8725DCE4B60035E306 /* RIBs */ = {
+			isa = PBXGroup;
+			children = (
+				E818FC8A25DCE61F0035E306 /* Root */,
+				E818FD2325DCF4B70035E306 /* LoggedOut */,
+				E818FD2A25DD04540035E306 /* Main */,
+			);
+			path = RIBs;
+			sourceTree = "<group>";
+		};
+		E818FC8A25DCE61F0035E306 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				E818FD5B25DD0E1E0035E306 /* Dependency */,
+				E818FCDF25DCEF910035E306 /* RootRouter.swift */,
+				E818FCE025DCEF910035E306 /* RootViewController.swift */,
+				E818FCE125DCEF910035E306 /* RootBuilder.swift */,
+				E818FCE225DCEF910035E306 /* RootInteractor.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		E818FC9925DCE9880035E306 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				E80337E825BEBE34008580CA /* AppDelegate.swift */,
+				E818FC9A25DCE9A60035E306 /* AppComponent.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+		E818FD2325DCF4B70035E306 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				E818FD2C25DD06860035E306 /* LoggedOutRouter.swift */,
+				E818FD2D25DD06860035E306 /* LoggedOutViewController.swift */,
+				E818FD2E25DD06860035E306 /* LoggedOutBuilder.swift */,
+				E818FD2F25DD06860035E306 /* LoggedOutInteractor.swift */,
+				E818FD5525DD0CB30035E306 /* LoggedOutViewController.storyboard */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		E818FD2A25DD04540035E306 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E818FD3A25DD06B00035E306 /* MainRouter.swift */,
+				E818FD3B25DD06B00035E306 /* MainViewController.swift */,
+				E818FD3C25DD06B00035E306 /* MainBuilder.swift */,
+				E818FD3D25DD06B00035E306 /* MainInteractor.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E818FD5B25DD0E1E0035E306 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				E818FDED25DD37250035E306 /* RootLoggedOut.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		E818FDF225DD38550035E306 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E818FDFB25DD39390035E306 /* Storyboard.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		E818FE0325DD39DA0035E306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E818FE0425DD39EC0035E306 /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E818FE0925DD3F8E0035E306 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E818FE0A25DD3FB30035E306 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +402,8 @@
 			files = (
 				E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */,
 				E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */,
+				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
-				E80337F025BEBE34008580CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,9 +548,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E80337ED25BEBE34008580CA /* ViewController.swift in Sources */,
+				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
+				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
+				E818FCE425DCEF910035E306 /* RootViewController.swift in Sources */,
+				E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */,
+				E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */,
+				E818FE0525DD39EC0035E306 /* BaseViewController.swift in Sources */,
+				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
+				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
+				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
+				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
+				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,
+				E818FC9B25DCE9A60035E306 /* AppComponent.swift in Sources */,
 				E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */,
+				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
+				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
+				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
+				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
+				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,14 +602,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E80337EE25BEBE34008580CA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E80337EF25BEBE34008580CA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E80337F625BEBE36008580CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -611,7 +738,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4693VAH9ZM;
 				INFOPLIST_FILE = woofriend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,7 +760,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4693VAH9ZM;
 				INFOPLIST_FILE = woofriend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

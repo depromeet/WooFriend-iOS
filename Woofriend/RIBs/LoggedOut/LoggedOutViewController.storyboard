@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vKn-9P-Ny8">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Logged Out View Controller-->
+        <scene sceneID="GzV-lN-fg7">
+            <objects>
+                <viewController id="vKn-9P-Ny8" customClass="LoggedOutViewController" customModule="Woofriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNZ-bO-rhc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXY-tZ-uZO">
+                                <rect key="frame" x="42.666666666666657" y="820" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WXY-tZ-uZO" secondAttribute="height" multiplier="343:52" id="rjJ-fK-QCf"/>
+                                    <constraint firstAttribute="height" constant="52" id="uQn-Hx-6tv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="naverID"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptb-aX-zx8">
+                                <rect key="frame" x="42.666666666666657" y="758" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ORK-7X-aMU"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="kakaoID"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXG-iN-jEV">
+                                <rect key="frame" x="42.666666666666657" y="696" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="b9m-vr-w58"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="appleID"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DXG-iN-jEV" firstAttribute="trailing" secondItem="WXY-tZ-uZO" secondAttribute="trailing" id="Avl-zt-d9c"/>
+                            <constraint firstItem="DXG-iN-jEV" firstAttribute="height" secondItem="WXY-tZ-uZO" secondAttribute="height" id="JbZ-oH-Tz8"/>
+                            <constraint firstItem="ptb-aX-zx8" firstAttribute="leading" secondItem="WXY-tZ-uZO" secondAttribute="leading" id="OTG-lg-h9q"/>
+                            <constraint firstItem="DXG-iN-jEV" firstAttribute="leading" secondItem="WXY-tZ-uZO" secondAttribute="leading" id="bdW-WG-ozw"/>
+                            <constraint firstItem="ptb-aX-zx8" firstAttribute="trailing" secondItem="WXY-tZ-uZO" secondAttribute="trailing" id="gvy-qN-jGD"/>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="bottom" secondItem="WXY-tZ-uZO" secondAttribute="bottom" constant="20" id="hg6-Zu-qOW"/>
+                            <constraint firstItem="ptb-aX-zx8" firstAttribute="centerX" secondItem="WXY-tZ-uZO" secondAttribute="centerX" id="oQg-fX-s8I"/>
+                            <constraint firstItem="ptb-aX-zx8" firstAttribute="top" secondItem="DXG-iN-jEV" secondAttribute="bottom" constant="10" id="oTj-Ps-n14"/>
+                            <constraint firstItem="WXY-tZ-uZO" firstAttribute="centerX" secondItem="HgA-Aw-ocO" secondAttribute="centerX" id="osG-Bg-3Kl"/>
+                            <constraint firstItem="WXY-tZ-uZO" firstAttribute="top" secondItem="ptb-aX-zx8" secondAttribute="bottom" constant="10" id="uUd-Vt-HGW"/>
+                            <constraint firstItem="ptb-aX-zx8" firstAttribute="height" secondItem="WXY-tZ-uZO" secondAttribute="height" id="v92-Lu-DXj"/>
+                            <constraint firstItem="DXG-iN-jEV" firstAttribute="centerX" secondItem="WXY-tZ-uZO" secondAttribute="centerX" id="xuC-i3-Sby"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleLoginButton" destination="DXG-iN-jEV" id="BFM-o9-vZf"/>
+                        <outlet property="kakaoLoginButton" destination="ptb-aX-zx8" id="fef-Yq-n43"/>
+                        <outlet property="naverLoginButton" destination="WXY-tZ-uZO" id="UQ3-Q0-1RN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0X-am-vwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="205"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appleID" width="343" height="52"/>
+        <image name="kakaoID" width="343" height="52"/>
+        <image name="naverID" width="343" height="52"/>
+    </resources>
+</document>
