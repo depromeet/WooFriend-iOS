@@ -14,17 +14,18 @@ protocol RootInteractable: Interactable, LoggedOutListener {
 
 protocol RootViewControllable: ViewControllable {
     func replaceRoot(viewControllable: ViewControllable)
+    func present(viewController: ViewControllable)
 }
 
 /**
  자식 RIB을 attach 하거나 detach 함
  */
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
-    
+        
     // MARK: Child RIBs
     
     private let loggedOutBuilder: LoggedOutBuildable
-    private var loggedOut: ViewableRouting?
+    private var loggedOutRouting: ViewableRouting?
 //    private let mainBuilder: MainBuildable
 //    private var main: ViewableRouting?
     
@@ -50,23 +51,18 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         
     }
     
-    private func routeToLoggedOut() {
-        let loggedOut = loggedOutBuilder.build(withListener: interactor)
-        self.loggedOut = loggedOut
-        attachChild(loggedOut)
-        viewController.replaceRoot(viewControllable: loggedOut.viewControllable)
-
+    func routeToSingUp() {
         
-//        interactor
-//        let _loggedOut = loggedOutBuilder.build(withListener: interactor)
-//        let b = interactor
-//        let a = loggedOutBuilder.build(withListener: b)
-//        let loggedOut =
-            
-//            loggedOutBuilder.build(withListener: interactor)
-//        self.loggedOut = loggedOut
-//        attachChild(self.loggedOut)
-//        viewController.present(viewController: loggedOut.viewControllable)
+    }
+    
+    private func routeToLoggedOut() {
+        let loggedOutRouting = loggedOutBuilder.build(withListener: interactor)
+        self.loggedOutRouting = loggedOutRouting
+        attachChild(loggedOutRouting)
+        viewController.replaceRoot(viewControllable: loggedOutRouting.viewControllable)
+//        let navigationController = UINavigationController(root: loggedOutRouting.viewControllable)
+//        navigationController.navigationBar.isHidden = true
+//        viewController.present(viewController: navigationController)
     }
 }
 

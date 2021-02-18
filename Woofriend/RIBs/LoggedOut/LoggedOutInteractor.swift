@@ -10,6 +10,9 @@ import RxSwift
 
 protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    // TODO: 라우터를 통해 하위 트리를 관리하기 위해 인터랙터가 호출할 수있는 메소드를 호출할 수 있는 메서드를 선언합니다.
+    func routeToSignUpRIB()
+    func detachToSignUpRIB()
 }
 
 protocol LoggedOutPresentable: Presentable {
@@ -17,13 +20,16 @@ protocol LoggedOutPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-// MARK:
+// MARK:  Other RIBs - 상위 트리의 Interactor 구현된 메소드 호출
+// 상위 노드의 RIB이 다수이고 같은 레벨을 옮겨갈때 사용됨
 protocol LoggedOutListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didEndWalkthrough()
     func didLogin()
 }
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
+    
     weak var router: LoggedOutRouting?
     weak var listener: LoggedOutListener?
 
@@ -51,10 +57,19 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     
     func loginKakaoID() {
         print("=======  카카오로그인")
+        print("=======  회원가입이 안된 상태")
+        
+        // 하위 노드의 이동
+        router?.routeToSignUpRIB()
     }
     
     func loginNaverID() {
         print("=======  네이버로그인")
+        print("=======  회원가입이 된 상태")
+    }
+    
+    func closeSignUp() {
+        router?.detachToSignUpRIB()
     }
 
 }

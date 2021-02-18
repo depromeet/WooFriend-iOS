@@ -66,13 +66,16 @@ PODS:
   - Quick (3.0.0)
   - RIBs (0.9.1):
     - RxSwift (~> 4.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Nimble
   - Quick
-  - RIBs (~> 0.9)
+  - RIBs
+  - RxCocoa
 
 SPEC REPOS:
   trunk:
@@ -89,6 +92,7 @@ SPEC REPOS:
     - PromisesObjC
     - Quick
     - RIBs
+    - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
@@ -105,8 +109,9 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   RIBs: 879184fbca567425c488d6b3d14a9c5abfbf9d47
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: 5a8e5350dc306ce5b374730c77c03cb187dc549f
+PODFILE CHECKSUM: 90acdd050129f6332ad71d523ee2ab557fe4eed1
 
 COCOAPODS: 1.10.1

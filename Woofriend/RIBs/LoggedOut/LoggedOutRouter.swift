@@ -7,20 +7,52 @@
 
 import RIBs
 
-protocol LoggedOutInteractable: Interactable {
+// 하위 노드(RIB)의
+protocol LoggedOutInteractable: Interactable, SignUpListener {
     var router: LoggedOutRouting? { get set }
     var listener: LoggedOutListener? { get set }
 }
 
+// Router 정의 -> ViewController에서 구현
 protocol LoggedOutViewControllable: ViewControllable {
     // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func present(viewController: ViewControllable)
+    func dismiss(viewController: ViewControllable)
 }
 
-final class LoggedOutRouter: ViewableRouter<LoggedOutInteractable, LoggedOutViewControllable>, LoggedOutRouting {
-
+final class LoggedOutRouter: ViewableRouter<LoggedOutInteractable, LoggedOutViewControllable> {
+    
+    // 하위 노드 RIB을 위한 인스턴스
+    private let signUpBuilder: SignUpBuildable
+    private var signUpRouting: SignUpRouting?
+    
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: LoggedOutInteractable, viewController: LoggedOutViewControllable) {
+    init(interactor: LoggedOutInteractable, viewController: LoggedOutViewControllable, signUpBuilder: SignUpBuildable) {
+        self.signUpBuilder = signUpBuilder
+        
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
+    
+}
+
+extension LoggedOutRouter: LoggedOutRouting {
+    
+    func routeToSignUpRIB() {
+        let signUpRouting = signUpBuilder.build(withListener: interactor)
+        self.signUpRouting = signUpRouting
+        attachChild(signUpRouting)
+        viewController.present(viewController: signUpRouting.viewControllable)
+        
+        // 네비게이션
+        //        let navigationController = UINavigationController(root: signUpRouting.viewControllable)
+        //        viewController.present(viewController: navigationController)
+    }
+    
+    func detachToSignUpRIB() {
+        guard let signUpRouting = signUpRouting else { return }
+        detachChild(signUpRouting)
+        viewController.dismiss(viewController: signUpRouting.viewControllable)
+    }
+    
 }

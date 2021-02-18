@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
+        /*
+         AppComponent가 주입된 Root RIB을 생성하고
+         Router tree의 시작점 Root RIB으로 설정하고
+         메인 window 객체 위에 라우터 트리를 시작한다.
+         */
         let launchRouter = RootBuilder(dependency: AppComponent()).build()
         self.launchRouter = launchRouter
         launchRouter.launchFromWindow(window)

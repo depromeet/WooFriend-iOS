@@ -16,27 +16,32 @@ protocol RootPresentableListener: class {
 }
 
 final class RootViewController: BaseViewController, RootPresentable, RootViewControllable {
-
+    
     weak var listener: RootPresentableListener?
     
     init() {
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("Method is not supported")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = UIColor.red
     }
-
+    
     // MARK: - RootViewControllable
-
+    
     func replaceRoot(viewControllable: ViewControllable) {
         replaceRoot(to: viewControllable.uiviewController)
+    }
+    
+    func present(viewController: ViewControllable) {
+        viewController.uiviewController.modalPresentationStyle = .fullScreen
+        present(viewController.uiviewController, animated: false, completion: nil)
     }
     
 }

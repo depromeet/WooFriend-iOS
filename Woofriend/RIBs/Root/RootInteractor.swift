@@ -29,8 +29,13 @@ protocol RootListener: class {
  - RootPresentable: Data model를 전달함
  */
 final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
+    func didEndWalkthrough() {
+        // 회원가입이 안된 상태
+    }
+    
     func didLogin() {
-        
+        // 회원가입이 된 상태
+        router?.routeToLoggedIn()
     }
     
 

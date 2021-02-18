@@ -26,16 +26,16 @@ final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, L
     // MARK: Properties
     
     weak var listener: LoggedOutPresentableListener?
-    
+    weak var popUpListener: PopUpViewControllerListener?
     /* Xib
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("Method is not supported")
-    }
-    */
+     init() {
+     super.init(nibName: nil, bundle: nil)
+     }
+     
+     required init?(coder aDecoder: NSCoder) {
+     fatalError("Method is not supported")
+     }
+     */
     
     // MARK: Lifecycle
     
@@ -43,24 +43,42 @@ final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, L
         let vc = Storyboard.LoggedOutViewController.instantiate(LoggedOutViewController.self)
         return vc
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
+        bindUI()
     }
+    
+    // MARK: LoggedOutViewControllable
+    
+    func present(viewController: ViewControllable) {
+        viewController.uiviewController.modalPresentationStyle = .fullScreen
+        present(viewController.uiviewController, animated: false, completion: nil)
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        if presentedViewController === viewController.uiviewController {
+            dismiss(animated: false, completion: nil)
+        }
+    }
+    
 }
 
 // MARK: - Setup
 
-extension LoggedOutViewController {
+extension LoggedOutViewController: PopUpViewControllerListener {
+    func popUpViewClose() {
+        print(2131)
+    }
     
-    private func setupViews() {
-        
-        // Signal은 Driver 같음.
+    private func bindUI() {
         appleLoginButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
-                self?.listener?.loginAppleID()
+                let alert = PopUpViewController.instantiate()
+                alert.modalPresentationStyle = .overCurrentContext
+                self?.present(alert, animated: false, completion: nil)
+//                self?.listener?.loginAppleID()
             })
             .disposed(by: disposeBag)
         

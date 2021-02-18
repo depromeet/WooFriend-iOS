@@ -7,28 +7,13 @@
 
 import RIBs
 
-protocol RootDependency: Dependency {
-    // TODO: Declare the set of dependencies required by this RIB, but cannot be
-    // created by this RIB.
-}
+// 외부 또는 상위 RIB에서 의존성 주입을 받야하는 것들을 정의함.
+protocol RootDependency: Dependency {}
 
-/**
- 부모 RIB Builder가 Component를 통해 자식 RIB Builder로 의존성을 주입함.
- */
-final class RootComponent: Component<RootDependency> {
-    
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-    let rootViewController: RootViewController
+// RootDependency 프로토콜을 구현함.
+final class RootComponent: Component<RootDependency> {}
 
-    init(dependency: RootDependency,
-         rootViewController: RootViewController) {
-        self.rootViewController = rootViewController
-        super.init(dependency: dependency)
-    }
-}
-
-// MARK: - Builder
-
+// 생성할 RIB을 프로토콜로 정의함.
 protocol RootBuildable: Buildable {
     /// The root `Router` of an application.
     func build() -> LaunchRouting
@@ -46,10 +31,10 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
     
     func build() -> LaunchRouting {
         let viewController = RootViewController()
-        let component = RootComponent(dependency: dependency, rootViewController: viewController)
+        let component = RootComponent(dependency: dependency)
         let interactor = RootInteractor(presenter: viewController)
         
-        // Child RIBs -> Logged out, Main
+        //TODO: Child RIBs -> Logged out, Main
         
         let loggedOutBuilder = LoggedOutBuilder(dependency: component)
         return RootRouter(interactor: interactor,
