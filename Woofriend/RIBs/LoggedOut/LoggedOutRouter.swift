@@ -43,10 +43,6 @@ extension LoggedOutRouter: LoggedOutRouting {
         self.signUpRouting = signUpRouting
         attachChild(signUpRouting)
         viewController.present(viewController: signUpRouting.viewControllable)
-        
-        // 네비게이션
-        //        let navigationController = UINavigationController(root: signUpRouting.viewControllable)
-        //        viewController.present(viewController: navigationController)
     }
     
     func detachToSignUpRIB() {

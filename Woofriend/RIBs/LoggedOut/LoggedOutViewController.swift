@@ -7,7 +7,6 @@
 
 import RIBs
 import RxSwift
-import RxCocoa
 import UIKit
 
 protocol LoggedOutPresentableListener: class {

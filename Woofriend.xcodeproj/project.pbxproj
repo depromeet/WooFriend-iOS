@@ -43,7 +43,8 @@
 		E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A025DE76AD005575BF /* SignUpBuilder.swift */; };
 		E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A125DE76AD005575BF /* SignUpInteractor.swift */; };
 		E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */; };
-		E87287B525DE8577005575BF /* UINavigationContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287B425DE8577005575BF /* UINavigationContoller.swift */; };
+		E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */; };
+		E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872880425DEAAEE005575BF /* UIView+Extension.swift */; };
 		FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,7 +114,8 @@
 		E87287A025DE76AD005575BF /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		E87287A125DE76AD005575BF /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
-		E87287B425DE8577005575BF /* UINavigationContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationContoller.swift; sourceTree = "<group>"; };
+		E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+Extension.swift"; sourceTree = "<group>"; };
+		E872880425DEAAEE005575BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.debug.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,7 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				E818FE0A25DD3FB30035E306 /* UIViewController+Extension.swift */,
-				E87287B425DE8577005575BF /* UINavigationContoller.swift */,
+				E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */,
+				E872880425DEAAEE005575BF /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
 				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
+				E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */,
 				E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */,
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,
@@ -611,7 +615,7 @@
 				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
-				E87287B525DE8577005575BF /* UINavigationContoller.swift in Sources */,
+				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
 				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
