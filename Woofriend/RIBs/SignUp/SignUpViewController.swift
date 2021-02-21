@@ -43,6 +43,7 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
         super.viewDidLoad()
         
         bindUI()
+        setCollectionView()
 //        setNavigationBar()
     }
     
@@ -85,11 +86,20 @@ extension SignUpViewController {
                 self.indicatiorTrailingConstraint.constant = aa * CGFloat((5 - idx))
             })
             .disposed(by: disposeBag)
-        
+    }
+    
+    private func setCollectionView() {
         // MARK: CollectionView
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
+        
+        collectionView.register(UINib(nibName: "DogNameCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DogNameCollectionViewCell")
+        collectionView.register(UINib(nibName: "DogBreadCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DogBreadCollectionViewCell")
+        collectionView.register(UINib(nibName: "DogConcernCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DogConcernCollectionViewCell")
+        collectionView.register(UINib(nibName: "DogPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DogPhotoCollectionViewCell")
+        collectionView.register(UINib(nibName: "MyInfoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MyInfoCollectionViewCell")
+        collectionView.register(UINib(nibName: "MyIntroductionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MyIntroductionCollectionViewCell")
     }
     
 }
@@ -101,19 +111,40 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "test", for: indexPath)
         
         switch stepCnt.value {
-        case 0: break
-        case 1: break
-        case 2: break
-        case 3: break
-        case 4: break
-        case 5: break
-        default: break
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogNameCollectionViewCell", for: indexPath) as? DogNameCollectionViewCell else { return UICollectionViewCell() }
+            
+            return cell
+            
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogBreadCollectionViewCell", for: indexPath) as? DogBreadCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+            
+        case 2:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogConcernCollectionViewCell", for: indexPath) as? DogConcernCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+            
+        case 3:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogPhotoCollectionViewCell", for: indexPath) as? DogPhotoCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+            
+        case 4:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyInfoCollectionViewCell", for: indexPath) as? MyInfoCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+            
+        case 5:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyIntroductionCollectionViewCell", for: indexPath) as? MyIntroductionCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+            
+        default:
+            return UICollectionViewCell()
         }
-        
-        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(1231321)
     }
     
     // 위 아래 간격
@@ -129,9 +160,6 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
     // cell 사이즈( 옆 라인을 고려하여 설정 )
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        let width = collectionView.frame.width
-        
-//        let size = CGSize(width: width, height: width)
         return collectionView.frame.size
     }
 }
