@@ -32,6 +32,7 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
     var titleName: BehaviorRelay<String> = BehaviorRelay(value: "반려견 정보")
     // TODO: 원래는 false, 테스트는 true
     var isEntered: BehaviorRelay<Bool> = BehaviorRelay(value: true)
+    var dogName: String = "멍쿠"
     
     weak var listener: SignUpPresentableListener?
     
@@ -126,7 +127,7 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
             
         case 2: // 특정 & 관심사
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogConcernCollectionViewCell", for: indexPath) as? DogConcernCollectionViewCell else { return UICollectionViewCell() }
-            cell.setData()
+            cell.setData(dogName)
             
             return cell
             

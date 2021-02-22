@@ -60,6 +60,8 @@
 		E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3E02225E21AD3008B87FA /* BaseCollectionViewCell.swift */; };
 		E8D3E02C25E21C2D008B87FA /* OtherDogsInfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3E02B25E21C2D008B87FA /* OtherDogsInfoPopupView.swift */; };
 		E8D3E03725E21C44008B87FA /* OtherDogsInfoPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D3E03625E21C44008B87FA /* OtherDogsInfoPopupView.xib */; };
+		E8E1E6CB25E40831008A9485 /* PhotoAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */; };
+		E8E1E6CC25E40831008A9485 /* PhotoAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */; };
 		FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +148,8 @@
 		E8D3E02225E21AD3008B87FA /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8D3E02B25E21C2D008B87FA /* OtherDogsInfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDogsInfoPopupView.swift; sourceTree = "<group>"; };
 		E8D3E03625E21C44008B87FA /* OtherDogsInfoPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherDogsInfoPopupView.xib; sourceTree = "<group>"; };
+		E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAddCell.swift; sourceTree = "<group>"; };
+		E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoAddCell.xib; sourceTree = "<group>"; };
 		E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.debug.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -380,6 +384,8 @@
 				E8D0020125E20761009D2482 /* MyInfoCollectionViewCell.xib */,
 				E8D0020725E20788009D2482 /* MyIntroductionCollectionViewCell.swift */,
 				E8D0020825E20788009D2482 /* MyIntroductionCollectionViewCell.xib */,
+				E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */,
+				E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -512,6 +518,7 @@
 				E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */,
 				E8D0020A25E20788009D2482 /* MyIntroductionCollectionViewCell.xib in Resources */,
 				E8D3E03725E21C44008B87FA /* OtherDogsInfoPopupView.xib in Resources */,
+				E8E1E6CC25E40831008A9485 /* PhotoAddCell.xib in Resources */,
 				E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */,
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
 				E8D0020325E20761009D2482 /* MyInfoCollectionViewCell.xib in Resources */,
@@ -676,6 +683,7 @@
 				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
 				E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */,
 				E8D001ED25E20728009D2482 /* DogBreadCollectionViewCell.swift in Sources */,
+				E8E1E6CB25E40831008A9485 /* PhotoAddCell.swift in Sources */,
 				E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */,
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,

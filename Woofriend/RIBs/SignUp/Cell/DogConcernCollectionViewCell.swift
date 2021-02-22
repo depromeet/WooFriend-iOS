@@ -30,13 +30,19 @@ class DogConcernCollectionViewCell: BaseCollectionViewCell, TagListViewDelegate 
         //        bindUI()
     }
     
-    func setData() {
+    override func prepareForReuse() {
+        interestView.removeAllTags()
+        characterView.removeAllTags()
+    }
+    
+    func setData(_ dogName: String) {
+        dogCharacterLabel.text = "\(dogName)의 특징"
+        dogInterestLabel.text = "\(dogName)의 관심사"
         bindUI()
     }
     
     private func bindUI() {
         mockInterest.forEach {
-            
             interestView.addTag("#\($0)").onTap = { [weak self] in
                 $0.isSelected.toggle()
                 print("===== interestView.selectedTags: \(self?.interestView.selectedTags().count)")
@@ -51,7 +57,6 @@ class DogConcernCollectionViewCell: BaseCollectionViewCell, TagListViewDelegate 
             }
             characterView.textFont = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)!
         }
-        
     }
-
+    
 }
