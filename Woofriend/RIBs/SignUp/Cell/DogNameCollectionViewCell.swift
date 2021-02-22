@@ -7,9 +7,11 @@
 
 import UIKit
 import RxSwift
+import RxGesture
 
 class DogNameCollectionViewCell: BaseCollectionViewCell {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var otherDogButton: UIButton!
     @IBOutlet weak var dogNameTextField: UITextField!
     @IBOutlet weak var dogMenButton: UIButton!
@@ -22,13 +24,23 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         bindUI()
     }
     
     private func bindUI() {
         multiDogInfoView.isHidden = true
+        
+        contentView.rx.tapGesture().asSignal()
+            .emit(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                
+                self.dogNameTextField.resignFirstResponder()
+                self.yearTextField.resignFirstResponder()
+                self.monthTextField.resignFirstResponder()
+                self.dayTextField.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
         
         otherDogButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
@@ -74,6 +86,7 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
             .scan("", accumulator: { (prev, new) -> String in
                 new.count > 6 ? prev :  new
             })
+            .do { print("dogNameTextField") }
             .bind(to: dogNameTextField.rx.text)
             .disposed(by: disposeBag)
         

@@ -310,6 +310,7 @@
                 <outlet property="multiDogInfoCloseButton" destination="XOE-Mo-OTk" id="d4b-0B-TwH"/>
                 <outlet property="multiDogInfoView" destination="w8l-Jp-cYW" id="FSD-2O-9H0"/>
                 <outlet property="otherDogButton" destination="Nxj-2d-LOC" id="PZC-2C-2Dg"/>
+                <outlet property="scrollView" destination="PBo-yU-9sK" id="Dr4-pK-ZNb"/>
                 <outlet property="yearTextField" destination="HMQ-Kd-cye" id="zyS-04-bVq"/>
             </connections>
             <point key="canvasLocation" x="239.85507246376812" y="139.28571428571428"/>

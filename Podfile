@@ -8,10 +8,10 @@ target 'Woofriend' do
   # Pods for Woofriend
 	pod 'Firebase/Analytics'
 	pod 'RIBs' #, '~> 0.9.2'
-#	pod 'RxCocoa'
 	pod 'RxSwift'
 	pod 'RxRelay'
 	pod 'RxCocoa'
+	pod 'RxGesture'
 
   target 'WoofriendTests' do
     inherit! :search_paths

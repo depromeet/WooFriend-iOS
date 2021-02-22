@@ -30,7 +30,8 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
     
     var stepCnt: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     var titleName: BehaviorRelay<String> = BehaviorRelay(value: "반려견 정보")
-    var isEntered: BehaviorRelay<Bool> = BehaviorRelay(value: false)
+    // TODO: 원래는 false, 테스트는 true
+    var isEntered: BehaviorRelay<Bool> = BehaviorRelay(value: true)
     
     weak var listener: SignUpPresentableListener?
     
@@ -141,10 +142,6 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
         default:
             return UICollectionViewCell()
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(1231321)
     }
     
     // 위 아래 간격
