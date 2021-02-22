@@ -12,6 +12,8 @@ target 'Woofriend' do
 	pod 'RxRelay'
 	pod 'RxCocoa'
 	pod 'RxGesture'
+	pod 'RxDataSources'#, '~> 4.0'
+	pod 'TagListView', '~> 1.0'
 
   target 'WoofriendTests' do
     inherit! :search_paths

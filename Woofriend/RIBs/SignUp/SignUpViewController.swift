@@ -45,18 +45,18 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
         
         bindUI()
         setCollectionView()
-//        setNavigationBar()
+        //        setNavigationBar()
     }
     
     func present(viewController: ViewControllable) {
-            viewController.uiviewController.modalPresentationStyle = .fullScreen
-            present(viewController.uiviewController, animated: false, completion: nil)
+        viewController.uiviewController.modalPresentationStyle = .fullScreen
+        present(viewController.uiviewController, animated: false, completion: nil)
     }
     
 }
 
 extension SignUpViewController {
- 
+    
     private func bindUI() {
         backButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
@@ -123,8 +123,11 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogBreadCollectionViewCell", for: indexPath) as? DogBreadCollectionViewCell else { return UICollectionViewCell() }
             return cell
             
-        case 2:
+            
+        case 2: // 특정 & 관심사
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogConcernCollectionViewCell", for: indexPath) as? DogConcernCollectionViewCell else { return UICollectionViewCell() }
+            cell.setData()
+            
             return cell
             
         case 3:
