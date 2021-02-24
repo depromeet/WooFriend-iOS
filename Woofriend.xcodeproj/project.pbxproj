@@ -37,6 +37,8 @@
 		E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E818FE4925DD4F1A0035E306 /* PopUpView.xib */; };
 		E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E818FE4F25DD673D0035E306 /* PopUpViewController.storyboard */; };
 		E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FE5425DD694E0035E306 /* PopUpView.swift */; };
+		E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827426B25E69711003BF6B7 /* WelcomeCell.swift */; };
+		E827426E25E69711003BF6B7 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E827426C25E69711003BF6B7 /* WelcomeCell.xib */; };
 		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
 		E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879E25DE76AD005575BF /* SignUpRouter.swift */; };
 		E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879F25DE76AD005575BF /* SignUpViewController.swift */; };
@@ -45,6 +47,7 @@
 		E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */; };
 		E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */; };
 		E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872880425DEAAEE005575BF /* UIView+Extension.swift */; };
+		E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */; };
 		E8D001DB25E206C8009D2482 /* DogNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D001D925E206C8009D2482 /* DogNameCollectionViewCell.swift */; };
 		E8D001DC25E206C8009D2482 /* DogNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D001DA25E206C8009D2482 /* DogNameCollectionViewCell.xib */; };
 		E8D001ED25E20728009D2482 /* DogBreadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D001EB25E20728009D2482 /* DogBreadCollectionViewCell.swift */; };
@@ -125,6 +128,8 @@
 		E818FE4925DD4F1A0035E306 /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
 		E818FE4F25DD673D0035E306 /* PopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpViewController.storyboard; sourceTree = "<group>"; };
 		E818FE5425DD694E0035E306 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		E827426B25E69711003BF6B7 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
+		E827426C25E69711003BF6B7 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
 		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E872879E25DE76AD005575BF /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		E872879F25DE76AD005575BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +138,7 @@
 		E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
 		E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+Extension.swift"; sourceTree = "<group>"; };
 		E872880425DEAAEE005575BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		E8D001D925E206C8009D2482 /* DogNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8D001DA25E206C8009D2482 /* DogNameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogNameCollectionViewCell.xib; sourceTree = "<group>"; };
 		E8D001EB25E20728009D2482 /* DogBreadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreadCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -351,6 +357,7 @@
 				E818FE0A25DD3FB30035E306 /* UIViewController+Extension.swift */,
 				E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */,
 				E872880425DEAAEE005575BF /* UIView+Extension.swift */,
+				E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -386,6 +393,8 @@
 				E8D0020825E20788009D2482 /* MyIntroductionCollectionViewCell.xib */,
 				E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */,
 				E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */,
+				E827426B25E69711003BF6B7 /* WelcomeCell.swift */,
+				E827426C25E69711003BF6B7 /* WelcomeCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -520,6 +529,7 @@
 				E8D3E03725E21C44008B87FA /* OtherDogsInfoPopupView.xib in Resources */,
 				E8E1E6CC25E40831008A9485 /* PhotoAddCell.xib in Resources */,
 				E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */,
+				E827426E25E69711003BF6B7 /* WelcomeCell.xib in Resources */,
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
 				E8D0020325E20761009D2482 /* MyInfoCollectionViewCell.xib in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
@@ -670,6 +680,7 @@
 				E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */,
 				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
 				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
+				E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */,
 				E818FCE425DCEF910035E306 /* RootViewController.swift in Sources */,
 				E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */,
 				E8D001FB25E2074B009D2482 /* DogPhotoCollectionViewCell.swift in Sources */,
@@ -702,6 +713,7 @@
 				E8D001F425E2073A009D2482 /* DogConcernCollectionViewCell.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
 				E8D0020925E20788009D2482 /* MyIntroductionCollectionViewCell.swift in Sources */,
+				E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */,
 				E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

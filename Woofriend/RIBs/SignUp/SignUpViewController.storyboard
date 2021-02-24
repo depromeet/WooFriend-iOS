@@ -126,6 +126,7 @@
                         <outlet property="collectionView" destination="f0f-aA-H0e" id="hWd-mp-yvl"/>
                         <outlet property="indicatiorTrailingConstraint" destination="oFE-eP-uqE" id="1zY-5b-5HY"/>
                         <outlet property="indicatorLabel" destination="tJ7-fn-b4B" id="5JW-wa-haU"/>
+                        <outlet property="navigationView" destination="lzw-qN-f1Y" id="FI0-p1-FdZ"/>
                         <outlet property="nextButton" destination="1lc-D0-u0Z" id="iiI-qf-d11"/>
                         <outlet property="titleLabel" destination="pRN-Sx-SaM" id="rcw-gR-TuY"/>
                     </connections>

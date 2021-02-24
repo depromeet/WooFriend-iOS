@@ -20,13 +20,13 @@ protocol SignUpPresentableListener: class {
 
 final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpViewControllable {
     
+    @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var indicatorLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var indicatiorTrailingConstraint: NSLayoutConstraint!
-    
     
     var stepCnt: BehaviorRelay<Int> = BehaviorRelay(value: 0)
     var titleName: BehaviorRelay<String> = BehaviorRelay(value: "반려견 정보")
@@ -80,12 +80,14 @@ extension SignUpViewController {
         stepCnt
             .subscribe(onNext: { [weak self] idx in
                 guard let self = self else { return }
-                self.collectionView.scrollToItem(at: IndexPath(row: idx, section: 0), at: .centeredHorizontally, animated: false)
-                print(self.view.bounds.width)
-                print(self.view.bounds.width / 5)
-                let aa = self.view.bounds.width / 6
+                if idx == 6 {
+                    self.navigationView.isHidden = true
+                    self.nextButton.isHidden = true
+                }
                 
-                self.indicatiorTrailingConstraint.constant = aa * CGFloat((5 - idx))
+                self.collectionView.scrollToItem(at: IndexPath(row: idx, section: 0), at: .centeredHorizontally, animated: false)
+                let current = self.view.bounds.width / 6
+                self.indicatiorTrailingConstraint.constant = current * CGFloat((5 - idx))
             })
             .disposed(by: disposeBag)
     }
@@ -102,6 +104,9 @@ extension SignUpViewController {
         collectionView.register(UINib(nibName: "DogPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DogPhotoCollectionViewCell")
         collectionView.register(UINib(nibName: "MyInfoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MyInfoCollectionViewCell")
         collectionView.register(UINib(nibName: "MyIntroductionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MyIntroductionCollectionViewCell")
+        collectionView.register(UINib(nibName: "WelcomeCell", bundle: nil), forCellWithReuseIdentifier: "WelcomeCell")
+        
+        
     }
     
 }
@@ -109,7 +114,7 @@ extension SignUpViewController {
 extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -141,6 +146,10 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
             
         case 5:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyIntroductionCollectionViewCell", for: indexPath) as? MyIntroductionCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+            
+        case 6:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WelcomeCell", for: indexPath) as? WelcomeCell else { return UICollectionViewCell() }
             return cell
             
         default:

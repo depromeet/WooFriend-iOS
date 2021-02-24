@@ -6,15 +6,30 @@
 //
 
 import UIKit
+import RxSwift
+import RxGesture
 
-class PhotoAddCell: UICollectionViewCell {
+class PhotoAddCell: BaseCollectionViewCell  {
 
     @IBOutlet weak var addImageView: UIImageView!
     @IBOutlet weak var deleteButton: UIButton!
+    var addAction: (() -> Void)?
+    var deleteAction: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        addImageView.rx.tapGesture().asSignal()
+            .emit(onNext: { [weak self] _ in
+                self?.addAction?()
+            })
+            .disposed(by: disposeBag)
+        
+        deleteButton.rx.tapGesture().asSignal()
+            .emit(onNext: { [weak self] _ in
+                self?.deleteAction?()
+            })
+            .disposed(by: disposeBag)
         
     }
     

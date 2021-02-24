@@ -77,7 +77,7 @@ extension SignUpInteractor: SignUpPresentableListener {
     
     func nextAction() {
         let nextStepCnt = presenter.stepCnt.value + 1
-        guard nextStepCnt < 6 else { return }
+        guard nextStepCnt < 7 else { return }
         presenter.stepCnt.accept(nextStepCnt)
         
         switch nextStepCnt {
