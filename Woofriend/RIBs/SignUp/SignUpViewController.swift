@@ -123,6 +123,12 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogNameCollectionViewCell", for: indexPath) as? DogNameCollectionViewCell else { return UICollectionViewCell() }
             
+            cell.isChecked.subscribe { b in
+                print("setp 0 enalbe == \(b)")
+            }
+            .disposed(by: disposeBag)
+
+            
             return cell
             
         case 1:

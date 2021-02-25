@@ -7,10 +7,12 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class BaseCollectionViewCell: UICollectionViewCell {
     
     let disposeBag = DisposeBag()
+    var isChecked: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     
     deinit {
         print("[DEINIT] ✨🧹 \(type(of: self)) was deinit.")
