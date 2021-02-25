@@ -305,13 +305,14 @@
             </constraints>
             <size key="customSize" width="276" height="422"/>
             <connections>
+                <outlet property="dayTextField" destination="EdA-S9-dLT" id="4To-Pn-5r0"/>
                 <outlet property="menButton" destination="wER-4v-s1O" id="LlM-JN-8wO"/>
                 <outlet property="monthTextField" destination="xgd-DV-k50" id="cax-ow-7gp"/>
                 <outlet property="nameTextField" destination="FpO-fp-wfK" id="x8q-G5-fyP"/>
                 <outlet property="townNameLabel" destination="ivo-T5-x3L" id="Dzg-9f-DDW"/>
+                <outlet property="townView" destination="SKV-g5-5Pj" id="d2k-u9-ggA"/>
                 <outlet property="womenButton" destination="HcN-K8-iK2" id="a4b-B0-0QF"/>
                 <outlet property="yearTextField" destination="QQt-Lh-4gh" id="jg6-v3-5c0"/>
-                <outlet property="동네뷰" destination="SKV-g5-5Pj" id="d2k-u9-ggA"/>
             </connections>
             <point key="canvasLocation" x="239.85507246376812" y="139.28571428571428"/>
         </collectionViewCell>
