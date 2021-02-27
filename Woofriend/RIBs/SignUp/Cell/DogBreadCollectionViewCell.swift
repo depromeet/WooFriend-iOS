@@ -74,7 +74,9 @@ class DogBreadCollectionViewCell: BaseCollectionViewCell {
                 self?.inoculationCompleteButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.inoculationCompleteButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.inoculationCompleteButton.layer.borderColor = UIColor.clear.cgColor
+                self?.inoculationCompleteButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Semibold", size: 14)!
                 
+                self?.inoculationDoNotButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)!
                 self?.inoculationDoNotButton.isSelected = false
                 self?.inoculationDoNotButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 self?.inoculationDoNotButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
@@ -88,7 +90,9 @@ class DogBreadCollectionViewCell: BaseCollectionViewCell {
                 self?.inoculationDoNotButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.inoculationDoNotButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.inoculationDoNotButton.layer.borderColor = UIColor.clear.cgColor
+                self?.inoculationDoNotButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Semibold", size: 14)!
                 
+                self?.inoculationCompleteButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)!
                 self?.inoculationCompleteButton.isSelected = false
                 self?.inoculationCompleteButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 self?.inoculationCompleteButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)

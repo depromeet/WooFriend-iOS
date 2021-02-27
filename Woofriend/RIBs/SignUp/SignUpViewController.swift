@@ -100,11 +100,12 @@ extension SignUpViewController {
         stepCnt
             .subscribe(onNext: { [weak self] idx in
                 guard let self = self else { return }
+                guard idx != -1 else { return }
 //                if idx == 6 {
 //                    self.navigationView.isHidden = true
 //                    self.nextButton.isHidden = true
 //                }
-                
+//
                 if self.isEntered.value[idx] {
                     self.nextButton.isSelected = true
                     self.nextButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)

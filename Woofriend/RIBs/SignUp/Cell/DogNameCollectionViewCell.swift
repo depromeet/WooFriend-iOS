@@ -84,12 +84,14 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
                 self?.dogMenButton.isSelected = true
                 self?.dogMenButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.dogMenButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+                self?.dogMenButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Semibold", size: 14)!
                 self?.dogMenButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.dogWomenButton.isSelected = false
                 self?.dogWomenButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 self?.dogWomenButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
                 self?.dogWomenButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                self?.dogWomenButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)!
             })
             .disposed(by: disposeBag)
         
@@ -100,11 +102,13 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
                 self?.dogWomenButton.isSelected = true
                 self?.dogWomenButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.dogWomenButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+                self?.dogMenButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)!
                 self?.dogWomenButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.dogMenButton.isSelected = false
                 self?.dogMenButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 self?.dogMenButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
+                self?.dogWomenButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Semibold", size: 14)!
                 self?.dogMenButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
             })
             .disposed(by: disposeBag)

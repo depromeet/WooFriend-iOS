@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPA-PN-u8v">
-                                        <rect key="frame" x="16" y="49.666666666666657" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="51" width="343" height="44"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6자 이내로 입력해주세요." adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-ek-sfz">
                                                 <rect key="frame" x="16" y="0.0" width="311" height="44"/>
@@ -58,19 +58,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려견 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH9-Fa-czU">
-                                        <rect key="frame" x="15.999999999999996" y="24" width="59.666666666666657" height="15.666666666666664"/>
+                                        <rect key="frame" x="16" y="24" width="64.333333333333329" height="17"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <color key="textColor" name="black_1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0U-dT-R8m">
-                                        <rect key="frame" x="16" y="139.33333333333334" width="167.66666666666666" height="44"/>
+                                        <rect key="frame" x="16" y="142" width="167.66666666666666" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="5vL-LH-bcw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <state key="normal" title="남아">
                                             <color key="titleColor" name="black_1"/>
                                         </state>
@@ -102,16 +102,16 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려견 성별" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2L-a2-ifM">
-                                        <rect key="frame" x="15.999999999999996" y="113.66666666666667" width="59.666666666666657" height="15.666666666666671"/>
+                                        <rect key="frame" x="16" y="115" width="64.333333333333329" height="17"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <color key="textColor" name="black_1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtB-GZ-UXt">
-                                        <rect key="frame" x="191.66666666666663" y="139.33333333333334" width="167.33333333333337" height="44"/>
+                                        <rect key="frame" x="191.66666666666663" y="142" width="167.33333333333337" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <state key="normal" title="여아">
                                             <color key="titleColor" name="black_1"/>
                                         </state>
@@ -128,14 +128,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려견 나이" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cw-ib-RN7">
-                                        <rect key="frame" x="15.999999999999996" y="204.33333333333334" width="59.666666666666657" height="15.666666666666657"/>
+                                        <rect key="frame" x="16" y="207" width="64.333333333333329" height="17"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <color key="textColor" name="black_1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cII-yc-UqN">
-                                        <rect key="frame" x="16" y="227" width="343" height="44"/>
+                                        <rect key="frame" x="16" y="231" width="343" height="44"/>
                                         <subviews>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3B-2f-g6c">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
@@ -235,8 +235,8 @@
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="살" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MW-xh-gqi">
-                                                        <rect key="frame" x="173.66666666666666" y="11.666666666666659" width="15" height="20.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                        <rect key="frame" x="173.66666666666666" y="14.333333333333343" width="11.333333333333343" height="15.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
                                                         <color key="textColor" name="black_1"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -265,7 +265,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8l-Jp-cYW">
-                                        <rect key="frame" x="49" y="43.666666666666657" width="310" height="60.333333333333343"/>
+                                        <rect key="frame" x="49" y="45" width="310" height="60.333333333333343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="otherDogs" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-9f-q0l">
                                                 <rect key="frame" x="0.0" y="0.0" width="310" height="60.333333333333336"/>
@@ -277,7 +277,7 @@
                                                 </constraints>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다견 가정인 경우 대표 강아지 1마리를 우선 등록하세요.  회원가입 후 다른 반려견들을 추가로 등록할 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW8-Ie-R2B">
-                                                <rect key="frame" x="18" y="22.666666666666664" width="254" height="26.666666666666664"/>
+                                                <rect key="frame" x="18" y="22.666666666666671" width="254" height="26.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>

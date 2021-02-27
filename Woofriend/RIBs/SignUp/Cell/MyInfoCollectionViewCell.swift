@@ -43,7 +43,9 @@ class MyInfoCollectionViewCell: BaseCollectionViewCell {
                 self?.menButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.menButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.menButton.layer.borderColor = UIColor.clear.cgColor
+                self?.menButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Semibold", size: 14)!
                 
+                self?.womenButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)!
                 self?.womenButton.isSelected = false
                 self?.womenButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 self?.womenButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
@@ -58,7 +60,9 @@ class MyInfoCollectionViewCell: BaseCollectionViewCell {
                 self?.womenButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.womenButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.womenButton.layer.borderColor = UIColor.clear.cgColor
+                self?.womenButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Semibold", size: 14)!
                 
+                self?.menButton.titleLabel?.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 14)!
                 self?.menButton.isSelected = false
                 self?.menButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
                 self?.menButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)

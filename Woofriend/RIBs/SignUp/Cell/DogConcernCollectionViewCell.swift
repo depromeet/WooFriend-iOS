@@ -47,7 +47,7 @@ class DogConcernCollectionViewCell: BaseCollectionViewCell, TagListViewDelegate 
                 $0.isSelected.toggle()
                 print("===== interestView.selectedTags: \(self?.interestView.selectedTags().count)")
             }
-            interestView.textFont = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)!
+            interestView.textFont = UIFont(name: "AppleSDGothicNeo-Medium", size: 12)!
         }
         
         mockCharacter.forEach {
@@ -55,7 +55,7 @@ class DogConcernCollectionViewCell: BaseCollectionViewCell, TagListViewDelegate 
                 $0.isSelected.toggle()
                 print("===== characterView.selectedTags: \(self?.characterView.selectedTags().count)")
             }
-            characterView.textFont = UIFont(name: "AppleSDGothicNeo-Regular", size: 12)!
+            characterView.textFont = UIFont(name: "AppleSDGothicNeo-Medium", size: 12)!
         }
     }
     
