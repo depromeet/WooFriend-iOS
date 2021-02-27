@@ -43,10 +43,12 @@ class DogBreadCollectionViewCell: BaseCollectionViewCell {
             .emit(onNext: { [weak self] in
                 self?.neutralCompleteButton.isSelected = true
                 self?.neutralCompleteButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+                self?.neutralCompleteButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.neutralCompleteButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.neutralDoNotButton.isSelected = false
                 self?.neutralDoNotButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                self?.neutralDoNotButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
                 self?.neutralDoNotButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
             })
             .disposed(by: disposeBag)
@@ -55,10 +57,12 @@ class DogBreadCollectionViewCell: BaseCollectionViewCell {
             .emit(onNext: { [weak self] in
                 self?.neutralDoNotButton.isSelected = true
                 self?.neutralDoNotButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+                self?.neutralDoNotButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.neutralDoNotButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.neutralCompleteButton.isSelected = false
                 self?.neutralCompleteButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                self?.neutralCompleteButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
                 self?.neutralCompleteButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
             })
             .disposed(by: disposeBag)
@@ -68,10 +72,12 @@ class DogBreadCollectionViewCell: BaseCollectionViewCell {
             .emit(onNext: { [weak self] in
                 self?.inoculationCompleteButton.isSelected = true
                 self?.inoculationCompleteButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+                self?.inoculationCompleteButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.inoculationCompleteButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.inoculationDoNotButton.isSelected = false
                 self?.inoculationDoNotButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                self?.inoculationDoNotButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
                 self?.inoculationDoNotButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
             })
             .disposed(by: disposeBag)
@@ -80,10 +86,12 @@ class DogBreadCollectionViewCell: BaseCollectionViewCell {
             .emit(onNext: { [weak self] in
                 self?.inoculationDoNotButton.isSelected = true
                 self?.inoculationDoNotButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+                self?.inoculationDoNotButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.inoculationDoNotButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.inoculationCompleteButton.isSelected = false
                 self?.inoculationCompleteButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                self?.inoculationCompleteButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
                 self?.inoculationCompleteButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
             })
             .disposed(by: disposeBag)

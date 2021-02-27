@@ -41,10 +41,12 @@ class MyInfoCollectionViewCell: BaseCollectionViewCell {
             .emit(onNext: { [weak self] in
                 self?.menButton.isSelected = true
                 self?.menButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+                self?.menButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.menButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.womenButton.isSelected = false
                 self?.womenButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                self?.womenButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
                 self?.womenButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
             })
             .disposed(by: disposeBag)
@@ -54,10 +56,12 @@ class MyInfoCollectionViewCell: BaseCollectionViewCell {
             .emit(onNext: { [weak self] in
                 self?.womenButton.isSelected = true
                 self?.womenButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+                self?.womenButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
                 self?.womenButton.layer.borderColor = UIColor.clear.cgColor
                 
                 self?.menButton.isSelected = false
                 self?.menButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                self?.menButton.setTitleColor(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), for: .normal)
                 self?.menButton.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
             })
             .disposed(by: disposeBag)

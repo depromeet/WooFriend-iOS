@@ -19,7 +19,8 @@ protocol SignUpPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
     var stepCnt: BehaviorRelay<Int> { get set }
     var titleName: BehaviorRelay<String> { get set }
-    var isEntered: BehaviorRelay<Bool> { get set }
+    var isEntered: BehaviorRelay<[Bool]> { get set }
+    var stepState: [Bool] { get set }
     var dogName: String { get set }
 }
 

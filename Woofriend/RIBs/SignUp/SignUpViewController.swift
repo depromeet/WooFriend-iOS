@@ -19,7 +19,6 @@ protocol SignUpPresentableListener: class {
 }
 
 final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpViewControllable {
-    
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var indicatorLabel: UILabel!
@@ -29,9 +28,10 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
     @IBOutlet weak var indicatiorTrailingConstraint: NSLayoutConstraint!
     
     var stepCnt: BehaviorRelay<Int> = BehaviorRelay(value: 0)
+    var stepState: [Bool] = [Bool](repeating: false, count: 6)
     var titleName: BehaviorRelay<String> = BehaviorRelay(value: "반려견 정보")
     // TODO: 원래는 false, 테스트는 true
-    var isEntered: BehaviorRelay<Bool> = BehaviorRelay(value: true)
+    var isEntered: BehaviorRelay<[Bool]> = BehaviorRelay(value: [Bool](repeating: false, count: 6))
     var dogName: String = "멍쿠"
     
     weak var listener: SignUpPresentableListener?
@@ -59,6 +59,24 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
 extension SignUpViewController {
     
     private func bindUI() {
+        
+        isEntered.subscribe { [weak self] list in
+            guard let self = self else { return }
+            guard let state = list.event.element?[self.stepCnt.value] else { return }
+            
+            if state {
+                self.nextButton.isSelected = true
+                self.nextButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+            } else {
+                self.nextButton.isSelected = false
+                self.nextButton.backgroundColor = #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
+            }
+            print(self.stepCnt.value)
+            print(state)
+        }
+        .disposed(by: disposeBag)
+
+        
         backButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
                 self?.listener?.backAction()
@@ -67,9 +85,11 @@ extension SignUpViewController {
         
         nextButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
-                // TODO: 필터 같은 오퍼레이터가 있을거 같은데..
-                guard let isEntered = self?.isEntered, isEntered.value == true else { return }
-                self?.listener?.nextAction()
+                guard let self = self else { return }
+//                if self.nextButton.isSelected  { self.listener?.nextAction() }
+                // TODO: 나중에 변경
+                self.listener?.nextAction()
+                
             })
             .disposed(by: disposeBag)
         
@@ -80,9 +100,17 @@ extension SignUpViewController {
         stepCnt
             .subscribe(onNext: { [weak self] idx in
                 guard let self = self else { return }
-                if idx == 6 {
-                    self.navigationView.isHidden = true
-                    self.nextButton.isHidden = true
+//                if idx == 6 {
+//                    self.navigationView.isHidden = true
+//                    self.nextButton.isHidden = true
+//                }
+                
+                if self.isEntered.value[idx] {
+                    self.nextButton.isSelected = true
+                    self.nextButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+                } else {
+                    self.nextButton.isSelected = false
+                    self.nextButton.backgroundColor = #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
                 }
                 
                 self.collectionView.scrollToItem(at: IndexPath(row: idx, section: 0), at: .centeredHorizontally, animated: false)
@@ -106,7 +134,6 @@ extension SignUpViewController {
         collectionView.register(UINib(nibName: "MyIntroductionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MyIntroductionCollectionViewCell")
         collectionView.register(UINib(nibName: "WelcomeCell", bundle: nil), forCellWithReuseIdentifier: "WelcomeCell")
         
-        
     }
     
 }
@@ -114,7 +141,7 @@ extension SignUpViewController {
 extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -123,8 +150,20 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogNameCollectionViewCell", for: indexPath) as? DogNameCollectionViewCell else { return UICollectionViewCell() }
             
-            cell.isChecked.subscribe { b in
-                print("setp 0 enalbe == \(b)")
+            cell.isChecked.subscribe { [weak self] b in
+                guard let self = self else { return }
+                guard let value = b.element else { return }
+                
+                self.stepState[self.stepCnt.value] = value
+                var currentState = self.isEntered.value
+                currentState[self.stepCnt.value] = value
+                
+                self.isEntered.accept(currentState)
+                
+                
+                print(self.stepState[self.stepCnt.value])
+                print(self.stepState)
+                print("======================")
             }
             .disposed(by: disposeBag)
 
