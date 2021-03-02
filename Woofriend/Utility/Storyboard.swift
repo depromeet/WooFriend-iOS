@@ -10,6 +10,10 @@ import UIKit
 enum Storyboard: String {
     case LoggedOutViewController
     case SignUpViewController
+    // SignUp - child
+    case SearchBreedViewController
+    case DirectBreedViewController
+    //
     case PopUpViewController
     
     func instantiate<VC: UIViewController>(_: VC.Type) -> VC {
