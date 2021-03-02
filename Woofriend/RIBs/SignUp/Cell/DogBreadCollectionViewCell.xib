@@ -93,23 +93,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOe-tS-XCd">
-                                        <rect key="frame" x="290" y="14" width="69" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="69" id="EYw-sn-UX5"/>
-                                        </constraints>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="견종 직접 입력">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중성화 여부" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVY-AM-AIF">
                                         <rect key="frame" x="16" y="115" width="64.5" height="17"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -187,7 +170,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="OOe-tS-XCd" secondAttribute="trailing" constant="16" id="1G1-Gm-GvL"/>
                                     <constraint firstItem="LVY-AM-AIF" firstAttribute="top" secondItem="BSS-HC-2rb" secondAttribute="bottom" constant="20" id="4gD-ba-VoM"/>
                                     <constraint firstAttribute="trailing" secondItem="GOe-On-G2g" secondAttribute="trailing" constant="16" id="52N-iT-zfR"/>
                                     <constraint firstItem="9uy-IC-eDk" firstAttribute="top" secondItem="RGs-Z5-J1i" secondAttribute="top" id="Dbp-A7-ppl"/>
@@ -205,7 +187,6 @@
                                     <constraint firstItem="Bag-an-CpB" firstAttribute="top" secondItem="Z00-2k-JF2" secondAttribute="top" constant="24" id="i0J-3k-NbQ"/>
                                     <constraint firstItem="BSS-HC-2rb" firstAttribute="leading" secondItem="Bag-an-CpB" secondAttribute="leading" id="jdT-Ck-hqh"/>
                                     <constraint firstItem="rPE-K5-GTk" firstAttribute="width" secondItem="Z00-2k-JF2" secondAttribute="width" multiplier="1/2" constant="-20" id="jub-Rk-kXg"/>
-                                    <constraint firstItem="BSS-HC-2rb" firstAttribute="top" secondItem="OOe-tS-XCd" secondAttribute="bottom" constant="12" id="obu-eY-sDs"/>
                                     <constraint firstItem="RGs-Z5-J1i" firstAttribute="top" secondItem="bqw-F7-5TT" secondAttribute="bottom" constant="10" id="oyd-2a-4e1"/>
                                     <constraint firstItem="rPE-K5-GTk" firstAttribute="leading" secondItem="Bag-an-CpB" secondAttribute="leading" id="pwU-uj-c8X"/>
                                     <constraint firstAttribute="trailing" secondItem="9uy-IC-eDk" secondAttribute="trailing" constant="16" id="qiv-VE-1BJ"/>
@@ -238,7 +219,6 @@
             </constraints>
             <size key="customSize" width="276" height="422"/>
             <connections>
-                <outlet property="directNameButton" destination="OOe-tS-XCd" id="m08-oj-Zjm"/>
                 <outlet property="dogNameLabel" destination="LQc-4p-VuR" id="ffW-Zp-9uz"/>
                 <outlet property="dogNameTapView" destination="BSS-HC-2rb" id="sMO-sj-GGb"/>
                 <outlet property="inoculationCompleteButton" destination="RGs-Z5-J1i" id="ObT-GP-7IV"/>

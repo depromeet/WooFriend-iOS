@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */; };
 		A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */; };
+		B83BA61F25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61A25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift */; };
+		B83BA62025EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA61B25EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard */; };
+		B83BA62125EE6CF3005BFDAC /* SearchDogBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61C25EE6CF3005BFDAC /* SearchDogBreedsViewController.swift */; };
+		B83BA62225EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61D25EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift */; };
+		B83BA62325EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61E25EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift */; };
 		E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337E825BEBE34008580CA /* AppDelegate.swift */; };
 		E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E80337F125BEBE34008580CA /* woofriend.xcdatamodeld */; };
 		E80337F525BEBE36008580CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80337F425BEBE36008580CA /* Assets.xcassets */; };
@@ -93,6 +98,11 @@
 		8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend_WoofriendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5586BE55B323D5A7BC9DC /* Pods-Woofriend-WoofriendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B09272E57C9BFC1751A5BF2D /* Pods-Woofriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.debug.xcconfig"; sourceTree = "<group>"; };
+		B83BA61A25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsRouter.swift; sourceTree = "<group>"; };
+		B83BA61B25EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchDogBreedsViewController.storyboard; sourceTree = "<group>"; };
+		B83BA61C25EE6CF3005BFDAC /* SearchDogBreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsViewController.swift; sourceTree = "<group>"; };
+		B83BA61D25EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsBuilder.swift; sourceTree = "<group>"; };
+		B83BA61E25EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsInteractor.swift; sourceTree = "<group>"; };
 		CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.release.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E80337E525BEBE34008580CA /* Woofriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woofriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80337E825BEBE34008580CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +205,18 @@
 				16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B83BA62A25EE6CFC005BFDAC /* SearchDogBreeds */ = {
+			isa = PBXGroup;
+			children = (
+				B83BA61A25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift */,
+				B83BA61B25EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard */,
+				B83BA61C25EE6CF3005BFDAC /* SearchDogBreedsViewController.swift */,
+				B83BA61D25EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift */,
+				B83BA61E25EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift */,
+			);
+			path = SearchDogBreeds;
 			sourceTree = "<group>";
 		};
 		E2710CCC056B7B8DBB6799D6 /* Pods */ = {
@@ -365,6 +387,7 @@
 		E872879D25DE7694005575BF /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				B83BA62A25EE6CFC005BFDAC /* SearchDogBreeds */,
 				E8D3E02A25E21BE1008B87FA /* Xib */,
 				E8D001D525E2042E009D2482 /* Cell */,
 				E872879E25DE76AD005575BF /* SignUpRouter.swift */,
@@ -526,6 +549,7 @@
 				E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */,
 				E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */,
 				E8D0020A25E20788009D2482 /* MyIntroductionCollectionViewCell.xib in Resources */,
+				B83BA62025EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard in Resources */,
 				E8D3E03725E21C44008B87FA /* OtherDogsInfoPopupView.xib in Resources */,
 				E8E1E6CC25E40831008A9485 /* PhotoAddCell.xib in Resources */,
 				E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */,
@@ -681,7 +705,9 @@
 				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
 				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
 				E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */,
+				B83BA61F25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift in Sources */,
 				E818FCE425DCEF910035E306 /* RootViewController.swift in Sources */,
+				B83BA62325EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift in Sources */,
 				E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */,
 				E8D001FB25E2074B009D2482 /* DogPhotoCollectionViewCell.swift in Sources */,
 				E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */,
@@ -702,6 +728,7 @@
 				E818FC9B25DCE9A60035E306 /* AppComponent.swift in Sources */,
 				E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */,
 				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
+				B83BA62125EE6CF3005BFDAC /* SearchDogBreedsViewController.swift in Sources */,
 				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
 				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
@@ -709,6 +736,7 @@
 				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
 				E8D001DB25E206C8009D2482 /* DogNameCollectionViewCell.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
+				B83BA62225EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift in Sources */,
 				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
 				E8D001F425E2073A009D2482 /* DogConcernCollectionViewCell.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,

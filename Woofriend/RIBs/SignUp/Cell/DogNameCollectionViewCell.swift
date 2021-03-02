@@ -10,6 +10,9 @@ import RxGesture
 
 class DogNameCollectionViewCell: BaseCollectionViewCell {
     
+    @IBOutlet weak var dogProfileView: UIView!
+    @IBOutlet weak var dogProfileImageView: UIImageView!
+    @IBOutlet weak var plusImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var otherDogButton: UIButton!
     @IBOutlet weak var dogNameLayerView: UIView!
@@ -20,10 +23,7 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var dogAgeTextField: UITextField!
     @IBOutlet weak var multiDogInfoView: UIView!
     @IBOutlet weak var multiDogInfoCloseButton: UIButton!
-    // FIXME: 확정되면 제거하기.
-    @IBOutlet weak var yearTextField: UITextField!
-    @IBOutlet weak var monthTextField: UITextField!
-    @IBOutlet weak var dayTextField: UITextField!
+    let imagePickerController = UIImagePickerController()
     /// 체크사항이 3개임
     private var isNextStep = [Bool](repeating: false, count: 3) {
         willSet {
@@ -39,13 +39,14 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .savedPhotosAlbum
+        imagePickerController.allowsEditing = true
+        dogProfileImageView.layer.cornerRadius = dogProfileImageView.frame.width / 2
         bindUI()
     }
     private func keyboradHideAll() {
         self.dogNameTextField.resignFirstResponder()
-        self.yearTextField.resignFirstResponder()
-        self.monthTextField.resignFirstResponder()
-        self.dayTextField.resignFirstResponder()
         self.dogAgeTextField.resignFirstResponder()
     }
     
@@ -57,17 +58,25 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
                 guard let self = self else { return }
                 
                 self.dogNameTextField.resignFirstResponder()
-                self.yearTextField.resignFirstResponder()
-                self.monthTextField.resignFirstResponder()
-                self.dayTextField.resignFirstResponder()
                 self.dogAgeTextField.resignFirstResponder()
             })
             .disposed(by: disposeBag)
         
+        dogProfileView.rx.tapGesture().asSignal()
+            .emit { [weak self] tap in
+                guard let self = self else { return }
+                // FIXME: 확인해서 rawValue enum으로
+                guard tap.state.rawValue == 3 else { return }
+                // tap.state.description, UIGestureRecognizerState.ended
+                
+                UIApplication.topViewController()?.present(self.imagePickerController, animated: true, completion: nil)
+            }
+            .disposed(by: disposeBag)
+
+        
         otherDogButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
                 self?.multiDogInfoView.isHidden = false
-                self?.isChecked.accept(true)
             })
             .disposed(by: disposeBag)
         
@@ -160,29 +169,23 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
             })
             .bind(to: dogAgeTextField.rx.text)
             .disposed(by: disposeBag)
+    }
+}
+
+extension DogNameCollectionViewCell: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+                
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            dogProfileImageView.image = image
+        } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            dogProfileImageView.image = image
+        }
         
-        // FIXME: 확정되면 제거하기.
-        /*
-        yearTextField.rx.text.orEmpty
-            .scan("", accumulator: { (prev, new) -> String in
-                new.count > 4 ? prev :  new
-            })
-            .bind(to: yearTextField.rx.text)
-            .disposed(by: disposeBag)
-        
-        monthTextField.rx.text.orEmpty
-            .scan("", accumulator: { (prev, new) -> String in
-                new.count > 2 ? prev :  new
-            })
-            .bind(to: monthTextField.rx.text)
-            .disposed(by: disposeBag)
-        
-        dayTextField.rx.text.orEmpty
-            .scan("", accumulator: { (prev, new) -> String in
-                new.count > 2 ? prev :  new
-            })
-            .bind(to: dayTextField.rx.text)
-            .disposed(by: disposeBag)
-        */
+        imagePickerController.dismiss(animated: true) { [weak self] in
+            guard let self = self else { return }
+            
+            self.plusImageView.isHidden = true
+        }
     }
 }
