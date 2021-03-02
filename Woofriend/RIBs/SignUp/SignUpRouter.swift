@@ -25,8 +25,8 @@ final class SignUpRouter: ViewableRouter<SignUpInteractable, SignUpViewControlla
         interactor.router = self
     }
     
-    func routeToSignUpRIB() {
+    
+    func routeSearchDogBreeds() {
         
     }
-    
 }

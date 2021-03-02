@@ -14,6 +14,21 @@
 		B83BA62125EE6CF3005BFDAC /* SearchDogBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61C25EE6CF3005BFDAC /* SearchDogBreedsViewController.swift */; };
 		B83BA62225EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61D25EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift */; };
 		B83BA62325EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61E25EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift */; };
+		B83BA63B25EE7156005BFDAC /* DirectBreedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63625EE7156005BFDAC /* DirectBreedRouter.swift */; };
+		B83BA63C25EE7156005BFDAC /* DirectBreedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA63725EE7156005BFDAC /* DirectBreedViewController.storyboard */; };
+		B83BA63D25EE7156005BFDAC /* DirectBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63825EE7156005BFDAC /* DirectBreedViewController.swift */; };
+		B83BA63E25EE7156005BFDAC /* DirectBreedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63925EE7156005BFDAC /* DirectBreedBuilder.swift */; };
+		B83BA63F25EE7156005BFDAC /* DirectBreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63A25EE7156005BFDAC /* DirectBreedInteractor.swift */; };
+		B83BA64B25EE718F005BFDAC /* SearchLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64725EE718F005BFDAC /* SearchLocalRouter.swift */; };
+		B83BA64C25EE718F005BFDAC /* SearchLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64825EE718F005BFDAC /* SearchLocalViewController.swift */; };
+		B83BA64D25EE718F005BFDAC /* SearchLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64925EE718F005BFDAC /* SearchLocalBuilder.swift */; };
+		B83BA64E25EE718F005BFDAC /* SearchLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64A25EE718F005BFDAC /* SearchLocalInteractor.swift */; };
+		B83BA65625EE719D005BFDAC /* SearchLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA65525EE719D005BFDAC /* SearchLocalViewController.storyboard */; };
+		B83BA66025EE71BE005BFDAC /* DirectLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65B25EE71BE005BFDAC /* DirectLocalRouter.swift */; };
+		B83BA66125EE71BE005BFDAC /* DirectLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA65C25EE71BE005BFDAC /* DirectLocalViewController.storyboard */; };
+		B83BA66225EE71BE005BFDAC /* DirectLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65D25EE71BE005BFDAC /* DirectLocalViewController.swift */; };
+		B83BA66325EE71BE005BFDAC /* DirectLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65E25EE71BE005BFDAC /* DirectLocalBuilder.swift */; };
+		B83BA66425EE71BE005BFDAC /* DirectLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65F25EE71BE005BFDAC /* DirectLocalInteractor.swift */; };
 		E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337E825BEBE34008580CA /* AppDelegate.swift */; };
 		E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E80337F125BEBE34008580CA /* woofriend.xcdatamodeld */; };
 		E80337F525BEBE36008580CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80337F425BEBE36008580CA /* Assets.xcassets */; };
@@ -103,6 +118,21 @@
 		B83BA61C25EE6CF3005BFDAC /* SearchDogBreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsViewController.swift; sourceTree = "<group>"; };
 		B83BA61D25EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsBuilder.swift; sourceTree = "<group>"; };
 		B83BA61E25EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsInteractor.swift; sourceTree = "<group>"; };
+		B83BA63625EE7156005BFDAC /* DirectBreedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedRouter.swift; sourceTree = "<group>"; };
+		B83BA63725EE7156005BFDAC /* DirectBreedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectBreedViewController.storyboard; sourceTree = "<group>"; };
+		B83BA63825EE7156005BFDAC /* DirectBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedViewController.swift; sourceTree = "<group>"; };
+		B83BA63925EE7156005BFDAC /* DirectBreedBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedBuilder.swift; sourceTree = "<group>"; };
+		B83BA63A25EE7156005BFDAC /* DirectBreedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedInteractor.swift; sourceTree = "<group>"; };
+		B83BA64725EE718F005BFDAC /* SearchLocalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalRouter.swift; sourceTree = "<group>"; };
+		B83BA64825EE718F005BFDAC /* SearchLocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalViewController.swift; sourceTree = "<group>"; };
+		B83BA64925EE718F005BFDAC /* SearchLocalBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalBuilder.swift; sourceTree = "<group>"; };
+		B83BA64A25EE718F005BFDAC /* SearchLocalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalInteractor.swift; sourceTree = "<group>"; };
+		B83BA65525EE719D005BFDAC /* SearchLocalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchLocalViewController.storyboard; sourceTree = "<group>"; };
+		B83BA65B25EE71BE005BFDAC /* DirectLocalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalRouter.swift; sourceTree = "<group>"; };
+		B83BA65C25EE71BE005BFDAC /* DirectLocalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectLocalViewController.storyboard; sourceTree = "<group>"; };
+		B83BA65D25EE71BE005BFDAC /* DirectLocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalViewController.swift; sourceTree = "<group>"; };
+		B83BA65E25EE71BE005BFDAC /* DirectLocalBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalBuilder.swift; sourceTree = "<group>"; };
+		B83BA65F25EE71BE005BFDAC /* DirectLocalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalInteractor.swift; sourceTree = "<group>"; };
 		CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.release.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E80337E525BEBE34008580CA /* Woofriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woofriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80337E825BEBE34008580CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +247,53 @@
 				B83BA61E25EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift */,
 			);
 			path = SearchDogBreeds;
+			sourceTree = "<group>";
+		};
+		B83BA63425EE7132005BFDAC /* SubRibs */ = {
+			isa = PBXGroup;
+			children = (
+				B83BA65A25EE71A3005BFDAC /* DirectLocal */,
+				B83BA64625EE717C005BFDAC /* SearchLocal  */,
+				B83BA63525EE713F005BFDAC /* DirectBreed */,
+				B83BA62A25EE6CFC005BFDAC /* SearchDogBreeds */,
+			);
+			path = SubRibs;
+			sourceTree = "<group>";
+		};
+		B83BA63525EE713F005BFDAC /* DirectBreed */ = {
+			isa = PBXGroup;
+			children = (
+				B83BA63625EE7156005BFDAC /* DirectBreedRouter.swift */,
+				B83BA63725EE7156005BFDAC /* DirectBreedViewController.storyboard */,
+				B83BA63825EE7156005BFDAC /* DirectBreedViewController.swift */,
+				B83BA63925EE7156005BFDAC /* DirectBreedBuilder.swift */,
+				B83BA63A25EE7156005BFDAC /* DirectBreedInteractor.swift */,
+			);
+			path = DirectBreed;
+			sourceTree = "<group>";
+		};
+		B83BA64625EE717C005BFDAC /* SearchLocal  */ = {
+			isa = PBXGroup;
+			children = (
+				B83BA64725EE718F005BFDAC /* SearchLocalRouter.swift */,
+				B83BA64825EE718F005BFDAC /* SearchLocalViewController.swift */,
+				B83BA64925EE718F005BFDAC /* SearchLocalBuilder.swift */,
+				B83BA64A25EE718F005BFDAC /* SearchLocalInteractor.swift */,
+				B83BA65525EE719D005BFDAC /* SearchLocalViewController.storyboard */,
+			);
+			path = "SearchLocal ";
+			sourceTree = "<group>";
+		};
+		B83BA65A25EE71A3005BFDAC /* DirectLocal */ = {
+			isa = PBXGroup;
+			children = (
+				B83BA65B25EE71BE005BFDAC /* DirectLocalRouter.swift */,
+				B83BA65C25EE71BE005BFDAC /* DirectLocalViewController.storyboard */,
+				B83BA65D25EE71BE005BFDAC /* DirectLocalViewController.swift */,
+				B83BA65E25EE71BE005BFDAC /* DirectLocalBuilder.swift */,
+				B83BA65F25EE71BE005BFDAC /* DirectLocalInteractor.swift */,
+			);
+			path = DirectLocal;
 			sourceTree = "<group>";
 		};
 		E2710CCC056B7B8DBB6799D6 /* Pods */ = {
@@ -387,7 +464,7 @@
 		E872879D25DE7694005575BF /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				B83BA62A25EE6CFC005BFDAC /* SearchDogBreeds */,
+				B83BA63425EE7132005BFDAC /* SubRibs */,
 				E8D3E02A25E21BE1008B87FA /* Xib */,
 				E8D001D525E2042E009D2482 /* Cell */,
 				E872879E25DE76AD005575BF /* SignUpRouter.swift */,
@@ -544,9 +621,11 @@
 				E8D001DC25E206C8009D2482 /* DogNameCollectionViewCell.xib in Resources */,
 				E8D001FC25E2074B009D2482 /* DogPhotoCollectionViewCell.xib in Resources */,
 				E8D001F525E2073A009D2482 /* DogConcernCollectionViewCell.xib in Resources */,
+				B83BA65625EE719D005BFDAC /* SearchLocalViewController.storyboard in Resources */,
 				E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */,
 				E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */,
 				E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */,
+				B83BA66125EE71BE005BFDAC /* DirectLocalViewController.storyboard in Resources */,
 				E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */,
 				E8D0020A25E20788009D2482 /* MyIntroductionCollectionViewCell.xib in Resources */,
 				B83BA62025EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard in Resources */,
@@ -555,6 +634,7 @@
 				E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */,
 				E827426E25E69711003BF6B7 /* WelcomeCell.xib in Resources */,
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
+				B83BA63C25EE7156005BFDAC /* DirectBreedViewController.storyboard in Resources */,
 				E8D0020325E20761009D2482 /* MyInfoCollectionViewCell.xib in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
 			);
@@ -703,19 +783,25 @@
 			files = (
 				E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */,
 				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
+				B83BA64E25EE718F005BFDAC /* SearchLocalInteractor.swift in Sources */,
 				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
+				B83BA64D25EE718F005BFDAC /* SearchLocalBuilder.swift in Sources */,
 				E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */,
 				B83BA61F25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift in Sources */,
 				E818FCE425DCEF910035E306 /* RootViewController.swift in Sources */,
 				B83BA62325EE6CF3005BFDAC /* SearchDogBreedsInteractor.swift in Sources */,
+				B83BA66425EE71BE005BFDAC /* DirectLocalInteractor.swift in Sources */,
 				E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */,
 				E8D001FB25E2074B009D2482 /* DogPhotoCollectionViewCell.swift in Sources */,
 				E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */,
+				B83BA64C25EE718F005BFDAC /* SearchLocalViewController.swift in Sources */,
+				B83BA63D25EE7156005BFDAC /* DirectBreedViewController.swift in Sources */,
 				E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */,
 				E8D3E02C25E21C2D008B87FA /* OtherDogsInfoPopupView.swift in Sources */,
 				E818FE0525DD39EC0035E306 /* BaseViewController.swift in Sources */,
 				E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */,
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
+				B83BA63E25EE7156005BFDAC /* DirectBreedBuilder.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
 				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
 				E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */,
@@ -725,22 +811,28 @@
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,
 				E8D0020225E20761009D2482 /* MyInfoCollectionViewCell.swift in Sources */,
+				B83BA63F25EE7156005BFDAC /* DirectBreedInteractor.swift in Sources */,
 				E818FC9B25DCE9A60035E306 /* AppComponent.swift in Sources */,
 				E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */,
+				B83BA66025EE71BE005BFDAC /* DirectLocalRouter.swift in Sources */,
 				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
 				B83BA62125EE6CF3005BFDAC /* SearchDogBreedsViewController.swift in Sources */,
 				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
 				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
+				B83BA66225EE71BE005BFDAC /* DirectLocalViewController.swift in Sources */,
 				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
 				E8D001DB25E206C8009D2482 /* DogNameCollectionViewCell.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
+				B83BA64B25EE718F005BFDAC /* SearchLocalRouter.swift in Sources */,
 				B83BA62225EE6CF3005BFDAC /* SearchDogBreedsBuilder.swift in Sources */,
 				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
 				E8D001F425E2073A009D2482 /* DogConcernCollectionViewCell.swift in Sources */,
+				B83BA63B25EE7156005BFDAC /* DirectBreedRouter.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
 				E8D0020925E20788009D2482 /* MyIntroductionCollectionViewCell.swift in Sources */,
+				B83BA66325EE71BE005BFDAC /* DirectLocalBuilder.swift in Sources */,
 				E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */,
 				E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */,
 			);
