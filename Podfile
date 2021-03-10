@@ -9,18 +9,25 @@ target 'Woofriend' do
 	pod 'Firebase/Analytics', '7.8.0'
 	pod 'RIBs', '0.9.1'
 
-	#pod 'RxSwift', '4.5.0'
-    	#pod 'RxCocoa', '4.5.0'
+	pod 'RxSwift', '4.5.0'
+	pod 'RxSwiftExt'
+    	pod 'RxCocoa', '4.5.0'
 	pod 'RxGesture', '2.2.0'
 	pod 'RxDataSources', '3.1.0'
+  	pod 'RxOptional'
 	pod 'TagListView'
 
 	# SNS 로그인 - 카톡은 레거시로 직접 프레임워크 넣음
 	pod 'naveridlogin-sdk-ios'
+	pod 'KakaoSDK'
 
 	# 네트워크
 	# KaKao 디펜던시 있음 Alamofire  5.4.1
-	pod 'Moya/RxSwift'
+	pod 'Moya'
+#	pod 'Moya/RxSwift'
+
+	# log
+	pod 'CocoaLumberjack/Swift'
 
   target 'WoofriendTests' do
     inherit! :search_paths

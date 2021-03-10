@@ -60,7 +60,16 @@
 		E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FE5425DD694E0035E306 /* PopUpView.swift */; };
 		E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827426B25E69711003BF6B7 /* WelcomeCell.swift */; };
 		E827426E25E69711003BF6B7 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E827426C25E69711003BF6B7 /* WelcomeCell.xib */; };
-		E8319FEB25F8B1AE00D21451 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8319FEA25F8B1AE00D21451 /* KakaoOpenSDK.framework */; };
+		E831A0B725F8C3B700D21451 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A0B625F8C3B700D21451 /* APIManager.swift */; };
+		E831A17B25F8D84B00D21451 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A17825F8D84B00D21451 /* MoyaProvider+Rx.swift */; };
+		E831A17C25F8D84B00D21451 /* Single+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A17925F8D84B00D21451 /* Single+Response.swift */; };
+		E831A18525F8DD9F00D21451 /* TestRepositoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A18425F8DD9F00D21451 /* TestRepositoy.swift */; };
+		E831A18B25F8DECB00D21451 /* NaverLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A18A25F8DECB00D21451 /* NaverLoginService.swift */; };
+		E831A19325F8E47400D21451 /* TestRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A19225F8E47400D21451 /* TestRespone.swift */; };
+		E831A1C125F8E9D700D21451 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1C025F8E9D700D21451 /* LogFormatter.swift */; };
+		E831A1C925F8E9DE00D21451 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1C825F8E9DE00D21451 /* Logger.swift */; };
+		E831A1CE25F8E9F300D21451 /* DDLogFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */; };
+		E831A1FC25F8EDFF00D21451 /* NaverInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */; };
 		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
 		E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879E25DE76AD005575BF /* SignUpRouter.swift */; };
 		E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879F25DE76AD005575BF /* SignUpViewController.swift */; };
@@ -171,8 +180,16 @@
 		E818FE5425DD694E0035E306 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		E827426B25E69711003BF6B7 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
 		E827426C25E69711003BF6B7 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
-		E8319FEA25F8B1AE00D21451 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
-		E8319FFC25F8B2F900D21451 /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		E831A0B625F8C3B700D21451 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E831A17825F8D84B00D21451 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
+		E831A17925F8D84B00D21451 /* Single+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Response.swift"; sourceTree = "<group>"; };
+		E831A18425F8DD9F00D21451 /* TestRepositoy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoy.swift; sourceTree = "<group>"; };
+		E831A18A25F8DECB00D21451 /* NaverLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginService.swift; sourceTree = "<group>"; };
+		E831A19225F8E47400D21451 /* TestRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRespone.swift; sourceTree = "<group>"; };
+		E831A1C025F8E9D700D21451 /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
+		E831A1C825F8E9DE00D21451 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLogFlag.swift; sourceTree = "<group>"; };
+		E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverInfo.swift; sourceTree = "<group>"; };
 		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E872879E25DE76AD005575BF /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		E872879F25DE76AD005575BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -208,7 +225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				76EE2F2D6CB4FD8C32B9CC4F /* libPods-Woofriend.a in Frameworks */,
-				E8319FEB25F8B1AE00D21451 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +250,6 @@
 		001164F4F2A2A852317CF7E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E8319FEA25F8B1AE00D21451 /* KakaoOpenSDK.framework */,
 				7609B4FF6F81E048E30762B0 /* libPods-Woofriend.a */,
 				48FAA74292C2A29EC8486AF7 /* libPods-Woofriend-WoofriendUITests.a */,
 				46A6B061731BBDA82E7E5CE0 /* libPods-WoofriendTests.a */,
@@ -317,7 +332,6 @@
 		E80337DC25BEBE34008580CA = {
 			isa = PBXGroup;
 			children = (
-				E8319FFC25F8B2F900D21451 /* KakaoOpenSDK-Bridging-Header.h */,
 				E80337E725BEBE34008580CA /* Woofriend */,
 				E803380125BEBE36008580CA /* WoofriendTests */,
 				E803380C25BEBE36008580CA /* WoofriendUITests */,
@@ -340,6 +354,10 @@
 		E80337E725BEBE34008580CA /* Woofriend */ = {
 			isa = PBXGroup;
 			children = (
+				E831A1FA25F8EDED00D21451 /* Respones */,
+				E831A18925F8DEB700D21451 /* Services */,
+				E831A18325F8DD6800D21451 /* Repositories */,
+				E831A0B525F8C39900D21451 /* Manager */,
 				E818FE0925DD3F8E0035E306 /* Extension */,
 				E818FDF225DD38550035E306 /* Utility */,
 				E818FC9925DCE9880035E306 /* AppStart */,
@@ -438,6 +456,7 @@
 		E818FDF225DD38550035E306 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				E831A1BF25F8E9BA00D21451 /* Logger */,
 				E818FDFB25DD39390035E306 /* Storyboard.swift */,
 				E818FE4825DD4F1A0035E306 /* PopUpViewController.swift */,
 				E818FE4925DD4F1A0035E306 /* PopUpView.xib */,
@@ -459,12 +478,57 @@
 		E818FE0925DD3F8E0035E306 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E831A17825F8D84B00D21451 /* MoyaProvider+Rx.swift */,
+				E831A17925F8D84B00D21451 /* Single+Response.swift */,
 				E818FE0A25DD3FB30035E306 /* UIViewController+Extension.swift */,
 				E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */,
 				E872880425DEAAEE005575BF /* UIView+Extension.swift */,
 				E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E831A0B525F8C39900D21451 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E831A0B625F8C3B700D21451 /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E831A18325F8DD6800D21451 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E831A18425F8DD9F00D21451 /* TestRepositoy.swift */,
+				E831A19225F8E47400D21451 /* TestRespone.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E831A18925F8DEB700D21451 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E831A18A25F8DECB00D21451 /* NaverLoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E831A1BF25F8E9BA00D21451 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				E831A1C025F8E9D700D21451 /* LogFormatter.swift */,
+				E831A1C825F8E9DE00D21451 /* Logger.swift */,
+				E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		E831A1FA25F8EDED00D21451 /* Respones */ = {
+			isa = PBXGroup;
+			children = (
+				E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */,
+			);
+			path = Respones;
 			sourceTree = "<group>";
 		};
 		E872879D25DE7694005575BF /* SignUp */ = {
@@ -773,6 +837,7 @@
 				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
 				B83BA64E25EE718F005BFDAC /* SearchLocalInteractor.swift in Sources */,
 				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
+				E831A1C925F8E9DE00D21451 /* Logger.swift in Sources */,
 				B83BA64D25EE718F005BFDAC /* SearchLocalBuilder.swift in Sources */,
 				E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */,
 				B83BA61F25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift in Sources */,
@@ -782,6 +847,7 @@
 				E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */,
 				E8D001FB25E2074B009D2482 /* DogPhotoCollectionViewCell.swift in Sources */,
 				E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */,
+				E831A1CE25F8E9F300D21451 /* DDLogFlag.swift in Sources */,
 				B83BA64C25EE718F005BFDAC /* SearchLocalViewController.swift in Sources */,
 				B83BA63D25EE7156005BFDAC /* DirectBreedViewController.swift in Sources */,
 				E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */,
@@ -791,11 +857,13 @@
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
 				B83BA63E25EE7156005BFDAC /* DirectBreedBuilder.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
+				E831A1FC25F8EDFF00D21451 /* NaverInfo.swift in Sources */,
 				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
 				E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */,
 				E8D001ED25E20728009D2482 /* DogBreadCollectionViewCell.swift in Sources */,
 				E8E1E6CB25E40831008A9485 /* PhotoAddCell.swift in Sources */,
 				E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */,
+				E831A17B25F8D84B00D21451 /* MoyaProvider+Rx.swift in Sources */,
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,
 				E8D0020225E20761009D2482 /* MyInfoCollectionViewCell.swift in Sources */,
@@ -806,8 +874,10 @@
 				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
 				B83BA62125EE6CF3005BFDAC /* SearchDogBreedsViewController.swift in Sources */,
 				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
+				E831A0B725F8C3B700D21451 /* APIManager.swift in Sources */,
 				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
+				E831A18525F8DD9F00D21451 /* TestRepositoy.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
 				B83BA66225EE71BE005BFDAC /* DirectLocalViewController.swift in Sources */,
 				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
@@ -818,8 +888,12 @@
 				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
 				E8D001F425E2073A009D2482 /* DogConcernCollectionViewCell.swift in Sources */,
 				B83BA63B25EE7156005BFDAC /* DirectBreedRouter.swift in Sources */,
+				E831A1C125F8E9D700D21451 /* LogFormatter.swift in Sources */,
+				E831A17C25F8D84B00D21451 /* Single+Response.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
+				E831A19325F8E47400D21451 /* TestRespone.swift in Sources */,
 				E8D0020925E20788009D2482 /* MyIntroductionCollectionViewCell.swift in Sources */,
+				E831A18B25F8DECB00D21451 /* NaverLoginService.swift in Sources */,
 				B83BA66325EE71BE005BFDAC /* DirectLocalBuilder.swift in Sources */,
 				E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */,
 				E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */,
@@ -1007,26 +1081,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"Alamofire\"",
-					"-l\"Differentiator\"",
-					"-l\"FirebaseCore\"",
-					"-l\"FirebaseCoreDiagnostics\"",
-					"-l\"FirebaseInstallations\"",
-					"-l\"GoogleDataTransport\"",
-					"-l\"GoogleUtilities\"",
-					"-l\"Moya\"",
-					"-l\"PromisesObjC\"",
-					"-l\"RIBs\"",
-					"-l\"Result\"",
-					"-l\"RxCocoa\"",
-					"-l\"RxDataSources\"",
-					"-l\"RxGesture\"",
-					"-l\"RxSwift\"",
-					"-l\"TagListView\"",
-					"-l\"c++\"",
-					"-l\"nanopb\"",
-					"-l\"sqlite3\"",
-					"-l\"z\"",
 					"-framework",
 					"\"CoreGraphics\"",
 					"-framework",
@@ -1051,11 +1105,10 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./KakaoOpenSDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1083,26 +1136,6 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-					"-l\"Alamofire\"",
-					"-l\"Differentiator\"",
-					"-l\"FirebaseCore\"",
-					"-l\"FirebaseCoreDiagnostics\"",
-					"-l\"FirebaseInstallations\"",
-					"-l\"GoogleDataTransport\"",
-					"-l\"GoogleUtilities\"",
-					"-l\"Moya\"",
-					"-l\"PromisesObjC\"",
-					"-l\"RIBs\"",
-					"-l\"Result\"",
-					"-l\"RxCocoa\"",
-					"-l\"RxDataSources\"",
-					"-l\"RxGesture\"",
-					"-l\"RxSwift\"",
-					"-l\"TagListView\"",
-					"-l\"c++\"",
-					"-l\"nanopb\"",
-					"-l\"sqlite3\"",
-					"-l\"z\"",
 					"-framework",
 					"\"CoreGraphics\"",
 					"-framework",
@@ -1127,11 +1160,10 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "./KakaoOpenSDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

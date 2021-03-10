@@ -14,7 +14,14 @@ protocol LoggedOutDependency: Dependency {
 
 final class LoggedOutComponent: Component<LoggedOutDependency>, SignUpDependency {
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    // MARK: #네트워크 1. LoggedOut 여기서 생성되는 컴포넌트를 생성
+    var networkTest: TestResponeType {
+        return shared {
+            let repository = TestRepositoy(apiClient: APIClientManager(plugins: []))
+            return TestRespone(repository: repository)
+        }
+        
+    }
 }
 
 // MARK: - Builder
@@ -32,7 +39,7 @@ final class LoggedOutBuilder: Builder<LoggedOutDependency>, LoggedOutBuildable {
     func build(withListener listener: LoggedOutListener) -> LoggedOutRouting {
         let component = LoggedOutComponent(dependency: dependency)
         let viewController = LoggedOutViewController.instantiate()
-        let interactor = LoggedOutInteractor(presenter: viewController)
+        let interactor = LoggedOutInteractor(presenter: viewController, test: component.networkTest)
         interactor.listener = listener
         
         let signUpBuilder = SignUpBuilder(dependency: component)

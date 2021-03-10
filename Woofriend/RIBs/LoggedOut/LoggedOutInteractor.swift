@@ -34,10 +34,15 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     weak var router: LoggedOutRouting?
     weak var listener: LoggedOutListener?
     weak var naverLogin = NaverThirdPartyLoginConnection.getSharedInstance()
+    
+    // 여기서 사용되는 컴포넌트?
+    private let test: TestResponeType
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: LoggedOutPresentable) {
+    init(presenter: LoggedOutPresentable, test: TestResponeType) {
+        self.test = test
+        
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -74,6 +79,22 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     
     func closeSignUp() {
         router?.detachToSignUpRIB()
+    }
+    
+    func testtest(auth: String) {
+        let a = test.test(auth: auth).asObservable()
+        
+        
+        a.subscribe { (res) in
+            print("""
+                \(res.element?.response.id)
+                \(res.element?.response.nickname)
+                \(res.element?.response.gender)
+                \(res.element?.response.name)
+                \(res.element?.response.birthday)
+                """)
+        }
+        
     }
 
 }

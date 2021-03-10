@@ -10,6 +10,9 @@ import CoreData
 import Firebase
 import RIBs
 import NaverThirdPartyLogin
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -51,8 +54,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
              */
         }
         
-        if KOSession.isKakaoAccountLoginCallback(url.absoluteURL) {
-            return KOSession.handleOpen(url)
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url)
         }
         
         return true
@@ -75,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func kakaoLogin() {
-        
+        KakaoSDKCommon.initSDK(appKey: "a05e3ce686fef3f616ff4d92d857f5fb")
     }
     
     // MARK: - Core Data stack

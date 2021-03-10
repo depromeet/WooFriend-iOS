@@ -9,11 +9,13 @@ import RIBs
 import RxSwift
 import UIKit
 import NaverThirdPartyLogin
+import KakaoSDKUser
 
 protocol LoggedOutPresentableListener: class {
     func loginAppleID()
     func loginKakaoID()
     func loginNaverID()
+    func testtest(auth: String)
 }
 
 final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, LoggedOutViewControllable {
@@ -77,9 +79,9 @@ extension LoggedOutViewController: PopUpViewControllerListener {
     private func bindUI() {
         appleLoginButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
-//                let alert = PopUpViewController.instantiate()
-//                alert.modalPresentationStyle = .overCurrentContext
-//                self?.present(alert, animated: false, completion: nil)
+                //                let alert = PopUpViewController.instantiate()
+                //                alert.modalPresentationStyle = .overCurrentContext
+                //                self?.present(alert, animated: false, completion: nil)
                 self?.listener?.loginAppleID()
             })
             .disposed(by: disposeBag)
@@ -87,21 +89,35 @@ extension LoggedOutViewController: PopUpViewControllerListener {
         
         kakaoLoginButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
-                guard let self = self else { return }
-                guard let session = KOSession.shared() else { return }
                 
-                if session.isOpen() {
-                    session.close()
-                }
-                
-                session.open { (err) in
-                    if err != nil || !session.isOpen() { return }
-                    KOSessionTask.userMeTask { (err, user) in
-                        guard let user = user else { return }
-                        print(user)
+                if (UserApi.isKakaoTalkLoginAvailable()) {
+                    UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                        if let error = error {
+                            print(error)
+                        }
+                        else {
+                            print("loginWithKakaoTalk() success.")
+                            
+                            //do something
+                            _ = oauthToken
+                        }
                     }
                 }
-                
+                //                guard let self = self else { return }
+                //                guard let session = KOSession.shared() else { return }
+                //
+                //                if session.isOpen() {
+                //                    session.close()
+                //                }
+                //
+                //                session.open { (err) in
+                //                    if err != nil || !session.isOpen() { return }
+                //                    KOSessionTask.userMeTask { (err, user) in
+                //                        guard let user = user else { return }
+                //                        print(user)
+                //                    }
+                //                }
+                //
                 
                 
                 // self?.listener?.loginKakaoID()
@@ -114,7 +130,7 @@ extension LoggedOutViewController: PopUpViewControllerListener {
                 guard let self = self else { return }
                 
                 self.naverLogin?.requestThirdPartyLogin()
-//                self?.listener?.loginNaverID()
+                //                self?.listener?.loginNaverID()
             })
             .disposed(by: disposeBag)
     }
@@ -128,11 +144,8 @@ extension LoggedOutViewController: NaverThirdPartyLoginConnectionDelegate {
          AppDelegate, NaverThirdPartyLoginConnection.getSharedInstance()?.application
          통해서 accessToken, tokenType 토근이 파서 되서 데이터가 들어감
          */
- 
-        
-        print(naverLogin?.accessToken)
-        print(naverLogin?.tokenType)
-        print()
+        print("\(naverLogin?.accessToken ?? "") \(naverLogin?.tokenType ?? "")")
+        self.listener?.testtest(auth: "\(naverLogin?.tokenType ?? "") \(naverLogin?.accessToken ?? "")")
     }
     
     func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
