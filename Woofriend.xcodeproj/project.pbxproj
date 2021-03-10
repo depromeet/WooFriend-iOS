@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */; };
-		A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */; };
+		516E5EB803959A1A9A0790D7 /* libPods-Woofriend-WoofriendUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FAA74292C2A29EC8486AF7 /* libPods-Woofriend-WoofriendUITests.a */; };
+		76EE2F2D6CB4FD8C32B9CC4F /* libPods-Woofriend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7609B4FF6F81E048E30762B0 /* libPods-Woofriend.a */; };
+		98B2DA41D654AA6EC7C40C06 /* libPods-WoofriendTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A6B061731BBDA82E7E5CE0 /* libPods-WoofriendTests.a */; };
 		B83BA61F25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61A25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift */; };
 		B83BA62025EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA61B25EE6CF3005BFDAC /* SearchDogBreedsViewController.storyboard */; };
 		B83BA62125EE6CF3005BFDAC /* SearchDogBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA61C25EE6CF3005BFDAC /* SearchDogBreedsViewController.swift */; };
@@ -59,6 +60,7 @@
 		E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FE5425DD694E0035E306 /* PopUpView.swift */; };
 		E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827426B25E69711003BF6B7 /* WelcomeCell.swift */; };
 		E827426E25E69711003BF6B7 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E827426C25E69711003BF6B7 /* WelcomeCell.xib */; };
+		E8319FEB25F8B1AE00D21451 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8319FEA25F8B1AE00D21451 /* KakaoOpenSDK.framework */; };
 		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
 		E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879E25DE76AD005575BF /* SignUpRouter.swift */; };
 		E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879F25DE76AD005575BF /* SignUpViewController.swift */; };
@@ -85,7 +87,6 @@
 		E8D3E03725E21C44008B87FA /* OtherDogsInfoPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D3E03625E21C44008B87FA /* OtherDogsInfoPopupView.xib */; };
 		E8E1E6CB25E40831008A9485 /* PhotoAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */; };
 		E8E1E6CC25E40831008A9485 /* PhotoAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */; };
-		FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,10 +108,10 @@
 
 /* Begin PBXFileReference section */
 		1021EC999F8855FD078DF99C /* Pods-WoofriendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.release.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.release.xcconfig"; sourceTree = "<group>"; };
-		16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WoofriendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A6B061731BBDA82E7E5CE0 /* libPods-WoofriendTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WoofriendTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FAA74292C2A29EC8486AF7 /* libPods-Woofriend-WoofriendUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Woofriend-WoofriendUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5D66928C143E89B1DEC1F5 /* Pods-Woofriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.release.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.release.xcconfig"; sourceTree = "<group>"; };
-		4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend_WoofriendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7609B4FF6F81E048E30762B0 /* libPods-Woofriend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Woofriend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5586BE55B323D5A7BC9DC /* Pods-Woofriend-WoofriendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B09272E57C9BFC1751A5BF2D /* Pods-Woofriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.debug.xcconfig"; sourceTree = "<group>"; };
 		B83BA61A25EE6CF3005BFDAC /* SearchDogBreedsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsRouter.swift; sourceTree = "<group>"; };
@@ -170,6 +171,8 @@
 		E818FE5425DD694E0035E306 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		E827426B25E69711003BF6B7 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
 		E827426C25E69711003BF6B7 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
+		E8319FEA25F8B1AE00D21451 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		E8319FFC25F8B2F900D21451 /* KakaoOpenSDK-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KakaoOpenSDK-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E872879E25DE76AD005575BF /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		E872879F25DE76AD005575BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -204,7 +207,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */,
+				76EE2F2D6CB4FD8C32B9CC4F /* libPods-Woofriend.a in Frameworks */,
+				E8319FEB25F8B1AE00D21451 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */,
+				98B2DA41D654AA6EC7C40C06 /* libPods-WoofriendTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */,
+				516E5EB803959A1A9A0790D7 /* libPods-Woofriend-WoofriendUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,9 +234,10 @@
 		001164F4F2A2A852317CF7E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */,
-				8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */,
-				16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */,
+				E8319FEA25F8B1AE00D21451 /* KakaoOpenSDK.framework */,
+				7609B4FF6F81E048E30762B0 /* libPods-Woofriend.a */,
+				48FAA74292C2A29EC8486AF7 /* libPods-Woofriend-WoofriendUITests.a */,
+				46A6B061731BBDA82E7E5CE0 /* libPods-WoofriendTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 		E80337DC25BEBE34008580CA = {
 			isa = PBXGroup;
 			children = (
+				E8319FFC25F8B2F900D21451 /* KakaoOpenSDK-Bridging-Header.h */,
 				E80337E725BEBE34008580CA /* Woofriend */,
 				E803380125BEBE36008580CA /* WoofriendTests */,
 				E803380C25BEBE36008580CA /* WoofriendUITests */,
@@ -538,7 +544,6 @@
 				E80337FA25BEBE36008580CA /* Sources */,
 				E80337FB25BEBE36008580CA /* Frameworks */,
 				E80337FC25BEBE36008580CA /* Resources */,
-				E8171814D0065CE4EEDFDD37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -755,23 +760,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8171814D0065CE4EEDFDD37 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1005,6 +993,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4693VAH9ZM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = woofriend/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1012,8 +1004,58 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Alamofire\"",
+					"-l\"Differentiator\"",
+					"-l\"FirebaseCore\"",
+					"-l\"FirebaseCoreDiagnostics\"",
+					"-l\"FirebaseInstallations\"",
+					"-l\"GoogleDataTransport\"",
+					"-l\"GoogleUtilities\"",
+					"-l\"Moya\"",
+					"-l\"PromisesObjC\"",
+					"-l\"RIBs\"",
+					"-l\"Result\"",
+					"-l\"RxCocoa\"",
+					"-l\"RxDataSources\"",
+					"-l\"RxGesture\"",
+					"-l\"RxSwift\"",
+					"-l\"TagListView\"",
+					"-l\"c++\"",
+					"-l\"nanopb\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"NaverThirdPartyLogin\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1027,6 +1069,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4693VAH9ZM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = woofriend/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1034,8 +1080,58 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Alamofire\"",
+					"-l\"Differentiator\"",
+					"-l\"FirebaseCore\"",
+					"-l\"FirebaseCoreDiagnostics\"",
+					"-l\"FirebaseInstallations\"",
+					"-l\"GoogleDataTransport\"",
+					"-l\"GoogleUtilities\"",
+					"-l\"Moya\"",
+					"-l\"PromisesObjC\"",
+					"-l\"RIBs\"",
+					"-l\"Result\"",
+					"-l\"RxCocoa\"",
+					"-l\"RxDataSources\"",
+					"-l\"RxGesture\"",
+					"-l\"RxSwift\"",
+					"-l\"TagListView\"",
+					"-l\"c++\"",
+					"-l\"nanopb\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"NaverThirdPartyLogin\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./KakaoOpenSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

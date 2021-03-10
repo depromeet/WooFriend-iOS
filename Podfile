@@ -1,19 +1,26 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'Woofriend' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  use_modular_headers!
 
   # Pods for Woofriend
-	pod 'Firebase/Analytics'
-	pod 'RIBs' #, '~> 0.9.2'
-	pod 'RxSwift'
-	pod 'RxRelay'
-	pod 'RxCocoa'
-	pod 'RxGesture'
-	pod 'RxDataSources'#, '~> 4.0'
-	pod 'TagListView', '~> 1.0'
+	pod 'Firebase/Analytics', '7.8.0'
+	pod 'RIBs', '0.9.1'
+
+	#pod 'RxSwift', '4.5.0'
+    	#pod 'RxCocoa', '4.5.0'
+	pod 'RxGesture', '2.2.0'
+	pod 'RxDataSources', '3.1.0'
+	pod 'TagListView'
+
+	# SNS 로그인 - 카톡은 레거시로 직접 프레임워크 넣음
+	pod 'naveridlogin-sdk-ios'
+
+	# 네트워크
+	# KaKao 디펜던시 있음 Alamofire  5.4.1
+	pod 'Moya/RxSwift'
 
   target 'WoofriendTests' do
     inherit! :search_paths

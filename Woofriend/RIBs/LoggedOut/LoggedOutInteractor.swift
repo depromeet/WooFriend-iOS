@@ -7,6 +7,7 @@
 
 import RIBs
 import RxSwift
+import NaverThirdPartyLogin
 
 protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
@@ -32,6 +33,7 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     
     weak var router: LoggedOutRouting?
     weak var listener: LoggedOutListener?
+    weak var naverLogin = NaverThirdPartyLoginConnection.getSharedInstance()
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -43,6 +45,8 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     override func didBecomeActive() {
         super.didBecomeActive()
         // TODO: Implement business logic here.
+        
+//        naverLogin?.delegate = self
     }
 
     override func willResignActive() {

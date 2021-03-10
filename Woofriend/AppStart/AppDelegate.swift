@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import Firebase
 import RIBs
+import NaverThirdPartyLogin
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         self.window?.overrideUserInterfaceStyle = .light
         
+        // SNS 로그인
+        naverLogin()
+        kakaoLogin()
+        
         /*
          AppComponent가 주입된 Root RIB을 생성하고
          Router tree의 시작점 Root RIB으로 설정하고
@@ -31,6 +36,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchRouter.launchFromWindow(window)
         
         return true
+    }
+    
+    // URL를 열때
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        //
+        NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
+        // 네이버 로그인 스킴
+        if url.absoluteString.hasPrefix("naverlogin://") {
+            let scanner = Scanner(string: url.absoluteString)
+            /* 수신 스킴 예시
+             naverlogin://thirdPartyLoginResult?version=2&code=0&authCode=TlHFy1sI8Pxz93MlLk
+             
+             */
+        }
+        
+        if KOSession.isKakaoAccountLoginCallback(url.absoluteURL) {
+            return KOSession.handleOpen(url)
+        }
+        
+        return true
+    }
+    
+    private func naverLogin() {
+        let naverLogionInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+        // 네이버 앱으로 인증
+        naverLogionInstance?.isInAppOauthEnable = true
+        // 웹으로 인증
+        naverLogionInstance?.isNaverAppOauthEnable = true
+        // 세로모드만
+        naverLogionInstance?.setOnlyPortraitSupportInIphone(true)
+        
+        // developers.naver.com 내 앱 설정
+        naverLogionInstance?.serviceUrlScheme = "naverlogin"
+        naverLogionInstance?.consumerKey = "bcAnKOWT51cvDGNrhulw"
+        naverLogionInstance?.consumerSecret = "WrMY7L0_yh"
+        naverLogionInstance?.appName = "같이가개"
+    }
+    
+    private func kakaoLogin() {
+        
     }
     
     // MARK: - Core Data stack
