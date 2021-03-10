@@ -10,11 +10,9 @@ target 'Woofriend' do
 	pod 'RIBs', '0.9.1'
 
 	pod 'RxSwift', '4.5.0'
-	pod 'RxSwiftExt'
     	pod 'RxCocoa', '4.5.0'
 	pod 'RxGesture', '2.2.0'
 	pod 'RxDataSources', '3.1.0'
-  	pod 'RxOptional'
 	pod 'TagListView'
 
 	# SNS 로그인 - 카톡은 레거시로 직접 프레임워크 넣음

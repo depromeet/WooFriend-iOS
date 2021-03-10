@@ -25,7 +25,4 @@ final class TestRepositoy: TestRepositoyType {
         return self.apiClient.request(NaverLoginService.searchUser(auth)).map(NaverInfo.self)
             
     }
-//            .request(NaverLoginService.searchUser(auth)
-//                .map(Any.self)
-//
 }

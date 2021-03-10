@@ -8,6 +8,7 @@
 import RIBs
 import RxSwift
 import NaverThirdPartyLogin
+import KakaoSDKUser
 
 protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
@@ -62,9 +63,11 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     // MARK: - LoggedOutPresentableListener
     func loginAppleID() {
         print("=======  애플로그인")
+        
+        router?.routeToSignUpRIB()
     }
     
-    func loginKakaoID() {
+    func getKakaoUserInfo() {
         print("=======  카카오로그인")
         print("=======  회원가입이 안된 상태")
         
@@ -81,20 +84,23 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
         router?.detachToSignUpRIB()
     }
     
-    func testtest(auth: String) {
+    func getNaverUserInfo(auth: String) {
         let a = test.test(auth: auth).asObservable()
         
         
-        a.subscribe { (res) in
+        // TODO: 다음 화면으로 컴포넌트로 넘겨서 처리하는게 좋겠지?
+        a.subscribe { [weak self] (res) in
             print("""
                 \(res.element?.response.id)
                 \(res.element?.response.nickname)
                 \(res.element?.response.gender)
                 \(res.element?.response.name)
                 \(res.element?.response.birthday)
+                \(res.element?.response.birthyear)
                 """)
+            self?.router?.routeToSignUpRIB()
         }
-        
+
     }
 
 }

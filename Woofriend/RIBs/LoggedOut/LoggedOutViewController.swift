@@ -13,9 +13,9 @@ import KakaoSDKUser
 
 protocol LoggedOutPresentableListener: class {
     func loginAppleID()
-    func loginKakaoID()
     func loginNaverID()
-    func testtest(auth: String)
+    func getKakaoUserInfo()
+    func getNaverUserInfo(auth: String)
 }
 
 final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, LoggedOutViewControllable {
@@ -97,30 +97,28 @@ extension LoggedOutViewController: PopUpViewControllerListener {
                         }
                         else {
                             print("loginWithKakaoTalk() success.")
+                            UserApi.shared.me() {(user, error) in
+                                if let error = error {
+                                    print(error)
+                                }
+                                else {
+                                    print("me() success.")
+                                    print(user?.properties?["profile_image"])
+                                    print(user?.kakaoAccount?.profile?.nickname)
+                                                                       
+//                                        \(res.element?.response.id)
+//                                        \(res.element?.response.nickname)
+//                                        \(res.element?.response.gender)
+//                                        \(res.element?.response.name)
+//                                        \(res.element?.response.birthday)
+                                    //do something
+                                    self?.listener?.getKakaoUserInfo()
+                                }
+                            }
                             
-                            //do something
-                            _ = oauthToken
                         }
                     }
                 }
-                //                guard let self = self else { return }
-                //                guard let session = KOSession.shared() else { return }
-                //
-                //                if session.isOpen() {
-                //                    session.close()
-                //                }
-                //
-                //                session.open { (err) in
-                //                    if err != nil || !session.isOpen() { return }
-                //                    KOSessionTask.userMeTask { (err, user) in
-                //                        guard let user = user else { return }
-                //                        print(user)
-                //                    }
-                //                }
-                //
-                
-                
-                // self?.listener?.loginKakaoID()
             })
             .disposed(by: disposeBag)
         
@@ -130,7 +128,6 @@ extension LoggedOutViewController: PopUpViewControllerListener {
                 guard let self = self else { return }
                 
                 self.naverLogin?.requestThirdPartyLogin()
-                //                self?.listener?.loginNaverID()
             })
             .disposed(by: disposeBag)
     }
@@ -145,7 +142,7 @@ extension LoggedOutViewController: NaverThirdPartyLoginConnectionDelegate {
          통해서 accessToken, tokenType 토근이 파서 되서 데이터가 들어감
          */
         print("\(naverLogin?.accessToken ?? "") \(naverLogin?.tokenType ?? "")")
-        self.listener?.testtest(auth: "\(naverLogin?.tokenType ?? "") \(naverLogin?.accessToken ?? "")")
+        self.listener?.getNaverUserInfo(auth: "\(naverLogin?.tokenType ?? "") \(naverLogin?.accessToken ?? "")")
     }
     
     func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {

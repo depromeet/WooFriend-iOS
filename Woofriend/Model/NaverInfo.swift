@@ -11,7 +11,7 @@ struct NaverInfo {
 
     let resultcode: String
     let message: String
-    let response: TESTT
+    let response: NaverInfoResponse
 }
 
 // MARK: - Decodable
@@ -35,16 +35,17 @@ extension NaverInfo: Hashable {
     }
 }
 
-struct TESTT {
+struct NaverInfoResponse {
     let id: String?
     let nickname: String?
     let profile_image: String?
     let gender: String?
     let name: String?
     let birthday: String?
+    let birthyear: String?
 }
 
-extension TESTT: Decodable {
+extension NaverInfoResponse: Decodable {
 
     private enum CodingKeys: String, CodingKey {
         case id
@@ -53,12 +54,13 @@ extension TESTT: Decodable {
         case gender
         case name
         case birthday
+        case birthyear
     }
 }
 
-extension TESTT: Hashable {
+extension NaverInfoResponse: Hashable {
 
-    static func == (_ lhs: TESTT, _ rhs: TESTT) -> Bool {
+    static func == (_ lhs: NaverInfoResponse, _ rhs: NaverInfoResponse) -> Bool {
         return lhs.id == rhs.id
     }
 

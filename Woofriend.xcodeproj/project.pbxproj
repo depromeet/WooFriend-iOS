@@ -354,7 +354,7 @@
 		E80337E725BEBE34008580CA /* Woofriend */ = {
 			isa = PBXGroup;
 			children = (
-				E831A1FA25F8EDED00D21451 /* Respones */,
+				E831A1FA25F8EDED00D21451 /* Model */,
 				E831A18925F8DEB700D21451 /* Services */,
 				E831A18325F8DD6800D21451 /* Repositories */,
 				E831A0B525F8C39900D21451 /* Manager */,
@@ -523,12 +523,12 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
-		E831A1FA25F8EDED00D21451 /* Respones */ = {
+		E831A1FA25F8EDED00D21451 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */,
 			);
-			path = Respones;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E872879D25DE7694005575BF /* SignUp */ = {

@@ -120,18 +120,7 @@ PODS:
   - RxGesture (2.2.0):
     - RxCocoa (~> 4.5)
     - RxSwift (~> 4.5)
-  - RxOptional (3.6.2):
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
-  - RxSwiftExt (3.4.0):
-    - RxSwiftExt/Core (= 3.4.0)
-    - RxSwiftExt/RxCocoa (= 3.4.0)
-  - RxSwiftExt/Core (3.4.0):
-    - RxSwift (~> 4.0)
-  - RxSwiftExt/RxCocoa (3.4.0):
-    - RxCocoa (~> 4.0)
-    - RxSwiftExt/Core
   - TagListView (1.4.1)
 
 DEPENDENCIES:
@@ -146,9 +135,7 @@ DEPENDENCIES:
   - RxCocoa (= 4.5.0)
   - RxDataSources (= 3.1.0)
   - RxGesture (= 2.2.0)
-  - RxOptional
   - RxSwift (= 4.5.0)
-  - RxSwiftExt
   - TagListView
 
 SPEC REPOS:
@@ -183,9 +170,7 @@ SPEC REPOS:
     - RxCocoa
     - RxDataSources
     - RxGesture
-    - RxOptional
     - RxSwift
-    - RxSwiftExt
     - TagListView
 
 SPEC CHECKSUMS:
@@ -219,11 +204,9 @@ SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxGesture: c1b7bf17166b0ef9d642a9510f8bac5785f18990
-  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
-  RxSwiftExt: 01f8ecbeeb355698e9c75365ebe908b00dacf45d
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
 
-PODFILE CHECKSUM: 262ab5dbb34f24cbfd41553452f0a237a9f41816
+PODFILE CHECKSUM: c6ce28a120008ebd36445a2687bc9db6a0b8854f
 
 COCOAPODS: 1.10.1
