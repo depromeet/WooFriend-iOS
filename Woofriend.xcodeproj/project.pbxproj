@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */; };
-		A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */; };
+		516E5EB803959A1A9A0790D7 /* libPods-Woofriend-WoofriendUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FAA74292C2A29EC8486AF7 /* libPods-Woofriend-WoofriendUITests.a */; };
+		76EE2F2D6CB4FD8C32B9CC4F /* libPods-Woofriend.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7609B4FF6F81E048E30762B0 /* libPods-Woofriend.a */; };
+		98B2DA41D654AA6EC7C40C06 /* libPods-WoofriendTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A6B061731BBDA82E7E5CE0 /* libPods-WoofriendTests.a */; };
 		E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337E825BEBE34008580CA /* AppDelegate.swift */; };
 		E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E80337F125BEBE34008580CA /* woofriend.xcdatamodeld */; };
 		E80337F525BEBE36008580CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80337F425BEBE36008580CA /* Assets.xcassets */; };
@@ -37,12 +38,64 @@
 		E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E818FE4925DD4F1A0035E306 /* PopUpView.xib */; };
 		E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E818FE4F25DD673D0035E306 /* PopUpViewController.storyboard */; };
 		E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FE5425DD694E0035E306 /* PopUpView.swift */; };
+		E831A0B725F8C3B700D21451 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A0B625F8C3B700D21451 /* APIManager.swift */; };
+		E831A17B25F8D84B00D21451 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A17825F8D84B00D21451 /* MoyaProvider+Rx.swift */; };
+		E831A17C25F8D84B00D21451 /* Single+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A17925F8D84B00D21451 /* Single+Response.swift */; };
+		E831A18525F8DD9F00D21451 /* TestRepositoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A18425F8DD9F00D21451 /* TestRepositoy.swift */; };
+		E831A18B25F8DECB00D21451 /* NaverLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A18A25F8DECB00D21451 /* NaverLoginService.swift */; };
+		E831A19325F8E47400D21451 /* TestRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A19225F8E47400D21451 /* TestRespone.swift */; };
+		E831A1C125F8E9D700D21451 /* LogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1C025F8E9D700D21451 /* LogFormatter.swift */; };
+		E831A1C925F8E9DE00D21451 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1C825F8E9DE00D21451 /* Logger.swift */; };
+		E831A1CE25F8E9F300D21451 /* DDLogFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */; };
+		E831A1FC25F8EDFF00D21451 /* NaverInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */; };
 		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
+		E8659FB225F912FD0036A2AF /* DogNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */; };
+		E8659FB325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */; };
+		E8659FB425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */; };
+		E8659FB525F912FD0036A2AF /* DogConcernCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA525F912FD0036A2AF /* DogConcernCollectionViewCell.xib */; };
+		E8659FB625F912FD0036A2AF /* PhotoAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA625F912FD0036A2AF /* PhotoAddCell.xib */; };
+		E8659FB725F912FD0036A2AF /* MyInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA725F912FD0036A2AF /* MyInfoCollectionViewCell.xib */; };
+		E8659FB825F912FD0036A2AF /* DogBreadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA825F912FD0036A2AF /* DogBreadCollectionViewCell.swift */; };
+		E8659FB925F912FD0036A2AF /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA925F912FD0036A2AF /* WelcomeCell.xib */; };
+		E8659FBA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift */; };
+		E8659FBB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift */; };
+		E8659FBC25F912FD0036A2AF /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAC25F912FD0036A2AF /* WelcomeCell.swift */; };
+		E8659FBD25F912FD0036A2AF /* DogNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FAD25F912FD0036A2AF /* DogNameCollectionViewCell.xib */; };
+		E8659FBE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FAE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib */; };
+		E8659FBF25F912FD0036A2AF /* PhotoAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAF25F912FD0036A2AF /* PhotoAddCell.swift */; };
+		E8659FC025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FB025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift */; };
+		E8659FC125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FB125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib */; };
+		E8659FDE25F9130E0036A2AF /* DirectLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FC725F9130E0036A2AF /* DirectLocalBuilder.swift */; };
+		E8659FDF25F9130E0036A2AF /* DirectLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FC825F9130E0036A2AF /* DirectLocalRouter.swift */; };
+		E8659FE025F9130E0036A2AF /* DirectLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FC925F9130E0036A2AF /* DirectLocalInteractor.swift */; };
+		E8659FE125F9130E0036A2AF /* DirectLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FCA25F9130E0036A2AF /* DirectLocalViewController.swift */; };
+		E8659FE225F9130E0036A2AF /* DirectLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8659FCB25F9130E0036A2AF /* DirectLocalViewController.storyboard */; };
+		E8659FE325F9130E0036A2AF /* DirectBreedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8659FCD25F9130E0036A2AF /* DirectBreedViewController.storyboard */; };
+		E8659FE425F9130E0036A2AF /* DirectBreedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FCE25F9130E0036A2AF /* DirectBreedRouter.swift */; };
+		E8659FE525F9130E0036A2AF /* DirectBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FCF25F9130E0036A2AF /* DirectBreedViewController.swift */; };
+		E8659FE625F9130E0036A2AF /* DirectBreedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD025F9130E0036A2AF /* DirectBreedBuilder.swift */; };
+		E8659FE725F9130E0036A2AF /* DirectBreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD125F9130E0036A2AF /* DirectBreedInteractor.swift */; };
+		E8659FE825F9130E0036A2AF /* SearchLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD325F9130E0036A2AF /* SearchLocalRouter.swift */; };
+		E8659FE925F9130E0036A2AF /* SearchLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD425F9130E0036A2AF /* SearchLocalBuilder.swift */; };
+		E8659FEA25F9130E0036A2AF /* SearchLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD525F9130E0036A2AF /* SearchLocalInteractor.swift */; };
+		E8659FEB25F9130E0036A2AF /* SearchLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8659FD625F9130E0036A2AF /* SearchLocalViewController.storyboard */; };
+		E8659FEC25F9130E0036A2AF /* SearchLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD725F9130E0036A2AF /* SearchLocalViewController.swift */; };
+		E8659FED25F9130E0036A2AF /* SearchDogBreedsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8659FD925F9130E0036A2AF /* SearchDogBreedsViewController.storyboard */; };
+		E8659FEE25F9130E0036A2AF /* SearchDogBreedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FDA25F9130E0036A2AF /* SearchDogBreedsRouter.swift */; };
+		E8659FEF25F9130E0036A2AF /* SearchDogBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FDB25F9130E0036A2AF /* SearchDogBreedsViewController.swift */; };
+		E8659FF025F9130E0036A2AF /* SearchDogBreedsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FDC25F9130E0036A2AF /* SearchDogBreedsInteractor.swift */; };
+		E8659FF125F9130E0036A2AF /* SearchDogBreedsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FDD25F9130E0036A2AF /* SearchDogBreedsBuilder.swift */; };
+		E8659FFB25F913190036A2AF /* OtherDogsInfoPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FF925F913190036A2AF /* OtherDogsInfoPopupView.xib */; };
+		E8659FFC25F913190036A2AF /* OtherDogsInfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FFA25F913190036A2AF /* OtherDogsInfoPopupView.swift */; };
+		E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879E25DE76AD005575BF /* SignUpRouter.swift */; };
+		E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879F25DE76AD005575BF /* SignUpViewController.swift */; };
+		E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A025DE76AD005575BF /* SignUpBuilder.swift */; };
+		E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A125DE76AD005575BF /* SignUpInteractor.swift */; };
+		E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */; };
 		E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */; };
 		E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872880425DEAAEE005575BF /* UIView+Extension.swift */; };
 		E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */; };
 		E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3E02225E21AD3008B87FA /* BaseCollectionViewCell.swift */; };
-		FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +117,10 @@
 
 /* Begin PBXFileReference section */
 		1021EC999F8855FD078DF99C /* Pods-WoofriendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.release.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.release.xcconfig"; sourceTree = "<group>"; };
-		16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WoofriendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A6B061731BBDA82E7E5CE0 /* libPods-WoofriendTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WoofriendTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FAA74292C2A29EC8486AF7 /* libPods-Woofriend-WoofriendUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Woofriend-WoofriendUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5D66928C143E89B1DEC1F5 /* Pods-Woofriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.release.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.release.xcconfig"; sourceTree = "<group>"; };
-		4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend_WoofriendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7609B4FF6F81E048E30762B0 /* libPods-Woofriend.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Woofriend.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5586BE55B323D5A7BC9DC /* Pods-Woofriend-WoofriendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B09272E57C9BFC1751A5BF2D /* Pods-Woofriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.debug.xcconfig"; sourceTree = "<group>"; };
 		CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.release.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,7 +158,60 @@
 		E818FE4925DD4F1A0035E306 /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
 		E818FE4F25DD673D0035E306 /* PopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpViewController.storyboard; sourceTree = "<group>"; };
 		E818FE5425DD694E0035E306 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		E831A0B625F8C3B700D21451 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E831A17825F8D84B00D21451 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
+		E831A17925F8D84B00D21451 /* Single+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Response.swift"; sourceTree = "<group>"; };
+		E831A18425F8DD9F00D21451 /* TestRepositoy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRepositoy.swift; sourceTree = "<group>"; };
+		E831A18A25F8DECB00D21451 /* NaverLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginService.swift; sourceTree = "<group>"; };
+		E831A19225F8E47400D21451 /* TestRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRespone.swift; sourceTree = "<group>"; };
+		E831A1C025F8E9D700D21451 /* LogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFormatter.swift; sourceTree = "<group>"; };
+		E831A1C825F8E9DE00D21451 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLogFlag.swift; sourceTree = "<group>"; };
+		E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverInfo.swift; sourceTree = "<group>"; };
 		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogNameCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		E8659FA525F912FD0036A2AF /* DogConcernCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogConcernCollectionViewCell.xib; sourceTree = "<group>"; };
+		E8659FA625F912FD0036A2AF /* PhotoAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoAddCell.xib; sourceTree = "<group>"; };
+		E8659FA725F912FD0036A2AF /* MyInfoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		E8659FA825F912FD0036A2AF /* DogBreadCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogBreadCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8659FA925F912FD0036A2AF /* WelcomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
+		E8659FAA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogConcernCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8659FAB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8659FAC25F912FD0036A2AF /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
+		E8659FAD25F912FD0036A2AF /* DogNameCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogNameCollectionViewCell.xib; sourceTree = "<group>"; };
+		E8659FAE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogBreadCollectionViewCell.xib; sourceTree = "<group>"; };
+		E8659FAF25F912FD0036A2AF /* PhotoAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAddCell.swift; sourceTree = "<group>"; };
+		E8659FB025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIntroductionCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8659FB125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyIntroductionCollectionViewCell.xib; sourceTree = "<group>"; };
+		E8659FC725F9130E0036A2AF /* DirectLocalBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalBuilder.swift; sourceTree = "<group>"; };
+		E8659FC825F9130E0036A2AF /* DirectLocalRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalRouter.swift; sourceTree = "<group>"; };
+		E8659FC925F9130E0036A2AF /* DirectLocalInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalInteractor.swift; sourceTree = "<group>"; };
+		E8659FCA25F9130E0036A2AF /* DirectLocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalViewController.swift; sourceTree = "<group>"; };
+		E8659FCB25F9130E0036A2AF /* DirectLocalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectLocalViewController.storyboard; sourceTree = "<group>"; };
+		E8659FCD25F9130E0036A2AF /* DirectBreedViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectBreedViewController.storyboard; sourceTree = "<group>"; };
+		E8659FCE25F9130E0036A2AF /* DirectBreedRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectBreedRouter.swift; sourceTree = "<group>"; };
+		E8659FCF25F9130E0036A2AF /* DirectBreedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectBreedViewController.swift; sourceTree = "<group>"; };
+		E8659FD025F9130E0036A2AF /* DirectBreedBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectBreedBuilder.swift; sourceTree = "<group>"; };
+		E8659FD125F9130E0036A2AF /* DirectBreedInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectBreedInteractor.swift; sourceTree = "<group>"; };
+		E8659FD325F9130E0036A2AF /* SearchLocalRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalRouter.swift; sourceTree = "<group>"; };
+		E8659FD425F9130E0036A2AF /* SearchLocalBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalBuilder.swift; sourceTree = "<group>"; };
+		E8659FD525F9130E0036A2AF /* SearchLocalInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalInteractor.swift; sourceTree = "<group>"; };
+		E8659FD625F9130E0036A2AF /* SearchLocalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchLocalViewController.storyboard; sourceTree = "<group>"; };
+		E8659FD725F9130E0036A2AF /* SearchLocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalViewController.swift; sourceTree = "<group>"; };
+		E8659FD925F9130E0036A2AF /* SearchDogBreedsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchDogBreedsViewController.storyboard; sourceTree = "<group>"; };
+		E8659FDA25F9130E0036A2AF /* SearchDogBreedsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsRouter.swift; sourceTree = "<group>"; };
+		E8659FDB25F9130E0036A2AF /* SearchDogBreedsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsViewController.swift; sourceTree = "<group>"; };
+		E8659FDC25F9130E0036A2AF /* SearchDogBreedsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsInteractor.swift; sourceTree = "<group>"; };
+		E8659FDD25F9130E0036A2AF /* SearchDogBreedsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsBuilder.swift; sourceTree = "<group>"; };
+		E8659FF925F913190036A2AF /* OtherDogsInfoPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherDogsInfoPopupView.xib; sourceTree = "<group>"; };
+		E8659FFA25F913190036A2AF /* OtherDogsInfoPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherDogsInfoPopupView.swift; sourceTree = "<group>"; };
+		E872879E25DE76AD005575BF /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		E872879F25DE76AD005575BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E87287A025DE76AD005575BF /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
+		E87287A125DE76AD005575BF /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
 		E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+Extension.swift"; sourceTree = "<group>"; };
 		E872880425DEAAEE005575BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
@@ -118,7 +224,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */,
+				76EE2F2D6CB4FD8C32B9CC4F /* libPods-Woofriend.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */,
+				98B2DA41D654AA6EC7C40C06 /* libPods-WoofriendTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */,
+				516E5EB803959A1A9A0790D7 /* libPods-Woofriend-WoofriendUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,9 +250,9 @@
 		001164F4F2A2A852317CF7E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */,
-				8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */,
-				16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */,
+				7609B4FF6F81E048E30762B0 /* libPods-Woofriend.a */,
+				48FAA74292C2A29EC8486AF7 /* libPods-Woofriend-WoofriendUITests.a */,
+				46A6B061731BBDA82E7E5CE0 /* libPods-WoofriendTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +295,10 @@
 		E80337E725BEBE34008580CA /* Woofriend */ = {
 			isa = PBXGroup;
 			children = (
+				E831A1FA25F8EDED00D21451 /* Model */,
+				E831A18925F8DEB700D21451 /* Services */,
+				E831A18325F8DD6800D21451 /* Repositories */,
+				E831A0B525F8C39900D21451 /* Manager */,
 				E818FE0925DD3F8E0035E306 /* Extension */,
 				E818FDF225DD38550035E306 /* Utility */,
 				E818FC9925DCE9880035E306 /* AppStart */,
@@ -226,6 +336,7 @@
 			children = (
 				E818FC8A25DCE61F0035E306 /* Root */,
 				E818FD2325DCF4B70035E306 /* LoggedOut */,
+				E872879D25DE7694005575BF /* SignUp */,
 				E818FD2A25DD04540035E306 /* Main */,
 			);
 			path = RIBs;
@@ -286,6 +397,7 @@
 		E818FDF225DD38550035E306 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				E831A1BF25F8E9BA00D21451 /* Logger */,
 				E818FDFB25DD39390035E306 /* Storyboard.swift */,
 				E818FE4825DD4F1A0035E306 /* PopUpViewController.swift */,
 				E818FE4925DD4F1A0035E306 /* PopUpView.xib */,
@@ -307,12 +419,163 @@
 		E818FE0925DD3F8E0035E306 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E831A17825F8D84B00D21451 /* MoyaProvider+Rx.swift */,
+				E831A17925F8D84B00D21451 /* Single+Response.swift */,
 				E818FE0A25DD3FB30035E306 /* UIViewController+Extension.swift */,
 				E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */,
 				E872880425DEAAEE005575BF /* UIView+Extension.swift */,
 				E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E831A0B525F8C39900D21451 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E831A0B625F8C3B700D21451 /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E831A18325F8DD6800D21451 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E831A18425F8DD9F00D21451 /* TestRepositoy.swift */,
+				E831A19225F8E47400D21451 /* TestRespone.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		E831A18925F8DEB700D21451 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E831A18A25F8DECB00D21451 /* NaverLoginService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E831A1BF25F8E9BA00D21451 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				E831A1C025F8E9D700D21451 /* LogFormatter.swift */,
+				E831A1C825F8E9DE00D21451 /* Logger.swift */,
+				E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		E831A1FA25F8EDED00D21451 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8659FA125F912FD0036A2AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */,
+				E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */,
+				E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */,
+				E8659FA525F912FD0036A2AF /* DogConcernCollectionViewCell.xib */,
+				E8659FA625F912FD0036A2AF /* PhotoAddCell.xib */,
+				E8659FA725F912FD0036A2AF /* MyInfoCollectionViewCell.xib */,
+				E8659FA825F912FD0036A2AF /* DogBreadCollectionViewCell.swift */,
+				E8659FA925F912FD0036A2AF /* WelcomeCell.xib */,
+				E8659FAA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift */,
+				E8659FAB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift */,
+				E8659FAC25F912FD0036A2AF /* WelcomeCell.swift */,
+				E8659FAD25F912FD0036A2AF /* DogNameCollectionViewCell.xib */,
+				E8659FAE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib */,
+				E8659FAF25F912FD0036A2AF /* PhotoAddCell.swift */,
+				E8659FB025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift */,
+				E8659FB125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E8659FC525F9130E0036A2AF /* SubRibs */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FC625F9130E0036A2AF /* DirectLocal */,
+				E8659FCC25F9130E0036A2AF /* DirectBreed */,
+				E8659FD225F9130E0036A2AF /* SearchLocal  */,
+				E8659FD825F9130E0036A2AF /* SearchDogBreeds */,
+			);
+			path = SubRibs;
+			sourceTree = "<group>";
+		};
+		E8659FC625F9130E0036A2AF /* DirectLocal */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FC725F9130E0036A2AF /* DirectLocalBuilder.swift */,
+				E8659FC825F9130E0036A2AF /* DirectLocalRouter.swift */,
+				E8659FC925F9130E0036A2AF /* DirectLocalInteractor.swift */,
+				E8659FCA25F9130E0036A2AF /* DirectLocalViewController.swift */,
+				E8659FCB25F9130E0036A2AF /* DirectLocalViewController.storyboard */,
+			);
+			path = DirectLocal;
+			sourceTree = "<group>";
+		};
+		E8659FCC25F9130E0036A2AF /* DirectBreed */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FCD25F9130E0036A2AF /* DirectBreedViewController.storyboard */,
+				E8659FCE25F9130E0036A2AF /* DirectBreedRouter.swift */,
+				E8659FCF25F9130E0036A2AF /* DirectBreedViewController.swift */,
+				E8659FD025F9130E0036A2AF /* DirectBreedBuilder.swift */,
+				E8659FD125F9130E0036A2AF /* DirectBreedInteractor.swift */,
+			);
+			path = DirectBreed;
+			sourceTree = "<group>";
+		};
+		E8659FD225F9130E0036A2AF /* SearchLocal  */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FD325F9130E0036A2AF /* SearchLocalRouter.swift */,
+				E8659FD425F9130E0036A2AF /* SearchLocalBuilder.swift */,
+				E8659FD525F9130E0036A2AF /* SearchLocalInteractor.swift */,
+				E8659FD625F9130E0036A2AF /* SearchLocalViewController.storyboard */,
+				E8659FD725F9130E0036A2AF /* SearchLocalViewController.swift */,
+			);
+			path = "SearchLocal ";
+			sourceTree = "<group>";
+		};
+		E8659FD825F9130E0036A2AF /* SearchDogBreeds */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FD925F9130E0036A2AF /* SearchDogBreedsViewController.storyboard */,
+				E8659FDA25F9130E0036A2AF /* SearchDogBreedsRouter.swift */,
+				E8659FDB25F9130E0036A2AF /* SearchDogBreedsViewController.swift */,
+				E8659FDC25F9130E0036A2AF /* SearchDogBreedsInteractor.swift */,
+				E8659FDD25F9130E0036A2AF /* SearchDogBreedsBuilder.swift */,
+			);
+			path = SearchDogBreeds;
+			sourceTree = "<group>";
+		};
+		E8659FF825F913190036A2AF /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FF925F913190036A2AF /* OtherDogsInfoPopupView.xib */,
+				E8659FFA25F913190036A2AF /* OtherDogsInfoPopupView.swift */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		E872879D25DE7694005575BF /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				E8659FF825F913190036A2AF /* Xib */,
+				E8659FC525F9130E0036A2AF /* SubRibs */,
+				E8659FA125F912FD0036A2AF /* Cell */,
+				E872879E25DE76AD005575BF /* SignUpRouter.swift */,
+				E872879F25DE76AD005575BF /* SignUpViewController.swift */,
+				E87287A025DE76AD005575BF /* SignUpBuilder.swift */,
+				E87287A125DE76AD005575BF /* SignUpInteractor.swift */,
+				E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +608,6 @@
 				E80337FA25BEBE36008580CA /* Sources */,
 				E80337FB25BEBE36008580CA /* Frameworks */,
 				E80337FC25BEBE36008580CA /* Resources */,
-				E8171814D0065CE4EEDFDD37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,11 +686,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8659FBE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib in Resources */,
+				E8659FB925F912FD0036A2AF /* WelcomeCell.xib in Resources */,
+				E8659FB425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib in Resources */,
+				E8659FB625F912FD0036A2AF /* PhotoAddCell.xib in Resources */,
+				E8659FB525F912FD0036A2AF /* DogConcernCollectionViewCell.xib in Resources */,
 				E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */,
+				E8659FE325F9130E0036A2AF /* DirectBreedViewController.storyboard in Resources */,
+				E8659FEB25F9130E0036A2AF /* SearchLocalViewController.storyboard in Resources */,
 				E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */,
 				E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */,
 				E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */,
+				E8659FC125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib in Resources */,
+				E8659FE225F9130E0036A2AF /* DirectLocalViewController.storyboard in Resources */,
+				E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */,
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
+				E8659FFB25F913190036A2AF /* OtherDogsInfoPopupView.xib in Resources */,
+				E8659FED25F9130E0036A2AF /* SearchDogBreedsViewController.storyboard in Resources */,
+				E8659FB725F912FD0036A2AF /* MyInfoCollectionViewCell.xib in Resources */,
+				E8659FBD25F912FD0036A2AF /* DogNameCollectionViewCell.xib in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,23 +826,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8171814D0065CE4EEDFDD37 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -577,27 +836,66 @@
 				E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */,
 				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
 				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
+				E831A1C925F8E9DE00D21451 /* Logger.swift in Sources */,
+				E8659FE725F9130E0036A2AF /* DirectBreedInteractor.swift in Sources */,
 				E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */,
+				E8659FE025F9130E0036A2AF /* DirectLocalInteractor.swift in Sources */,
 				E818FCE425DCEF910035E306 /* RootViewController.swift in Sources */,
+				E8659FE425F9130E0036A2AF /* DirectBreedRouter.swift in Sources */,
+				E8659FE125F9130E0036A2AF /* DirectLocalViewController.swift in Sources */,
+				E8659FFC25F913190036A2AF /* OtherDogsInfoPopupView.swift in Sources */,
+				E8659FDF25F9130E0036A2AF /* DirectLocalRouter.swift in Sources */,
 				E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */,
 				E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */,
+				E831A1CE25F8E9F300D21451 /* DDLogFlag.swift in Sources */,
+				E8659FF125F9130E0036A2AF /* SearchDogBreedsBuilder.swift in Sources */,
+				E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */,
+				E8659FDE25F9130E0036A2AF /* DirectLocalBuilder.swift in Sources */,
+				E8659FEE25F9130E0036A2AF /* SearchDogBreedsRouter.swift in Sources */,
+				E8659FE625F9130E0036A2AF /* DirectBreedBuilder.swift in Sources */,
+				E8659FB325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift in Sources */,
+				E8659FEF25F9130E0036A2AF /* SearchDogBreedsViewController.swift in Sources */,
+				E8659FEC25F9130E0036A2AF /* SearchLocalViewController.swift in Sources */,
 				E818FE0525DD39EC0035E306 /* BaseViewController.swift in Sources */,
+				E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */,
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
+				E8659FB225F912FD0036A2AF /* DogNameCollectionViewCell.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
+				E8659FE525F9130E0036A2AF /* DirectBreedViewController.swift in Sources */,
+				E8659FF025F9130E0036A2AF /* SearchDogBreedsInteractor.swift in Sources */,
+				E831A1FC25F8EDFF00D21451 /* NaverInfo.swift in Sources */,
 				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
 				E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */,
+				E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */,
+				E831A17B25F8D84B00D21451 /* MoyaProvider+Rx.swift in Sources */,
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,
 				E818FC9B25DCE9A60035E306 /* AppComponent.swift in Sources */,
+				E8659FBA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift in Sources */,
 				E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */,
 				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
+				E8659FBC25F912FD0036A2AF /* WelcomeCell.swift in Sources */,
 				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
+				E831A0B725F8C3B700D21451 /* APIManager.swift in Sources */,
+				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
+				E8659FEA25F9130E0036A2AF /* SearchLocalInteractor.swift in Sources */,
+				E831A18525F8DD9F00D21451 /* TestRepositoy.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
 				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
+				E8659FC025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift in Sources */,
 				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
+				E831A1C125F8E9D700D21451 /* LogFormatter.swift in Sources */,
+				E831A17C25F8D84B00D21451 /* Single+Response.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
+				E8659FE925F9130E0036A2AF /* SearchLocalBuilder.swift in Sources */,
+				E8659FB825F912FD0036A2AF /* DogBreadCollectionViewCell.swift in Sources */,
+				E8659FBB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift in Sources */,
+				E831A19325F8E47400D21451 /* TestRespone.swift in Sources */,
+				E8659FBF25F912FD0036A2AF /* PhotoAddCell.swift in Sources */,
+				E831A18B25F8DECB00D21451 /* NaverLoginService.swift in Sources */,
+				E8659FE825F9130E0036A2AF /* SearchLocalRouter.swift in Sources */,
 				E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -769,6 +1067,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4693VAH9ZM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = woofriend/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -776,8 +1078,37 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"NaverThirdPartyLogin\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -791,6 +1122,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4693VAH9ZM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = woofriend/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -798,8 +1133,37 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"NaverThirdPartyLogin\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
