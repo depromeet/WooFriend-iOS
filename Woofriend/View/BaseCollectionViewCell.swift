@@ -13,9 +13,6 @@ class BaseCollectionViewCell: UICollectionViewCell {
     
     let disposeBag = DisposeBag()
     var isChecked: BehaviorRelay<Bool> = BehaviorRelay(value: false)
-    var isError: BehaviorRelay<Bool> = BehaviorRelay(value: false)
-    // TODO: 이게 맞나? RIBs에 위배 되지 않나?
-    weak var listener: SignUpPresentableListener?
     
     deinit {
         print("[DEINIT] ✨🧹 \(type(of: self)) was deinit.")

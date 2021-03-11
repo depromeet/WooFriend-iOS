@@ -10,19 +10,6 @@ import RxGesture
 import Photos
 import CropViewController
 
-protocol StructExt {
-    func allPropertiesAreNotNull() throws -> Bool
-}
-
-extension StructExt {
-    func allPropertiesAreNotNull() throws -> Bool {
-        
-        let mirror = Mirror(reflecting: self)
-        
-        return !mirror.children.contains(where: { $0.value as Any? == nil})
-    }
-}
-
 class DogNameCollectionViewCell: BaseCollectionViewCell {
     
     @IBOutlet weak var dogProfileView: UIView!
@@ -38,12 +25,11 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var dogAgeTextField: UITextField!
     @IBOutlet weak var multiDogInfoView: UIView!
     @IBOutlet weak var multiDogInfoCloseButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
-    // local 데이터
     private var dogProfile: DogProfile? = DogProfile() {
         willSet {
-            let isNext = newValue?.hasNilField() ?? true
-            self.isChecked.accept(!isNext)
+            self.nextButton.backgroundColor = !(self.dogProfile?.hasNilField() ?? true) ? #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1) : #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
         }
     }
     
@@ -51,10 +37,9 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         setUI()
         bindUI()
-        self.listener?.backAction()
-        
     }
     
     private func keyboradHideAll() {
@@ -81,21 +66,6 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
                 self.dogAgeTextField.resignFirstResponder()
             })
             .disposed(by: disposeBag)
-        
-        isError.subscribe(onNext: { [weak self] isErr in
-            guard let self = self else { return }
-            
-            // FIXME: ......음
-            print("error:  ", isErr)
-            if isErr {
-                self.dogNameLayerView.layer.borderColor = self.dogProfile?.name?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                self.dogWomenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                self.dogMenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                self.dogAgeLayerView.layer.borderColor = self.dogProfile?.age?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-            }
-        })
-        .disposed(by: disposeBag)
-        
         
         dogProfileView.rx.tapGesture().asSignal()
             .emit { [weak self] tap in
@@ -232,6 +202,23 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
             })
             .bind(to: dogAgeTextField.rx.text)
             .disposed(by: disposeBag)
+        
+        nextButton.rx.tap.asSignal()
+            .emit(onNext: { [weak self] b in
+                guard let self = self else { return }
+
+                if !(self.dogProfile?.hasNilField() ?? true) {
+                    self.isChecked.accept(true)
+                } else {
+                    self.isChecked.accept(false)
+                    self.dogNameLayerView.layer.borderColor = self.dogProfile?.name?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                    self.dogWomenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                    self.dogMenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                    self.dogAgeLayerView.layer.borderColor = self.dogProfile?.age?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                    self.dogProfileImageView.layer.borderColor = self.dogProfile?.photo == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -251,6 +238,7 @@ extension DogNameCollectionViewCell: UIImagePickerControllerDelegate & UINavigat
     func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         
         self.plusImageView.isHidden = true
+        dogProfileImageView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).cgColor
         dogProfile?.photo = image
         dogProfileImageView.image = image
         cropViewController.dismiss(animated: true)

@@ -24,7 +24,6 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var indicatorLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var indicatiorTrailingConstraint: NSLayoutConstraint!
     
@@ -63,37 +62,16 @@ extension SignUpViewController {
         
         isEntered.subscribe { [weak self] list in
             guard let self = self else { return }
-            guard let state = list.event.element?[self.stepCnt.value] else { return }
+            guard let state = list.event.element?[self.stepCnt.value], state else { return }
             
-            if state {
-                self.nextButton.isSelected = true
-                self.nextButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
-            } else {
-                self.nextButton.isSelected = false
-                self.nextButton.backgroundColor = #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
-            }
-            print(self.stepCnt.value)
-            print(state)
+            self.listener?.nextAction()
         }
         .disposed(by: disposeBag)
-
+        
         
         backButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
                 self?.listener?.backAction()
-            })
-            .disposed(by: disposeBag)
-        
-        nextButton.rx.tap.asSignal()
-            .emit(onNext: { [weak self] in
-                guard let self = self else { return }
-                if self.nextButton.isSelected {
-                    self.listener?.nextAction()
-                } else {
-                    // FIXME: 정녕 이 방법밖에 없는가...
-                    let cell = self.collectionView(self.collectionView, cellForItemAt: IndexPath(row: self.stepCnt.value, section: 0)) as? BaseCollectionViewCell
-                    cell?.isError.accept(true)
-                }
             })
             .disposed(by: disposeBag)
         
@@ -105,18 +83,6 @@ extension SignUpViewController {
             .subscribe(onNext: { [weak self] idx in
                 guard let self = self else { return }
                 guard idx != -1 else { return }
-//                if idx == 6 {
-//                    self.navigationView.isHidden = true
-//                    self.nextButton.isHidden = true
-//                }
-//
-                if self.isEntered.value[idx] {
-                    self.nextButton.isSelected = true
-                    self.nextButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
-                } else {
-                    self.nextButton.isSelected = false
-                    self.nextButton.backgroundColor = #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
-                }
                 
                 self.collectionView.scrollToItem(at: IndexPath(row: idx, section: 0), at: .centeredHorizontally, animated: false)
                 let current = self.view.bounds.width / 6
@@ -171,7 +137,7 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 print("======================")
             }
             .disposed(by: disposeBag)
-
+            
             
             return cell
             
