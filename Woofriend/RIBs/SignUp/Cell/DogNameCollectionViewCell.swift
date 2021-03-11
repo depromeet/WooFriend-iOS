@@ -7,6 +7,21 @@
 
 import UIKit
 import RxGesture
+import Photos
+import CropViewController
+
+protocol StructExt {
+    func allPropertiesAreNotNull() throws -> Bool
+}
+
+extension StructExt {
+    func allPropertiesAreNotNull() throws -> Bool {
+        
+        let mirror = Mirror(reflecting: self)
+        
+        return !mirror.children.contains(where: { $0.value as Any? == nil})
+    }
+}
 
 class DogNameCollectionViewCell: BaseCollectionViewCell {
     
@@ -23,31 +38,36 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var dogAgeTextField: UITextField!
     @IBOutlet weak var multiDogInfoView: UIView!
     @IBOutlet weak var multiDogInfoCloseButton: UIButton!
-    let imagePickerController = UIImagePickerController()
-    /// 체크사항이 3개임
-    private var isNextStep = [Bool](repeating: false, count: 3) {
+    
+    // local 데이터
+    private var dogProfile: DogProfile? = DogProfile() {
         willSet {
-            let cnt = isNextStep.filter { $0 == true}.count
-            if cnt == 3 {
-                self.isChecked.accept(true)
-            } else {
-                self.isChecked.accept(false)
-            }
+            let isNext = newValue?.hasNilField() ?? true
+            self.isChecked.accept(!isNext)
         }
     }
     
+    let imagePickerController = UIImagePickerController()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .savedPhotosAlbum
-        imagePickerController.allowsEditing = true
-        dogProfileImageView.layer.cornerRadius = dogProfileImageView.frame.width / 2
+        setUI()
         bindUI()
+        self.listener?.backAction()
+        
     }
+    
     private func keyboradHideAll() {
         self.dogNameTextField.resignFirstResponder()
         self.dogAgeTextField.resignFirstResponder()
+    }
+    
+    private func setUI() {
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .savedPhotosAlbum
+        dogProfileImageView.layer.cornerRadius = dogProfileImageView.frame.width / 2
+        dogNameTextField.addDoneButtonOnKeyboard()
+        dogAgeTextField.addDoneButtonOnKeyboard()
     }
     
     private func bindUI() {
@@ -62,17 +82,52 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
             })
             .disposed(by: disposeBag)
         
+        isError.subscribe(onNext: { [weak self] isErr in
+            guard let self = self else { return }
+            
+            // FIXME: ......음
+            print("error:  ", isErr)
+            if isErr {
+                self.dogNameLayerView.layer.borderColor = self.dogProfile?.name?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                self.dogWomenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                self.dogMenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+                self.dogAgeLayerView.layer.borderColor = self.dogProfile?.age?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+            }
+        })
+        .disposed(by: disposeBag)
+        
+        
         dogProfileView.rx.tapGesture().asSignal()
             .emit { [weak self] tap in
                 guard let self = self else { return }
                 // FIXME: 확인해서 rawValue enum으로
-                guard tap.state.rawValue == 3 else { return }
-                // tap.state.description, UIGestureRecognizerState.ended
+                guard tap.state.rawValue == 3 /* UIGestureRecognizerState.ended */ else { return }
                 
-                UIApplication.topViewController()?.present(self.imagePickerController, animated: true, completion: nil)
+                // FIXME: 더럽..
+                switch PHPhotoLibrary.authorizationStatus() {
+                
+                case .authorized:
+                    DispatchQueue.main.async {
+                        UIApplication.topViewController()?.present(self.imagePickerController, animated: true, completion: nil)
+                    }
+                    
+                default:
+                    PHPhotoLibrary.requestAuthorization { status in
+                        
+                        switch status {
+                        case .authorized:
+                            DispatchQueue.main.async {
+                                UIApplication.topViewController()?.present(self.imagePickerController, animated: true, completion: nil)
+                            }
+                        default:
+                            if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    }
+                }
             }
             .disposed(by: disposeBag)
-
         
         otherDogButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
@@ -89,7 +144,9 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
         
         dogMenButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
-                self?.isNextStep[1] = true
+                self?.dogProfile?.gender = "M"
+                self?.dogNameTextField.resignFirstResponder()
+                self?.dogAgeTextField.resignFirstResponder()
                 self?.dogMenButton.isSelected = true
                 self?.dogMenButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.dogMenButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
@@ -107,7 +164,9 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
         
         dogWomenButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
-                self?.isNextStep[1] = true
+                self?.dogProfile?.gender = "W"
+                self?.dogNameTextField.resignFirstResponder()
+                self?.dogAgeTextField.resignFirstResponder()
                 self?.dogWomenButton.isSelected = true
                 self?.dogWomenButton.backgroundColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
                 self?.dogWomenButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
@@ -123,47 +182,51 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
             .disposed(by: disposeBag)
         
         // MARK: 텍스트 필드
+        dogNameTextField.rx.controlEvent(.editingDidBegin).asSignal()
+            .emit(onNext: { [weak self] in
+                self?.dogNameLayerView.layer.borderColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1).cgColor
+            })
+            .disposed(by: disposeBag)
+        
+        dogNameTextField.rx.controlEvent(.editingDidEnd).asSignal()
+            .emit(onNext: { [weak self] in
+                self?.dogNameLayerView.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+            })
+            .disposed(by: disposeBag)
         
         dogNameTextField.rx.text.orEmpty
             .scan("", accumulator: { [weak self] (prev, new) -> String in
-                guard let self = self else { return "" }
-                
-                if new.count == 0 {
-                    self.isNextStep[0] = false
-                    self.dogNameLayerView.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.dogNameLayerView.clipsToBounds = true
-                } else {
-                    self.isNextStep[0] = true
-                    self.dogNameLayerView.layer.borderColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1).cgColor
-                    self.dogNameLayerView.clipsToBounds = true
-                }
                 
                 if new.count > 6 {
                     return prev
                 } else {
+                    self?.dogProfile?.name = new
                     return new
                 }
             })
             .bind(to: dogNameTextField.rx.text)
             .disposed(by: disposeBag)
         
+        
+        dogAgeTextField.rx.controlEvent(.editingDidBegin).asSignal()
+            .emit(onNext: { [weak self] in
+                self?.dogAgeLayerView.layer.borderColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1).cgColor
+            })
+            .disposed(by: disposeBag)
+        
+        dogAgeTextField.rx.controlEvent(.editingDidEnd).asSignal()
+            .emit(onNext: { [weak self] in
+                self?.dogAgeLayerView.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+            })
+            .disposed(by: disposeBag)
+        
         dogAgeTextField.rx.text.orEmpty
             .scan("", accumulator: { [weak self] (prev, new) -> String in
-                guard let self = self else { return "" }
-                
-                if new.count == 0 {
-                    self.isNextStep[2] = false
-                    self.dogAgeLayerView.layer.borderColor = #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.dogAgeLayerView.clipsToBounds = true
-                } else {
-                    self.isNextStep[2] = true
-                    self.dogAgeLayerView.layer.borderColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1).cgColor
-                    self.dogAgeLayerView.clipsToBounds = true
-                }
-                
+                print(new)
                 if new.count > 2 {
                     return prev
                 } else {
+                    self?.dogProfile?.age = new
                     return new
                 }
             })
@@ -172,20 +235,34 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     }
 }
 
-extension DogNameCollectionViewCell: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension DogNameCollectionViewCell: UIImagePickerControllerDelegate & UINavigationControllerDelegate, CropViewControllerDelegate {
+    
+    func presentCropViewController(image: UIImage?) {
+        let cropViewController = CropViewController(croppingStyle: .circular, image: image ?? UIImage())
+        
+        cropViewController.doneButtonTitle = "완료"
+        cropViewController.doneButtonColor = #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1)
+        cropViewController.cancelButtonTitle = "취소"
+        cropViewController.cancelButtonColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        cropViewController.delegate = self
+        UIApplication.topViewController()?.present(cropViewController, animated: false, completion: nil)
+    }
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        
+        self.plusImageView.isHidden = true
+        dogProfile?.photo = image
+        dogProfileImageView.image = image
+        cropViewController.dismiss(animated: true)
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-                
-        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            dogProfileImageView.image = image
-        } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            dogProfileImageView.image = image
-        }
         
         imagePickerController.dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
             
-            self.plusImageView.isHidden = true
+            self.presentCropViewController(image: info[UIImagePickerController.InfoKey.originalImage] as? UIImage)
+            
         }
     }
 }

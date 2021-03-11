@@ -13,7 +13,6 @@ target 'Woofriend' do
     	pod 'RxCocoa', '4.5.0'
 	pod 'RxGesture', '2.2.0'
 	pod 'RxDataSources', '3.1.0'
-	pod 'TagListView'
 
 	# SNS 로그인 - 카톡은 레거시로 직접 프레임워크 넣음
 	pod 'naveridlogin-sdk-ios'
@@ -26,6 +25,11 @@ target 'Woofriend' do
 
 	# log
 	pod 'CocoaLumberjack/Swift'
+		
+	# UI
+	pod 'TagListView'	# 태그
+	pod 'ZLPhotoBrowser'	# 사진 크롭, 멀티 등
+	pod 'CropViewController'
 
   target 'WoofriendTests' do
     inherit! :search_paths

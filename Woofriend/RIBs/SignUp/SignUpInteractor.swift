@@ -23,7 +23,9 @@ protocol SignUpPresentable: Presentable {
     var titleName: BehaviorRelay<String> { get set }
     var isEntered: BehaviorRelay<[Bool]> { get set }
     var stepState: [Bool] { get set }
-    var dogName: String { get set }
+    
+    // MARK: 반려경 정보
+    var dogProfile: BehaviorRelay<DogProfile> { get set }
 }
 
 // 상위 노드가 구현함.

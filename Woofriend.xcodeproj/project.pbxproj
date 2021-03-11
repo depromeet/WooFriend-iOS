@@ -48,7 +48,10 @@
 		E831A1C925F8E9DE00D21451 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1C825F8E9DE00D21451 /* Logger.swift */; };
 		E831A1CE25F8E9F300D21451 /* DDLogFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */; };
 		E831A1FC25F8EDFF00D21451 /* NaverInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */; };
+		E849084925F9A31C006A9E6A /* DogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849084825F9A31C006A9E6A /* DogProfile.swift */; };
+		E849085625F9A475006A9E6A /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849085525F9A475006A9E6A /* Encodable+Extension.swift */; };
 		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
+		E860255825F9BD0F0068D243 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860255725F9BD0F0068D243 /* UITextField+Extension.swift */; };
 		E8659FB225F912FD0036A2AF /* DogNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */; };
 		E8659FB325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */; };
 		E8659FB425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */; };
@@ -168,7 +171,10 @@
 		E831A1C825F8E9DE00D21451 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E831A1CD25F8E9F300D21451 /* DDLogFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDLogFlag.swift; sourceTree = "<group>"; };
 		E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverInfo.swift; sourceTree = "<group>"; };
+		E849084825F9A31C006A9E6A /* DogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfile.swift; sourceTree = "<group>"; };
+		E849085525F9A475006A9E6A /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E860255725F9BD0F0068D243 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -425,6 +431,8 @@
 				E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */,
 				E872880425DEAAEE005575BF /* UIView+Extension.swift */,
 				E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */,
+				E849085525F9A475006A9E6A /* Encodable+Extension.swift */,
+				E860255725F9BD0F0068D243 /* UITextField+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -468,6 +476,14 @@
 			isa = PBXGroup;
 			children = (
 				E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E849084725F9A2F9006A9E6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E849084825F9A31C006A9E6A /* DogProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -566,6 +582,7 @@
 		E872879D25DE7694005575BF /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				E849084725F9A2F9006A9E6A /* Model */,
 				E8659FF825F913190036A2AF /* Xib */,
 				E8659FC525F9130E0036A2AF /* SubRibs */,
 				E8659FA125F912FD0036A2AF /* Cell */,
@@ -590,6 +607,7 @@
 				E80337E225BEBE34008580CA /* Frameworks */,
 				E80337E325BEBE34008580CA /* Resources */,
 				18408917F1774F422D30C247 /* [CP] Embed Pods Frameworks */,
+				6251941F15105FFCCE989308 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -628,6 +646,7 @@
 				E803380625BEBE36008580CA /* Frameworks */,
 				E803380725BEBE36008580CA /* Resources */,
 				14A0A81EDB9E3645AA48AE38 /* [CP] Embed Pods Frameworks */,
+				64662DBD4074C00AE508BDE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -782,6 +801,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6251941F15105FFCCE989308 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend/Pods-Woofriend-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend/Pods-Woofriend-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Woofriend/Pods-Woofriend-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64662DBD4074C00AE508BDE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6891AC7597E8E08300D861A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -836,6 +889,7 @@
 				E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */,
 				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
 				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
+				E849084925F9A31C006A9E6A /* DogProfile.swift in Sources */,
 				E831A1C925F8E9DE00D21451 /* Logger.swift in Sources */,
 				E8659FE725F9130E0036A2AF /* DirectBreedInteractor.swift in Sources */,
 				E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */,
@@ -879,6 +933,8 @@
 				E831A0B725F8C3B700D21451 /* APIManager.swift in Sources */,
 				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
+				E860255825F9BD0F0068D243 /* UITextField+Extension.swift in Sources */,
+				E849085625F9A475006A9E6A /* Encodable+Extension.swift in Sources */,
 				E8659FEA25F9130E0036A2AF /* SearchLocalInteractor.swift in Sources */,
 				E831A18525F8DD9F00D21451 /* TestRepositoy.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,

@@ -19,6 +19,7 @@ protocol SignUpPresentableListener: class {
 }
 
 final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpViewControllable {
+    
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var indicatorLabel: UILabel!
@@ -32,7 +33,7 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
     var titleName: BehaviorRelay<String> = BehaviorRelay(value: "반려견 정보")
     // TODO: 원래는 false, 테스트는 true
     var isEntered: BehaviorRelay<[Bool]> = BehaviorRelay(value: [Bool](repeating: false, count: 6))
-    var dogName: String = "멍쿠"
+    var dogProfile: BehaviorRelay<DogProfile> = BehaviorRelay(value: DogProfile())
     
     weak var listener: SignUpPresentableListener?
     
@@ -86,10 +87,13 @@ extension SignUpViewController {
         nextButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
                 guard let self = self else { return }
-//                if self.nextButton.isSelected  { self.listener?.nextAction() }
-                // TODO: 나중에 변경
-                self.listener?.nextAction()
-                
+                if self.nextButton.isSelected {
+                    self.listener?.nextAction()
+                } else {
+                    // FIXME: 정녕 이 방법밖에 없는가...
+                    let cell = self.collectionView(self.collectionView, cellForItemAt: IndexPath(row: self.stepCnt.value, section: 0)) as? BaseCollectionViewCell
+                    cell?.isError.accept(true)
+                }
             })
             .disposed(by: disposeBag)
         
@@ -178,7 +182,7 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
             
         case 2: // 특정 & 관심사
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogConcernCollectionViewCell", for: indexPath) as? DogConcernCollectionViewCell else { return UICollectionViewCell() }
-            cell.setData(dogName)
+            cell.setData(dogProfile.value.name ?? "")
             
             return cell
             

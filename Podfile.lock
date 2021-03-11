@@ -3,6 +3,7 @@ PODS:
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
+  - CropViewController (2.6.0)
   - Differentiator (3.1.0)
   - Firebase/Analytics (7.8.0):
     - Firebase/Core
@@ -122,9 +123,13 @@ PODS:
     - RxSwift (~> 4.5)
   - RxSwift (4.5.0)
   - TagListView (1.4.1)
+  - ZLPhotoBrowser (4.1.4):
+    - ZLPhotoBrowser/Core (= 4.1.4)
+  - ZLPhotoBrowser/Core (4.1.4)
 
 DEPENDENCIES:
   - CocoaLumberjack/Swift
+  - CropViewController
   - Firebase/Analytics (= 7.8.0)
   - KakaoSDK
   - Moya
@@ -137,11 +142,13 @@ DEPENDENCIES:
   - RxGesture (= 2.2.0)
   - RxSwift (= 4.5.0)
   - TagListView
+  - ZLPhotoBrowser
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - CocoaLumberjack
+    - CropViewController
     - Differentiator
     - Firebase
     - FirebaseAnalytics
@@ -172,10 +179,12 @@ SPEC REPOS:
     - RxGesture
     - RxSwift
     - TagListView
+    - ZLPhotoBrowser
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
+  CropViewController: 7093b39ec3cb508531b22d35773e06cecd7378d8
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Firebase: 1e0d6610f21bdd131231525d7ee78f7f9e64e606
   FirebaseAnalytics: e70f7e0f1f178960a7d0b4ebec32e8c386245eda
@@ -206,7 +215,8 @@ SPEC CHECKSUMS:
   RxGesture: c1b7bf17166b0ef9d642a9510f8bac5785f18990
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
+  ZLPhotoBrowser: 7595658e8e5266efb8aed85c134d0a08fb6fed8f
 
-PODFILE CHECKSUM: c6ce28a120008ebd36445a2687bc9db6a0b8854f
+PODFILE CHECKSUM: cb8de36ea8f0432b5d728780f4dc2cc4e6204db0
 
 COCOAPODS: 1.10.1
