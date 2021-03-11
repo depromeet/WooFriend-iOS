@@ -7,6 +7,9 @@ target 'Woofriend' do
 
   # Pods for Woofriend
 	pod 'Firebase/Analytics', '7.8.0'
+	pod 'Firebase/Crashlytics'
+	pod 'Firebase/RemoteConfig'
+
 	pod 'RIBs', '0.9.1'
 
 	pod 'RxSwift', '4.5.0'

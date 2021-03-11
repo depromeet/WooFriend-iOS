@@ -37,7 +37,6 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         // 회원가입이 된 상태
         router?.routeToLoggedIn()
     }
-    
 
     weak var router: RootRouting?
     weak var listener: RootListener?

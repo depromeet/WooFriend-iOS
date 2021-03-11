@@ -16,6 +16,7 @@ protocol SignUpPresentableListener: class {
     // interactor class.
     func backAction()
     func nextAction()
+    func selectedDogBread()
 }
 
 final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpViewControllable {
@@ -31,8 +32,9 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
     var stepState: [Bool] = [Bool](repeating: false, count: 6)
     var titleName: BehaviorRelay<String> = BehaviorRelay(value: "반려견 정보")
     // TODO: 원래는 false, 테스트는 true
-    var isEntered: BehaviorRelay<[Bool]> = BehaviorRelay(value: [Bool](repeating: false, count: 6))
-    var dogProfile: BehaviorRelay<DogProfile> = BehaviorRelay(value: DogProfile())
+    var isEntered: BehaviorRelay<[Bool]> = BehaviorRelay(value: [Bool](repeating: true, count: 6))
+    var dogProfile = DogProfile()
+    var dogBread = DogBread()
     
     weak var listener: SignUpPresentableListener?
     
@@ -50,9 +52,15 @@ final class SignUpViewController: BaseViewController, SignUpPresentable, SignUpV
     }
     
     func present(viewController: ViewControllable) {
-        viewController.uiviewController.modalPresentationStyle = .fullScreen
-        present(viewController.uiviewController, animated: false, completion: nil)
+        viewController.uiviewController.modalPresentationStyle = .overCurrentContext
+        viewController.uiviewController.view.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 0.5)
+        present(viewController.uiviewController, animated: true, completion: nil)
     }
+    
+    func dismiss(viewController: ViewControllable) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 
@@ -130,25 +138,50 @@ extension SignUpViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 currentState[self.stepCnt.value] = value
                 
                 self.isEntered.accept(currentState)
-                
-                
-                print(self.stepState[self.stepCnt.value])
-                print(self.stepState)
-                print("======================")
             }
             .disposed(by: disposeBag)
             
+            // MARK: 서브RIB이 아닌 셀로 처리해서 이 사단이 남.
+            cell.closerDogProfile = { [weak self] profile in
+                guard let profile = profile else { return }
+                
+                self?.dogProfile = profile
+            }
             
             return cell
             
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogBreadCollectionViewCell", for: indexPath) as? DogBreadCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.isChecked.subscribe { [weak self] b in
+                guard let self = self else { return }
+                guard let value = b.element else { return }
+                
+                self.stepState[self.stepCnt.value] = value
+                var currentState = self.isEntered.value
+                currentState[self.stepCnt.value] = value
+                
+                self.isEntered.accept(currentState)
+            }
+            .disposed(by: disposeBag)
+            
+            cell.breadAction = { [weak self] in
+                self?.listener?.selectedDogBread()
+            }
+            
+            // MARK: 서브RIB이 아닌 셀로 처리해서 이 사단이 남.
+            cell.closerDogBread = { [weak self] dogBread in
+                guard let dogBread = dogBread else { return }
+                
+                self?.dogBread = dogBread
+            }
+            
             return cell
             
             
         case 2: // 특정 & 관심사
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogConcernCollectionViewCell", for: indexPath) as? DogConcernCollectionViewCell else { return UICollectionViewCell() }
-            cell.setData(dogProfile.value.name ?? "")
+            cell.setData(dogProfile.name ?? "")
             
             return cell
             

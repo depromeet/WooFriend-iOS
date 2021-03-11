@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         naverLogin()
         kakaoLogin()
         
+        FirebaseApp.configure()
+        
         /*
          AppComponent가 주입된 Root RIB을 생성하고
          Router tree의 시작점 Root RIB으로 설정하고

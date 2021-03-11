@@ -13,6 +13,7 @@ protocol SignUpRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     
     func routeSearchDogBreeds()
+    func detachToSearchDogBreeds()
 }
 
 protocol SignUpPresentable: Presentable {
@@ -25,7 +26,8 @@ protocol SignUpPresentable: Presentable {
     var stepState: [Bool] { get set }
     
     // MARK: 반려경 정보
-    var dogProfile: BehaviorRelay<DogProfile> { get set }
+    var dogProfile: DogProfile { get set }
+    var dogBread: DogBread { get set }
 }
 
 // 상위 노드가 구현함.
@@ -35,6 +37,21 @@ protocol SignUpListener: class {
 }
 
 final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpInteractable {
+    func closeSearchDogBreads(dogBread: String?) {
+        presenter.dogBread.bread = dogBread
+        print(dogBread)
+        router?.detachToSearchDogBreeds()
+    }
+    
+    
+    func closeSearchDogBreads() {
+        router?.detachToSearchDogBreeds()
+    }
+    
+    func didSearchDogBreeds() {
+        router?.routeSearchDogBreeds()
+    }
+    
     weak var router: SignUpRouting?
     weak var listener: SignUpListener?
     
@@ -59,6 +76,10 @@ final class SignUpInteractor: PresentableInteractor<SignUpPresentable>, SignUpIn
 
 extension SignUpInteractor: SignUpPresentableListener {
     
+    func selectedDogBread() {
+        router?.routeSearchDogBreeds()
+    }
+    
     func backAction() {
         let nextStepCnt = presenter.stepCnt.value - 1
         presenter.stepCnt.accept(nextStepCnt)
@@ -67,9 +88,9 @@ extension SignUpInteractor: SignUpPresentableListener {
         case -1:
             listener?.closeSignUp()
         case 0:
-            presenter.titleName.accept("반려견 정보 1")
+            presenter.titleName.accept("반려견 정보")
         case 1:
-            presenter.titleName.accept("반려견 정보 2")
+            presenter.titleName.accept("반려견 정보")
         case 2:
             presenter.titleName.accept("반려견 특징&관심사")
         case 3:
@@ -87,9 +108,9 @@ extension SignUpInteractor: SignUpPresentableListener {
         
         switch nextStepCnt {
         case 0:
-            presenter.titleName.accept("반려견 정보 1")
+            presenter.titleName.accept("반려견 정보")
         case 1:
-            presenter.titleName.accept("반려견 정보 2")
+            presenter.titleName.accept("반려견 정보")
         case 2:
             presenter.titleName.accept("반려견 특징&관심사")
         case 3:

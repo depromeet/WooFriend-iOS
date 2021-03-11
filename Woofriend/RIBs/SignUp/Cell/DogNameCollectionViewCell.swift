@@ -27,13 +27,14 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var multiDogInfoCloseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    // FIXME: 다 Rib 단위로 해야함. 콜렉션 셀로 나누니깐, RIB간 데이터가....
+    var closerDogProfile: ((DogProfile?) -> Void)?
+    let imagePickerController = UIImagePickerController()
     private var dogProfile: DogProfile? = DogProfile() {
         willSet {
             self.nextButton.backgroundColor = !(self.dogProfile?.hasNilField() ?? true) ? #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1) : #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
         }
     }
-    
-    let imagePickerController = UIImagePickerController()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -110,7 +111,6 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
                 self?.multiDogInfoView.isHidden = true
             })
             .disposed(by: disposeBag)
-        
         
         dogMenButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
@@ -209,6 +209,7 @@ class DogNameCollectionViewCell: BaseCollectionViewCell {
 
                 if !(self.dogProfile?.hasNilField() ?? true) {
                     self.isChecked.accept(true)
+                    self.closerDogProfile?(self.dogProfile)
                 } else {
                     self.isChecked.accept(false)
                     self.dogNameLayerView.layer.borderColor = self.dogProfile?.name?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor

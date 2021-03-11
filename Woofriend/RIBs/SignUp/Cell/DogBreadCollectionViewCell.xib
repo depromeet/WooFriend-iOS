@@ -5,228 +5,257 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DogBreadCollectionViewCell" id="ijz-Hw-t0T" customClass="DogBreadCollectionViewCell" customModule="Woofriend" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
-                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DogBreadCollectionViewCell" id="oon-eu-yEC" customClass="DogBreadCollectionViewCell" customModule="Woofriend" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="499" height="624"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sT1-gN-ima">
+                <rect key="frame" x="0.0" y="0.0" width="499" height="624"/>
+                <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBj-e5-64p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-fR-AQy">
+                        <rect key="frame" x="0.0" y="0.0" width="499" height="624"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z00-2k-JF2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-hR-glz">
+                                <rect key="frame" x="16" y="557" width="467" height="51"/>
+                                <color key="backgroundColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="5R4-wd-GKB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <state key="normal" title="다음으로"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-C4-6Ds">
+                                <rect key="frame" x="0.0" y="0.0" width="499" height="541"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSS-HC-2rb">
-                                        <rect key="frame" x="16" y="51" width="343" height="44"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6w-rU-kum">
+                                        <rect key="frame" x="0.0" y="0.0" width="499" height="541"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="expand_nor" translatesAutoresizingMaskIntoConstraints="NO" id="0Mk-gB-LDE">
-                                                <rect key="frame" x="313" y="14" width="16" height="16"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-fy-sP9">
+                                                <rect key="frame" x="16" y="51" width="467" height="44"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="expand_nor" translatesAutoresizingMaskIntoConstraints="NO" id="WbQ-7c-uvC">
+                                                        <rect key="frame" x="437" y="14" width="16" height="16"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="16" id="lAj-vu-0Pg"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견종을 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7c-pF-sai">
+                                                        <rect key="frame" x="16" y="14" width="391" height="16"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                        <color key="textColor" name="black_2"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="hM2-yX-yMZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="WbQ-7c-uvC" secondAttribute="bottom" constant="14" id="63A-59-T8Z"/>
+                                                    <constraint firstItem="WbQ-7c-uvC" firstAttribute="top" secondItem="AsY-fy-sP9" secondAttribute="top" constant="14" id="H1a-Lp-NmS"/>
+                                                    <constraint firstItem="F7c-pF-sai" firstAttribute="top" secondItem="AsY-fy-sP9" secondAttribute="top" constant="14" id="IWS-a3-yOE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="F7c-pF-sai" secondAttribute="bottom" constant="14" id="PeO-IZ-0lY"/>
+                                                    <constraint firstItem="F7c-pF-sai" firstAttribute="leading" secondItem="AsY-fy-sP9" secondAttribute="leading" constant="16" id="UeA-u3-aYn"/>
+                                                    <constraint firstItem="WbQ-7c-uvC" firstAttribute="leading" secondItem="F7c-pF-sai" secondAttribute="trailing" constant="30" id="gd0-WH-Ki8"/>
+                                                    <constraint firstAttribute="height" constant="44" id="r8N-Rr-axn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WbQ-7c-uvC" secondAttribute="trailing" constant="14" id="x76-oA-f34"/>
                                                 </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견종을 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQc-4p-VuR">
-                                                <rect key="frame" x="16" y="14" width="267" height="16"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
-                                                <color key="textColor" name="black_2"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="black_4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견종" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aU-gE-Qw5">
+                                                <rect key="frame" x="16" y="24" width="24.5" height="17"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <color key="textColor" name="black_1"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnI-4c-o5I">
+                                                <rect key="frame" x="16" y="142" width="229.5" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="7By-b0-G3b"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <state key="normal" title="중성화 완료">
+                                                    <color key="titleColor" name="black_1"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="black_4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중성화 여부" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idm-YV-4VQ">
+                                                <rect key="frame" x="16" y="115" width="64.5" height="17"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <color key="textColor" name="black_1"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09F-Zf-A9v">
+                                                <rect key="frame" x="253.5" y="142" width="229.5" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <state key="normal" title="중성화 전">
+                                                    <color key="titleColor" name="black_1"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="black_4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예방접종 여부" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Db-0Y-Uqy">
+                                                <rect key="frame" x="16" y="207" width="76.5" height="17"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <color key="textColor" name="black_1"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkw-03-GSK">
+                                                <rect key="frame" x="16" y="234" width="229.5" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="EA4-Pd-ZZI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <state key="normal" title="접종 전">
+                                                    <color key="titleColor" name="black_1"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="black_4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAH-eo-bK8">
+                                                <rect key="frame" x="253.5" y="234" width="229.5" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <state key="normal" title="접종 완료">
+                                                    <color key="titleColor" name="black_1"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="black_4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="LQc-4p-VuR" firstAttribute="top" secondItem="BSS-HC-2rb" secondAttribute="top" constant="14" id="4ki-af-aXV"/>
-                                            <constraint firstItem="0Mk-gB-LDE" firstAttribute="leading" secondItem="LQc-4p-VuR" secondAttribute="trailing" constant="30" id="Rly-py-3aI"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Mk-gB-LDE" secondAttribute="bottom" constant="14" id="Zax-yy-KAE"/>
-                                            <constraint firstAttribute="height" constant="44" id="ZvJ-nL-NUQ"/>
-                                            <constraint firstItem="LQc-4p-VuR" firstAttribute="leading" secondItem="BSS-HC-2rb" secondAttribute="leading" constant="16" id="hFz-QE-ubS"/>
-                                            <constraint firstAttribute="bottom" secondItem="LQc-4p-VuR" secondAttribute="bottom" constant="14" id="kSv-kn-aqu"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Mk-gB-LDE" secondAttribute="trailing" constant="14" id="oxw-OU-cUc"/>
-                                            <constraint firstItem="0Mk-gB-LDE" firstAttribute="top" secondItem="BSS-HC-2rb" secondAttribute="top" constant="14" id="zZZ-rC-6Aa"/>
+                                            <constraint firstItem="6Db-0Y-Uqy" firstAttribute="top" secondItem="qnI-4c-o5I" secondAttribute="bottom" constant="21" id="2wP-Ly-UPi"/>
+                                            <constraint firstItem="AsY-fy-sP9" firstAttribute="leading" secondItem="2aU-gE-Qw5" secondAttribute="leading" id="5p2-nj-NQo"/>
+                                            <constraint firstItem="09F-Zf-A9v" firstAttribute="width" secondItem="qnI-4c-o5I" secondAttribute="width" id="6OX-mY-uR1"/>
+                                            <constraint firstItem="idm-YV-4VQ" firstAttribute="top" secondItem="AsY-fy-sP9" secondAttribute="bottom" constant="20" id="8eq-tW-Xew"/>
+                                            <constraint firstItem="rkw-03-GSK" firstAttribute="top" secondItem="6Db-0Y-Uqy" secondAttribute="bottom" constant="10" id="CWA-qL-61Y"/>
+                                            <constraint firstItem="2aU-gE-Qw5" firstAttribute="leading" secondItem="P6w-rU-kum" secondAttribute="leading" constant="16" id="CiY-0e-tpS"/>
+                                            <constraint firstAttribute="trailing" secondItem="09F-Zf-A9v" secondAttribute="trailing" constant="16" id="E9C-Yg-7g6"/>
+                                            <constraint firstItem="qnI-4c-o5I" firstAttribute="leading" secondItem="2aU-gE-Qw5" secondAttribute="leading" id="GFI-fo-FCm"/>
+                                            <constraint firstItem="BAH-eo-bK8" firstAttribute="top" secondItem="rkw-03-GSK" secondAttribute="top" id="Nuc-pP-KFl"/>
+                                            <constraint firstAttribute="trailing" secondItem="BAH-eo-bK8" secondAttribute="trailing" constant="16" id="TR3-7g-hWR"/>
+                                            <constraint firstItem="09F-Zf-A9v" firstAttribute="top" secondItem="qnI-4c-o5I" secondAttribute="top" id="UbP-gW-lkU"/>
+                                            <constraint firstItem="AsY-fy-sP9" firstAttribute="top" secondItem="2aU-gE-Qw5" secondAttribute="bottom" constant="10" id="VQA-Nb-ehq"/>
+                                            <constraint firstItem="idm-YV-4VQ" firstAttribute="leading" secondItem="2aU-gE-Qw5" secondAttribute="leading" id="YDr-Mi-qNx"/>
+                                            <constraint firstItem="09F-Zf-A9v" firstAttribute="height" secondItem="qnI-4c-o5I" secondAttribute="height" id="cW2-2W-ZlN"/>
+                                            <constraint firstItem="BAH-eo-bK8" firstAttribute="height" secondItem="rkw-03-GSK" secondAttribute="height" id="ch3-Tk-an4"/>
+                                            <constraint firstItem="09F-Zf-A9v" firstAttribute="leading" secondItem="qnI-4c-o5I" secondAttribute="trailing" constant="8" id="ehm-cz-1Uj"/>
+                                            <constraint firstItem="2aU-gE-Qw5" firstAttribute="top" secondItem="P6w-rU-kum" secondAttribute="top" constant="24" id="i3f-u4-ndL"/>
+                                            <constraint firstItem="BAH-eo-bK8" firstAttribute="width" secondItem="rkw-03-GSK" secondAttribute="width" id="iEZ-nY-O8k"/>
+                                            <constraint firstItem="qnI-4c-o5I" firstAttribute="width" secondItem="P6w-rU-kum" secondAttribute="width" multiplier="1/2" constant="-20" id="ihw-ke-eVV"/>
+                                            <constraint firstItem="BAH-eo-bK8" firstAttribute="leading" secondItem="rkw-03-GSK" secondAttribute="trailing" constant="8" id="nd4-r8-XTy"/>
+                                            <constraint firstAttribute="trailing" secondItem="AsY-fy-sP9" secondAttribute="trailing" constant="16" id="qZJ-5D-wVL"/>
+                                            <constraint firstItem="6Db-0Y-Uqy" firstAttribute="leading" secondItem="2aU-gE-Qw5" secondAttribute="leading" id="sz6-MH-CKy"/>
+                                            <constraint firstItem="qnI-4c-o5I" firstAttribute="top" secondItem="idm-YV-4VQ" secondAttribute="bottom" constant="10" id="tOU-da-Nhc"/>
+                                            <constraint firstItem="rkw-03-GSK" firstAttribute="leading" secondItem="P6w-rU-kum" secondAttribute="leading" constant="16" id="udM-XU-tnO"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="black_4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견종" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bag-an-CpB">
-                                        <rect key="frame" x="16" y="24" width="24.5" height="17"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <color key="textColor" name="black_1"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-K5-GTk">
-                                        <rect key="frame" x="16" y="142" width="167.5" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="9iX-DD-O08"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <state key="normal" title="중성화 완료">
-                                            <color key="titleColor" name="black_1"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="black_4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중성화 여부" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVY-AM-AIF">
-                                        <rect key="frame" x="16" y="115" width="64.5" height="17"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <color key="textColor" name="black_1"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOe-On-G2g">
-                                        <rect key="frame" x="191.5" y="142" width="167.5" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <state key="normal" title="중성화 전">
-                                            <color key="titleColor" name="black_1"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="black_4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예방접종 여부" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqw-F7-5TT">
-                                        <rect key="frame" x="16" y="207" width="76.5" height="17"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <color key="textColor" name="black_1"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-Z5-J1i">
-                                        <rect key="frame" x="16" y="234" width="167.5" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="zo7-8n-5WY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <state key="normal" title="접종 전">
-                                            <color key="titleColor" name="black_1"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="black_4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uy-IC-eDk">
-                                        <rect key="frame" x="191.5" y="234" width="167.5" height="44"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <state key="normal" title="접종 완료">
-                                            <color key="titleColor" name="black_1"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="black_4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="LVY-AM-AIF" firstAttribute="top" secondItem="BSS-HC-2rb" secondAttribute="bottom" constant="20" id="4gD-ba-VoM"/>
-                                    <constraint firstAttribute="trailing" secondItem="GOe-On-G2g" secondAttribute="trailing" constant="16" id="52N-iT-zfR"/>
-                                    <constraint firstItem="9uy-IC-eDk" firstAttribute="top" secondItem="RGs-Z5-J1i" secondAttribute="top" id="Dbp-A7-ppl"/>
-                                    <constraint firstItem="bqw-F7-5TT" firstAttribute="leading" secondItem="Bag-an-CpB" secondAttribute="leading" id="G7R-0m-ltx"/>
-                                    <constraint firstItem="LVY-AM-AIF" firstAttribute="leading" secondItem="Bag-an-CpB" secondAttribute="leading" id="IIH-iN-ByY"/>
-                                    <constraint firstItem="9uy-IC-eDk" firstAttribute="height" secondItem="RGs-Z5-J1i" secondAttribute="height" id="L1T-zF-qNK"/>
-                                    <constraint firstItem="GOe-On-G2g" firstAttribute="top" secondItem="rPE-K5-GTk" secondAttribute="top" id="TlT-Rf-vg9"/>
-                                    <constraint firstItem="GOe-On-G2g" firstAttribute="width" secondItem="rPE-K5-GTk" secondAttribute="width" id="VWf-h8-HbZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="BSS-HC-2rb" secondAttribute="trailing" constant="16" id="WIy-aK-MOT"/>
-                                    <constraint firstItem="9uy-IC-eDk" firstAttribute="leading" secondItem="RGs-Z5-J1i" secondAttribute="trailing" constant="8" id="Wah-fZ-qw8"/>
-                                    <constraint firstItem="BSS-HC-2rb" firstAttribute="top" secondItem="Bag-an-CpB" secondAttribute="bottom" constant="10" id="Xwq-uz-44S"/>
-                                    <constraint firstItem="RGs-Z5-J1i" firstAttribute="leading" secondItem="Z00-2k-JF2" secondAttribute="leading" constant="16" id="cBk-DN-xBH"/>
-                                    <constraint firstItem="GOe-On-G2g" firstAttribute="leading" secondItem="rPE-K5-GTk" secondAttribute="trailing" constant="8" id="gP5-El-bSJ"/>
-                                    <constraint firstItem="bqw-F7-5TT" firstAttribute="top" secondItem="rPE-K5-GTk" secondAttribute="bottom" constant="21" id="hoM-XH-j0R"/>
-                                    <constraint firstItem="Bag-an-CpB" firstAttribute="top" secondItem="Z00-2k-JF2" secondAttribute="top" constant="24" id="i0J-3k-NbQ"/>
-                                    <constraint firstItem="BSS-HC-2rb" firstAttribute="leading" secondItem="Bag-an-CpB" secondAttribute="leading" id="jdT-Ck-hqh"/>
-                                    <constraint firstItem="rPE-K5-GTk" firstAttribute="width" secondItem="Z00-2k-JF2" secondAttribute="width" multiplier="1/2" constant="-20" id="jub-Rk-kXg"/>
-                                    <constraint firstItem="RGs-Z5-J1i" firstAttribute="top" secondItem="bqw-F7-5TT" secondAttribute="bottom" constant="10" id="oyd-2a-4e1"/>
-                                    <constraint firstItem="rPE-K5-GTk" firstAttribute="leading" secondItem="Bag-an-CpB" secondAttribute="leading" id="pwU-uj-c8X"/>
-                                    <constraint firstAttribute="trailing" secondItem="9uy-IC-eDk" secondAttribute="trailing" constant="16" id="qiv-VE-1BJ"/>
-                                    <constraint firstItem="Bag-an-CpB" firstAttribute="leading" secondItem="Z00-2k-JF2" secondAttribute="leading" constant="16" id="s9x-dR-IAI"/>
-                                    <constraint firstItem="rPE-K5-GTk" firstAttribute="top" secondItem="LVY-AM-AIF" secondAttribute="bottom" constant="10" id="usF-r5-Exy"/>
-                                    <constraint firstItem="9uy-IC-eDk" firstAttribute="width" secondItem="RGs-Z5-J1i" secondAttribute="width" id="xxU-9T-9r3"/>
-                                    <constraint firstItem="GOe-On-G2g" firstAttribute="height" secondItem="rPE-K5-GTk" secondAttribute="height" id="y7e-QH-QOz"/>
+                                    <constraint firstItem="P6w-rU-kum" firstAttribute="bottom" secondItem="M7Y-XF-bgK" secondAttribute="bottom" id="21m-WB-8qV"/>
+                                    <constraint firstItem="P6w-rU-kum" firstAttribute="top" secondItem="eNd-C4-6Ds" secondAttribute="top" id="N3i-6b-uq5"/>
+                                    <constraint firstAttribute="trailing" secondItem="P6w-rU-kum" secondAttribute="trailing" id="Qkm-7j-nJI"/>
+                                    <constraint firstAttribute="bottom" secondItem="P6w-rU-kum" secondAttribute="bottom" id="Zyk-Jl-gVW"/>
+                                    <constraint firstItem="P6w-rU-kum" firstAttribute="centerX" secondItem="eNd-C4-6Ds" secondAttribute="centerX" id="hn4-JZ-KOs"/>
+                                    <constraint firstItem="P6w-rU-kum" firstAttribute="leading" secondItem="eNd-C4-6Ds" secondAttribute="leading" id="ihL-C0-EQw"/>
                                 </constraints>
-                            </view>
+                                <viewLayoutGuide key="contentLayoutGuide" id="GTL-ec-Xwt"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="M7Y-XF-bgK"/>
+                            </scrollView>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Z00-2k-JF2" firstAttribute="bottom" secondItem="f5n-Zg-NGs" secondAttribute="bottom" id="Jsm-8s-zoC"/>
-                            <constraint firstItem="Z00-2k-JF2" firstAttribute="centerX" secondItem="oBj-e5-64p" secondAttribute="centerX" id="at1-f6-YbJ"/>
-                            <constraint firstItem="Z00-2k-JF2" firstAttribute="top" secondItem="oBj-e5-64p" secondAttribute="top" id="iAi-VP-oZM"/>
-                            <constraint firstItem="Z00-2k-JF2" firstAttribute="leading" secondItem="oBj-e5-64p" secondAttribute="leading" id="kfe-nC-hWS"/>
-                            <constraint firstAttribute="bottom" secondItem="Z00-2k-JF2" secondAttribute="bottom" id="v5W-Ga-Ozs"/>
-                            <constraint firstAttribute="trailing" secondItem="Z00-2k-JF2" secondAttribute="trailing" id="zKZ-Pt-2R9"/>
+                            <constraint firstItem="eNd-C4-6Ds" firstAttribute="top" secondItem="leQ-fR-AQy" secondAttribute="top" id="5fB-Vh-zi6"/>
+                            <constraint firstAttribute="bottom" secondItem="f0f-hR-glz" secondAttribute="bottom" constant="16" id="8bO-2x-KQI"/>
+                            <constraint firstItem="f0f-hR-glz" firstAttribute="top" secondItem="eNd-C4-6Ds" secondAttribute="bottom" constant="16" id="Oeh-N9-chx"/>
+                            <constraint firstAttribute="trailing" secondItem="f0f-hR-glz" secondAttribute="trailing" constant="16" id="QCM-OE-m3z"/>
+                            <constraint firstItem="eNd-C4-6Ds" firstAttribute="leading" secondItem="leQ-fR-AQy" secondAttribute="leading" id="Rmh-h9-ZCs"/>
+                            <constraint firstItem="f0f-hR-glz" firstAttribute="leading" secondItem="leQ-fR-AQy" secondAttribute="leading" constant="16" id="ecs-nM-fcN"/>
+                            <constraint firstAttribute="trailing" secondItem="eNd-C4-6Ds" secondAttribute="trailing" id="onh-ID-5xu"/>
                         </constraints>
-                        <viewLayoutGuide key="contentLayoutGuide" id="mwV-4x-apC"/>
-                        <viewLayoutGuide key="frameLayoutGuide" id="f5n-Zg-NGs"/>
-                    </scrollView>
+                    </view>
                 </subviews>
-            </view>
-            <viewLayoutGuide key="safeArea" id="KWD-gm-zM5"/>
-            <constraints>
-                <constraint firstItem="oBj-e5-64p" firstAttribute="top" secondItem="ijz-Hw-t0T" secondAttribute="top" id="6jV-Od-kmD"/>
-                <constraint firstItem="oBj-e5-64p" firstAttribute="leading" secondItem="ijz-Hw-t0T" secondAttribute="leading" id="nFj-id-Jo6"/>
-                <constraint firstAttribute="trailing" secondItem="oBj-e5-64p" secondAttribute="trailing" id="rcC-ep-lHs"/>
-                <constraint firstAttribute="bottom" secondItem="oBj-e5-64p" secondAttribute="bottom" id="whL-09-pO7"/>
-            </constraints>
-            <size key="customSize" width="276" height="422"/>
+                <constraints>
+                    <constraint firstItem="leQ-fR-AQy" firstAttribute="leading" secondItem="sT1-gN-ima" secondAttribute="leading" id="0b5-NU-bbz"/>
+                    <constraint firstAttribute="trailing" secondItem="leQ-fR-AQy" secondAttribute="trailing" id="1Vy-ki-cGh"/>
+                    <constraint firstAttribute="bottom" secondItem="leQ-fR-AQy" secondAttribute="bottom" id="EzF-6t-2pY"/>
+                    <constraint firstItem="leQ-fR-AQy" firstAttribute="top" secondItem="sT1-gN-ima" secondAttribute="top" id="RWr-cP-0YD"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="499" height="624"/>
             <connections>
-                <outlet property="dogNameLabel" destination="LQc-4p-VuR" id="ffW-Zp-9uz"/>
-                <outlet property="dogNameTapView" destination="BSS-HC-2rb" id="sMO-sj-GGb"/>
-                <outlet property="inoculationCompleteButton" destination="RGs-Z5-J1i" id="ObT-GP-7IV"/>
-                <outlet property="inoculationDoNotButton" destination="9uy-IC-eDk" id="dfE-MN-m3F"/>
-                <outlet property="neutralCompleteButton" destination="rPE-K5-GTk" id="Jgp-4L-w09"/>
-                <outlet property="neutralDoNotButton" destination="GOe-On-G2g" id="TY9-w9-7ed"/>
+                <outlet property="dogNameLabel" destination="F7c-pF-sai" id="MdX-12-ppw"/>
+                <outlet property="dogNameTapView" destination="AsY-fy-sP9" id="2l3-BG-5ji"/>
+                <outlet property="neutralCompleteButton" destination="qnI-4c-o5I" id="3qP-VP-Bq7"/>
+                <outlet property="neutralDoNotButton" destination="09F-Zf-A9v" id="5hr-t8-2WJ"/>
+                <outlet property="nextButton" destination="f0f-hR-glz" id="Im0-UI-ycL"/>
+                <outlet property="vaccinatedCompleteButton" destination="BAH-eo-bK8" id="tf5-ok-IYv"/>
+                <outlet property="vaccinatedDoNotButton" destination="rkw-03-GSK" id="KP9-Og-xbc"/>
             </connections>
-            <point key="canvasLocation" x="239.85507246376812" y="139.28571428571428"/>
+            <point key="canvasLocation" x="1065.9420289855072" y="191.51785714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

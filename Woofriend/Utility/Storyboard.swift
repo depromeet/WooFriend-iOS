@@ -11,8 +11,8 @@ enum Storyboard: String {
     case LoggedOutViewController
     case SignUpViewController
     // SignUp - child
-    case SearchBreedViewController
-    case DirectBreedViewController
+        case SearchDogBreedsViewController
+        case DirectBreedViewController
     //
     case PopUpViewController
     

@@ -31,7 +31,7 @@ final class SearchDogBreedsBuilder: Builder<SearchDogBreedsDependency>, SearchDo
 
     func build(withListener listener: SearchDogBreedsListener) -> SearchDogBreedsRouting {
         let component = SearchDogBreedsComponent(dependency: dependency)
-        let viewController = SearchDogBreedsViewController()
+        let viewController = SearchDogBreedsViewController.instantiate()
         let interactor = SearchDogBreedsInteractor(presenter: viewController)
         interactor.listener = listener
         return SearchDogBreedsRouter(interactor: interactor, viewController: viewController)

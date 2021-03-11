@@ -12,7 +12,7 @@ protocol SignUpDependency: Dependency {
     // created by this RIB.
 }
 
-final class SignUpComponent: Component<SignUpDependency> {
+final class SignUpComponent: Component<SignUpDependency>, SearchLocalDependency, SearchDogBreedsDependency, DirectBreedDependency, DirectLocalDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -34,6 +34,18 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
         let viewController = SignUpViewController.instantiate()
         let interactor = SignUpInteractor(presenter: viewController)
         interactor.listener = listener
-        return SignUpRouter(interactor: interactor, viewController: viewController)
+        
+        // 자식뷰 빌더
+        let searchLocalBuilder = SearchLocalBuilder(dependency: component)
+        let searchDogBreedsBuilder = SearchDogBreedsBuilder(dependency: component)
+        let directLocalBuilder = DirectLocalBuilder(dependency: component)
+        let directBreedBuilder = DirectBreedBuilder(dependency: component)
+        return SignUpRouter(interactor: interactor,
+                            viewController: viewController,
+                            searchDogBreedsBuilder: searchDogBreedsBuilder,
+                            directBreedBuilder: directBreedBuilder,
+                            searchLocalBuilder: searchLocalBuilder,
+                            directLocalBuilder: directLocalBuilder
+        )
     }
 }

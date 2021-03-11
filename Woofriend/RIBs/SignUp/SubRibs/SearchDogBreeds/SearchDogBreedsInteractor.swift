@@ -9,21 +9,33 @@ import RIBs
 import RxSwift
 
 protocol SearchDogBreedsRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+
 }
 
 protocol SearchDogBreedsPresentable: Presentable {
     var listener: SearchDogBreedsPresentableListener? { get set }
+    
     // TODO: Declare methods the interactor can invoke the presenter to present data.
+    var dogBreadList: [String] { get set }
 }
 
 protocol SearchDogBreedsListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     
     func didSearchDogBreeds()
+    func closeSearchDogBreads(dogBread: String?)
 }
 
 final class SearchDogBreedsInteractor: PresentableInteractor<SearchDogBreedsPresentable>, SearchDogBreedsInteractable, SearchDogBreedsPresentableListener {
+    
+    func closeAction(dogBread: String?) {
+        listener?.closeSearchDogBreads(dogBread: dogBread)
+    }
+    
+    func directDogBreadAction() {
+        
+    }
+    
 
     weak var router: SearchDogBreedsRouting?
     weak var listener: SearchDogBreedsListener?
