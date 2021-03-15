@@ -66,7 +66,7 @@ final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, L
 
 // MARK: - Setup
 
-extension LoggedOutViewController: PopUpViewControllerListener {
+extension LoggedOutViewController: PopUpViewControllerListener, SignUpViewControllable {
     func popUpViewClose() {
         print(2131)
     }

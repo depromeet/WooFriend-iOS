@@ -27,9 +27,11 @@ final class LoggedOutRouter: ViewableRouter<LoggedOutInteractable, LoggedOutView
     private var signUpRouting: SignUpRouting?
     
     // TODO: Constructor inject child builder protocols to allow building children.
-    init(interactor: LoggedOutInteractable, viewController: LoggedOutViewControllable, signUpBuilder: SignUpBuildable) {
-        self.signUpBuilder = signUpBuilder
+    init(interactor: LoggedOutInteractable,
+         viewController: LoggedOutViewControllable,
+         signUpBuilder: SignUpBuildable) {
         
+        self.signUpBuilder = signUpBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -39,16 +41,18 @@ final class LoggedOutRouter: ViewableRouter<LoggedOutInteractable, LoggedOutView
 extension LoggedOutRouter: LoggedOutRouting {
     
     func routeToSignUpRIB() {
-        let signUpRouting = signUpBuilder.build(withListener: interactor)
-        self.signUpRouting = signUpRouting
-        attachChild(signUpRouting)
-        viewController.present(viewController: signUpRouting.viewControllable)
+//        let signUpRouting = signUpBuilder.build(withListener: interactor)
+//        self.signUpRouting = signUpRouting
+//        attachChild(signUpRouting)
+//        viewController.present(viewController: signUpRouting)
+        let signUp = signUpBuilder.build(withListener: interactor)
+        attachChild(signUp)
     }
     
     func detachToSignUpRIB() {
         guard let signUpRouting = signUpRouting else { return }
         detachChild(signUpRouting)
-        viewController.dismiss(viewController: signUpRouting.viewControllable)
+//        viewController.dismiss(viewController: signUpRouting.viewControllable)
     }
     
 }

@@ -9,26 +9,16 @@
 /* Begin PBXBuildFile section */
 		35A4C8A51683538D99BEA22A /* Pods_Woofriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACF9BE9B68669A60F56D031 /* Pods_Woofriend.framework */; };
 		A3546DC5109591CE2B71DEA9 /* Pods_WoofriendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B2BAB44279FFF89A09C509 /* Pods_WoofriendTests.framework */; };
-		B83BA63B25EE7156005BFDAC /* DirectBreedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63625EE7156005BFDAC /* DirectBreedRouter.swift */; };
-		B83BA63C25EE7156005BFDAC /* DirectBreedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA63725EE7156005BFDAC /* DirectBreedViewController.storyboard */; };
-		B83BA63D25EE7156005BFDAC /* DirectBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63825EE7156005BFDAC /* DirectBreedViewController.swift */; };
-		B83BA63E25EE7156005BFDAC /* DirectBreedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63925EE7156005BFDAC /* DirectBreedBuilder.swift */; };
-		B83BA63F25EE7156005BFDAC /* DirectBreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA63A25EE7156005BFDAC /* DirectBreedInteractor.swift */; };
-		B83BA64B25EE718F005BFDAC /* SearchLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64725EE718F005BFDAC /* SearchLocalRouter.swift */; };
-		B83BA64C25EE718F005BFDAC /* SearchLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64825EE718F005BFDAC /* SearchLocalViewController.swift */; };
-		B83BA64D25EE718F005BFDAC /* SearchLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64925EE718F005BFDAC /* SearchLocalBuilder.swift */; };
-		B83BA64E25EE718F005BFDAC /* SearchLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA64A25EE718F005BFDAC /* SearchLocalInteractor.swift */; };
-		B83BA65625EE719D005BFDAC /* SearchLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA65525EE719D005BFDAC /* SearchLocalViewController.storyboard */; };
-		B83BA66025EE71BE005BFDAC /* DirectLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65B25EE71BE005BFDAC /* DirectLocalRouter.swift */; };
-		B83BA66125EE71BE005BFDAC /* DirectLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA65C25EE71BE005BFDAC /* DirectLocalViewController.storyboard */; };
-		B83BA66225EE71BE005BFDAC /* DirectLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65D25EE71BE005BFDAC /* DirectLocalViewController.swift */; };
-		B83BA66325EE71BE005BFDAC /* DirectLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65E25EE71BE005BFDAC /* DirectLocalBuilder.swift */; };
-		B83BA66425EE71BE005BFDAC /* DirectLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA65F25EE71BE005BFDAC /* DirectLocalInteractor.swift */; };
-		B83BA67625EE7392005BFDAC /* SearchBreedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA67125EE7392005BFDAC /* SearchBreedRouter.swift */; };
-		B83BA67725EE7392005BFDAC /* SearchBreedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83BA67225EE7392005BFDAC /* SearchBreedViewController.storyboard */; };
-		B83BA67825EE7392005BFDAC /* SearchBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA67325EE7392005BFDAC /* SearchBreedViewController.swift */; };
-		B83BA67925EE7392005BFDAC /* SearchBreedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA67425EE7392005BFDAC /* SearchBreedBuilder.swift */; };
-		B83BA67A25EE7392005BFDAC /* SearchBreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BA67525EE7392005BFDAC /* SearchBreedInteractor.swift */; };
+		B8A30D6A25FFD0F8005466DA /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D6725FFD0F8005466DA /* SignUpRouter.swift */; };
+		B8A30D6B25FFD0F8005466DA /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D6825FFD0F8005466DA /* SignUpBuilder.swift */; };
+		B8A30D6C25FFD0F8005466DA /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D6925FFD0F8005466DA /* SignUpInteractor.swift */; };
+		B8A30D8425FFD3F2005466DA /* LoggedOutComponent+SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D8325FFD3F2005466DA /* LoggedOutComponent+SignUp.swift */; };
+		B8A30D8E25FFD5A0005466DA /* DogNameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D8925FFD5A0005466DA /* DogNameRouter.swift */; };
+		B8A30D8F25FFD5A0005466DA /* DogNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D8A25FFD5A0005466DA /* DogNameViewController.swift */; };
+		B8A30D9025FFD5A0005466DA /* DogNameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D8B25FFD5A0005466DA /* DogNameBuilder.swift */; };
+		B8A30D9125FFD5A0005466DA /* DogNameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D8C25FFD5A0005466DA /* DogNameInteractor.swift */; };
+		B8A30D9225FFD5A0005466DA /* DogNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8A30D8D25FFD5A0005466DA /* DogNameViewController.xib */; };
+		B8A30D9F25FFE00C005466DA /* SignUpComponent+DogName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A30D9E25FFE00C005466DA /* SignUpComponent+DogName.swift */; };
 		E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80337E825BEBE34008580CA /* AppDelegate.swift */; };
 		E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E80337F125BEBE34008580CA /* woofriend.xcdatamodeld */; };
 		E80337F525BEBE36008580CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80337F425BEBE36008580CA /* Assets.xcassets */; };
@@ -57,34 +47,11 @@
 		E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E818FE4925DD4F1A0035E306 /* PopUpView.xib */; };
 		E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E818FE4F25DD673D0035E306 /* PopUpViewController.storyboard */; };
 		E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E818FE5425DD694E0035E306 /* PopUpView.swift */; };
-		E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827426B25E69711003BF6B7 /* WelcomeCell.swift */; };
-		E827426E25E69711003BF6B7 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E827426C25E69711003BF6B7 /* WelcomeCell.xib */; };
 		E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */; };
-		E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879E25DE76AD005575BF /* SignUpRouter.swift */; };
-		E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879F25DE76AD005575BF /* SignUpViewController.swift */; };
-		E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A025DE76AD005575BF /* SignUpBuilder.swift */; };
-		E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A125DE76AD005575BF /* SignUpInteractor.swift */; };
-		E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */; };
 		E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */; };
 		E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872880425DEAAEE005575BF /* UIView+Extension.swift */; };
 		E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */; };
-		E8D001DB25E206C8009D2482 /* DogNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D001D925E206C8009D2482 /* DogNameCollectionViewCell.swift */; };
-		E8D001DC25E206C8009D2482 /* DogNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D001DA25E206C8009D2482 /* DogNameCollectionViewCell.xib */; };
-		E8D001ED25E20728009D2482 /* DogBreadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D001EB25E20728009D2482 /* DogBreadCollectionViewCell.swift */; };
-		E8D001EE25E20728009D2482 /* DogBreadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D001EC25E20728009D2482 /* DogBreadCollectionViewCell.xib */; };
-		E8D001F425E2073A009D2482 /* DogConcernCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D001F225E2073A009D2482 /* DogConcernCollectionViewCell.swift */; };
-		E8D001F525E2073A009D2482 /* DogConcernCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D001F325E2073A009D2482 /* DogConcernCollectionViewCell.xib */; };
-		E8D001FB25E2074B009D2482 /* DogPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D001F925E2074B009D2482 /* DogPhotoCollectionViewCell.swift */; };
-		E8D001FC25E2074B009D2482 /* DogPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D001FA25E2074B009D2482 /* DogPhotoCollectionViewCell.xib */; };
-		E8D0020225E20761009D2482 /* MyInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0020025E20761009D2482 /* MyInfoCollectionViewCell.swift */; };
-		E8D0020325E20761009D2482 /* MyInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D0020125E20761009D2482 /* MyInfoCollectionViewCell.xib */; };
-		E8D0020925E20788009D2482 /* MyIntroductionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D0020725E20788009D2482 /* MyIntroductionCollectionViewCell.swift */; };
-		E8D0020A25E20788009D2482 /* MyIntroductionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D0020825E20788009D2482 /* MyIntroductionCollectionViewCell.xib */; };
 		E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3E02225E21AD3008B87FA /* BaseCollectionViewCell.swift */; };
-		E8D3E02C25E21C2D008B87FA /* OtherDogsInfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3E02B25E21C2D008B87FA /* OtherDogsInfoPopupView.swift */; };
-		E8D3E03725E21C44008B87FA /* OtherDogsInfoPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D3E03625E21C44008B87FA /* OtherDogsInfoPopupView.xib */; };
-		E8E1E6CB25E40831008A9485 /* PhotoAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */; };
-		E8E1E6CC25E40831008A9485 /* PhotoAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */; };
 		FF5931FEF558938C770389A4 /* Pods_Woofriend_WoofriendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,26 +80,16 @@
 		8923BD98FEC395512C25C622 /* Pods_Woofriend_WoofriendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Woofriend_WoofriendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A5586BE55B323D5A7BC9DC /* Pods-Woofriend-WoofriendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B09272E57C9BFC1751A5BF2D /* Pods-Woofriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend.debug.xcconfig"; path = "Target Support Files/Pods-Woofriend/Pods-Woofriend.debug.xcconfig"; sourceTree = "<group>"; };
-		B83BA63625EE7156005BFDAC /* DirectBreedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedRouter.swift; sourceTree = "<group>"; };
-		B83BA63725EE7156005BFDAC /* DirectBreedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectBreedViewController.storyboard; sourceTree = "<group>"; };
-		B83BA63825EE7156005BFDAC /* DirectBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedViewController.swift; sourceTree = "<group>"; };
-		B83BA63925EE7156005BFDAC /* DirectBreedBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedBuilder.swift; sourceTree = "<group>"; };
-		B83BA63A25EE7156005BFDAC /* DirectBreedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectBreedInteractor.swift; sourceTree = "<group>"; };
-		B83BA64725EE718F005BFDAC /* SearchLocalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalRouter.swift; sourceTree = "<group>"; };
-		B83BA64825EE718F005BFDAC /* SearchLocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalViewController.swift; sourceTree = "<group>"; };
-		B83BA64925EE718F005BFDAC /* SearchLocalBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalBuilder.swift; sourceTree = "<group>"; };
-		B83BA64A25EE718F005BFDAC /* SearchLocalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocalInteractor.swift; sourceTree = "<group>"; };
-		B83BA65525EE719D005BFDAC /* SearchLocalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchLocalViewController.storyboard; sourceTree = "<group>"; };
-		B83BA65B25EE71BE005BFDAC /* DirectLocalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalRouter.swift; sourceTree = "<group>"; };
-		B83BA65C25EE71BE005BFDAC /* DirectLocalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectLocalViewController.storyboard; sourceTree = "<group>"; };
-		B83BA65D25EE71BE005BFDAC /* DirectLocalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalViewController.swift; sourceTree = "<group>"; };
-		B83BA65E25EE71BE005BFDAC /* DirectLocalBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalBuilder.swift; sourceTree = "<group>"; };
-		B83BA65F25EE71BE005BFDAC /* DirectLocalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLocalInteractor.swift; sourceTree = "<group>"; };
-		B83BA67125EE7392005BFDAC /* SearchBreedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedRouter.swift; sourceTree = "<group>"; };
-		B83BA67225EE7392005BFDAC /* SearchBreedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchBreedViewController.storyboard; sourceTree = "<group>"; };
-		B83BA67325EE7392005BFDAC /* SearchBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedViewController.swift; sourceTree = "<group>"; };
-		B83BA67425EE7392005BFDAC /* SearchBreedBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedBuilder.swift; sourceTree = "<group>"; };
-		B83BA67525EE7392005BFDAC /* SearchBreedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBreedInteractor.swift; sourceTree = "<group>"; };
+		B8A30D6725FFD0F8005466DA /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		B8A30D6825FFD0F8005466DA /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
+		B8A30D6925FFD0F8005466DA /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		B8A30D8325FFD3F2005466DA /* LoggedOutComponent+SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedOutComponent+SignUp.swift"; sourceTree = "<group>"; };
+		B8A30D8925FFD5A0005466DA /* DogNameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNameRouter.swift; sourceTree = "<group>"; };
+		B8A30D8A25FFD5A0005466DA /* DogNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNameViewController.swift; sourceTree = "<group>"; };
+		B8A30D8B25FFD5A0005466DA /* DogNameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNameBuilder.swift; sourceTree = "<group>"; };
+		B8A30D8C25FFD5A0005466DA /* DogNameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNameInteractor.swift; sourceTree = "<group>"; };
+		B8A30D8D25FFD5A0005466DA /* DogNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogNameViewController.xib; sourceTree = "<group>"; };
+		B8A30D9E25FFE00C005466DA /* SignUpComponent+DogName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpComponent+DogName.swift"; sourceTree = "<group>"; };
 		CE33E6A44E5F01F2402DAFCA /* Pods-Woofriend-WoofriendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Woofriend-WoofriendUITests.release.xcconfig"; path = "Target Support Files/Pods-Woofriend-WoofriendUITests/Pods-Woofriend-WoofriendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E80337E525BEBE34008580CA /* Woofriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woofriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80337E825BEBE34008580CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,34 +125,11 @@
 		E818FE4925DD4F1A0035E306 /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
 		E818FE4F25DD673D0035E306 /* PopUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUpViewController.storyboard; sourceTree = "<group>"; };
 		E818FE5425DD694E0035E306 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
-		E827426B25E69711003BF6B7 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
-		E827426C25E69711003BF6B7 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
 		E85469ED25C50EDA0043B4FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E872879E25DE76AD005575BF /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
-		E872879F25DE76AD005575BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		E87287A025DE76AD005575BF /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
-		E87287A125DE76AD005575BF /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
-		E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
 		E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+Extension.swift"; sourceTree = "<group>"; };
 		E872880425DEAAEE005575BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
-		E8D001D925E206C8009D2482 /* DogNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogNameCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8D001DA25E206C8009D2482 /* DogNameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogNameCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8D001EB25E20728009D2482 /* DogBreadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreadCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8D001EC25E20728009D2482 /* DogBreadCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogBreadCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8D001F225E2073A009D2482 /* DogConcernCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogConcernCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8D001F325E2073A009D2482 /* DogConcernCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogConcernCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8D001F925E2074B009D2482 /* DogPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8D001FA25E2074B009D2482 /* DogPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8D0020025E20761009D2482 /* MyInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8D0020125E20761009D2482 /* MyInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8D0020725E20788009D2482 /* MyIntroductionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIntroductionCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8D0020825E20788009D2482 /* MyIntroductionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyIntroductionCollectionViewCell.xib; sourceTree = "<group>"; };
 		E8D3E02225E21AD3008B87FA /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8D3E02B25E21C2D008B87FA /* OtherDogsInfoPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherDogsInfoPopupView.swift; sourceTree = "<group>"; };
-		E8D3E03625E21C44008B87FA /* OtherDogsInfoPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherDogsInfoPopupView.xib; sourceTree = "<group>"; };
-		E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAddCell.swift; sourceTree = "<group>"; };
-		E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoAddCell.xib; sourceTree = "<group>"; };
 		E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.debug.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,63 +171,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B83BA62A25EE6CFC005BFDAC /* SearchBreed */ = {
+		B8A30D6325FFD05E005466DA /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				B83BA67125EE7392005BFDAC /* SearchBreedRouter.swift */,
-				B83BA67225EE7392005BFDAC /* SearchBreedViewController.storyboard */,
-				B83BA67325EE7392005BFDAC /* SearchBreedViewController.swift */,
-				B83BA67425EE7392005BFDAC /* SearchBreedBuilder.swift */,
-				B83BA67525EE7392005BFDAC /* SearchBreedInteractor.swift */,
+				B8A30D6725FFD0F8005466DA /* SignUpRouter.swift */,
+				B8A30D6825FFD0F8005466DA /* SignUpBuilder.swift */,
+				B8A30D6925FFD0F8005466DA /* SignUpInteractor.swift */,
+				B8A30D9E25FFE00C005466DA /* SignUpComponent+DogName.swift */,
 			);
-			path = SearchBreed;
+			path = SignUp;
 			sourceTree = "<group>";
 		};
-		B83BA63525EE713F005BFDAC /* DirectBreed */ = {
+		B8A30D8825FFD582005466DA /* dog */ = {
 			isa = PBXGroup;
 			children = (
-				B83BA63625EE7156005BFDAC /* DirectBreedRouter.swift */,
-				B83BA63725EE7156005BFDAC /* DirectBreedViewController.storyboard */,
-				B83BA63825EE7156005BFDAC /* DirectBreedViewController.swift */,
-				B83BA63925EE7156005BFDAC /* DirectBreedBuilder.swift */,
-				B83BA63A25EE7156005BFDAC /* DirectBreedInteractor.swift */,
+				B8A30D8925FFD5A0005466DA /* DogNameRouter.swift */,
+				B8A30D8A25FFD5A0005466DA /* DogNameViewController.swift */,
+				B8A30D8B25FFD5A0005466DA /* DogNameBuilder.swift */,
+				B8A30D8C25FFD5A0005466DA /* DogNameInteractor.swift */,
+				B8A30D8D25FFD5A0005466DA /* DogNameViewController.xib */,
 			);
-			path = DirectBreed;
-			sourceTree = "<group>";
-		};
-		B83BA64625EE717C005BFDAC /* SearchLocal  */ = {
-			isa = PBXGroup;
-			children = (
-				B83BA64725EE718F005BFDAC /* SearchLocalRouter.swift */,
-				B83BA64825EE718F005BFDAC /* SearchLocalViewController.swift */,
-				B83BA64925EE718F005BFDAC /* SearchLocalBuilder.swift */,
-				B83BA64A25EE718F005BFDAC /* SearchLocalInteractor.swift */,
-				B83BA65525EE719D005BFDAC /* SearchLocalViewController.storyboard */,
-			);
-			path = "SearchLocal ";
-			sourceTree = "<group>";
-		};
-		B83BA65A25EE71A3005BFDAC /* DirectLocal */ = {
-			isa = PBXGroup;
-			children = (
-				B83BA65B25EE71BE005BFDAC /* DirectLocalRouter.swift */,
-				B83BA65C25EE71BE005BFDAC /* DirectLocalViewController.storyboard */,
-				B83BA65D25EE71BE005BFDAC /* DirectLocalViewController.swift */,
-				B83BA65E25EE71BE005BFDAC /* DirectLocalBuilder.swift */,
-				B83BA65F25EE71BE005BFDAC /* DirectLocalInteractor.swift */,
-			);
-			path = DirectLocal;
-			sourceTree = "<group>";
-		};
-		B83BA68125EE75D6005BFDAC /* Child */ = {
-			isa = PBXGroup;
-			children = (
-				B83BA62A25EE6CFC005BFDAC /* SearchBreed */,
-				B83BA63525EE713F005BFDAC /* DirectBreed */,
-				B83BA64625EE717C005BFDAC /* SearchLocal  */,
-				B83BA65A25EE71A3005BFDAC /* DirectLocal */,
-			);
-			path = Child;
+			path = dog;
 			sourceTree = "<group>";
 		};
 		E2710CCC056B7B8DBB6799D6 /* Pods */ = {
@@ -369,9 +267,10 @@
 		E818FC8725DCE4B60035E306 /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
+				B8A30D8825FFD582005466DA /* dog */,
+				B8A30D6325FFD05E005466DA /* SignUp */,
 				E818FC8A25DCE61F0035E306 /* Root */,
 				E818FD2325DCF4B70035E306 /* LoggedOut */,
-				E872879D25DE7694005575BF /* SignUp - 상태 */,
 				E818FD2A25DD04540035E306 /* Main */,
 			);
 			path = RIBs;
@@ -406,6 +305,7 @@
 				E818FD2E25DD06860035E306 /* LoggedOutBuilder.swift */,
 				E818FD2F25DD06860035E306 /* LoggedOutInteractor.swift */,
 				E818FD5525DD0CB30035E306 /* LoggedOutViewController.storyboard */,
+				B8A30D8325FFD3F2005466DA /* LoggedOutComponent+SignUp.swift */,
 			);
 			path = LoggedOut;
 			sourceTree = "<group>";
@@ -459,54 +359,6 @@
 				E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		E872879D25DE7694005575BF /* SignUp - 상태 */ = {
-			isa = PBXGroup;
-			children = (
-				B83BA68125EE75D6005BFDAC /* Child */,
-				E8D3E02A25E21BE1008B87FA /* Xib */,
-				E8D001D525E2042E009D2482 /* Cell */,
-				E872879E25DE76AD005575BF /* SignUpRouter.swift */,
-				E872879F25DE76AD005575BF /* SignUpViewController.swift */,
-				E87287A025DE76AD005575BF /* SignUpBuilder.swift */,
-				E87287A125DE76AD005575BF /* SignUpInteractor.swift */,
-				E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */,
-			);
-			name = "SignUp - 상태";
-			path = "SignUp - 상태";
-			sourceTree = "<group>";
-		};
-		E8D001D525E2042E009D2482 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				E8D001D925E206C8009D2482 /* DogNameCollectionViewCell.swift */,
-				E8D001DA25E206C8009D2482 /* DogNameCollectionViewCell.xib */,
-				E8D001EB25E20728009D2482 /* DogBreadCollectionViewCell.swift */,
-				E8D001EC25E20728009D2482 /* DogBreadCollectionViewCell.xib */,
-				E8D001F225E2073A009D2482 /* DogConcernCollectionViewCell.swift */,
-				E8D001F325E2073A009D2482 /* DogConcernCollectionViewCell.xib */,
-				E8D001F925E2074B009D2482 /* DogPhotoCollectionViewCell.swift */,
-				E8D001FA25E2074B009D2482 /* DogPhotoCollectionViewCell.xib */,
-				E8D0020025E20761009D2482 /* MyInfoCollectionViewCell.swift */,
-				E8D0020125E20761009D2482 /* MyInfoCollectionViewCell.xib */,
-				E8D0020725E20788009D2482 /* MyIntroductionCollectionViewCell.swift */,
-				E8D0020825E20788009D2482 /* MyIntroductionCollectionViewCell.xib */,
-				E8E1E6C925E40831008A9485 /* PhotoAddCell.swift */,
-				E8E1E6CA25E40831008A9485 /* PhotoAddCell.xib */,
-				E827426B25E69711003BF6B7 /* WelcomeCell.swift */,
-				E827426C25E69711003BF6B7 /* WelcomeCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		E8D3E02A25E21BE1008B87FA /* Xib */ = {
-			isa = PBXGroup;
-			children = (
-				E8D3E02B25E21C2D008B87FA /* OtherDogsInfoPopupView.swift */,
-				E8D3E03625E21C44008B87FA /* OtherDogsInfoPopupView.xib */,
-			);
-			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -618,26 +470,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D001EE25E20728009D2482 /* DogBreadCollectionViewCell.xib in Resources */,
-				E8D001DC25E206C8009D2482 /* DogNameCollectionViewCell.xib in Resources */,
-				E8D001FC25E2074B009D2482 /* DogPhotoCollectionViewCell.xib in Resources */,
-				E8D001F525E2073A009D2482 /* DogConcernCollectionViewCell.xib in Resources */,
-				B83BA65625EE719D005BFDAC /* SearchLocalViewController.storyboard in Resources */,
 				E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */,
 				E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */,
 				E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */,
-				B83BA66125EE71BE005BFDAC /* DirectLocalViewController.storyboard in Resources */,
 				E85469EE25C50EDA0043B4FE /* GoogleService-Info.plist in Resources */,
-				E8D0020A25E20788009D2482 /* MyIntroductionCollectionViewCell.xib in Resources */,
-				E8D3E03725E21C44008B87FA /* OtherDogsInfoPopupView.xib in Resources */,
-				E8E1E6CC25E40831008A9485 /* PhotoAddCell.xib in Resources */,
-				E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */,
-				B83BA67725EE7392005BFDAC /* SearchBreedViewController.storyboard in Resources */,
-				E827426E25E69711003BF6B7 /* WelcomeCell.xib in Resources */,
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
-				B83BA63C25EE7156005BFDAC /* DirectBreedViewController.storyboard in Resources */,
-				E8D0020325E20761009D2482 /* MyInfoCollectionViewCell.xib in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
+				B8A30D9225FFD5A0005466DA /* DogNameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,57 +623,37 @@
 			files = (
 				E818FE5525DD694E0035E306 /* PopUpView.swift in Sources */,
 				E818FD3325DD06860035E306 /* LoggedOutInteractor.swift in Sources */,
-				B83BA64E25EE718F005BFDAC /* SearchLocalInteractor.swift in Sources */,
 				E818FD3F25DD06B00035E306 /* MainViewController.swift in Sources */,
-				B83BA64D25EE718F005BFDAC /* SearchLocalBuilder.swift in Sources */,
+				B8A30D9F25FFE00C005466DA /* SignUpComponent+DogName.swift in Sources */,
 				E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */,
+				B8A30D8E25FFD5A0005466DA /* DogNameRouter.swift in Sources */,
 				E818FCE425DCEF910035E306 /* RootViewController.swift in Sources */,
-				B83BA67A25EE7392005BFDAC /* SearchBreedInteractor.swift in Sources */,
-				B83BA66425EE71BE005BFDAC /* DirectLocalInteractor.swift in Sources */,
-				B83BA67925EE7392005BFDAC /* SearchBreedBuilder.swift in Sources */,
 				E818FCE325DCEF910035E306 /* RootRouter.swift in Sources */,
-				E8D001FB25E2074B009D2482 /* DogPhotoCollectionViewCell.swift in Sources */,
 				E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */,
-				B83BA64C25EE718F005BFDAC /* SearchLocalViewController.swift in Sources */,
-				B83BA63D25EE7156005BFDAC /* DirectBreedViewController.swift in Sources */,
-				E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */,
-				E8D3E02C25E21C2D008B87FA /* OtherDogsInfoPopupView.swift in Sources */,
 				E818FE0525DD39EC0035E306 /* BaseViewController.swift in Sources */,
-				E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */,
+				B8A30D6A25FFD0F8005466DA /* SignUpRouter.swift in Sources */,
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
-				B83BA63E25EE7156005BFDAC /* DirectBreedBuilder.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
 				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
 				E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */,
-				E8D001ED25E20728009D2482 /* DogBreadCollectionViewCell.swift in Sources */,
-				E8E1E6CB25E40831008A9485 /* PhotoAddCell.swift in Sources */,
-				E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */,
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,
-				B83BA67625EE7392005BFDAC /* SearchBreedRouter.swift in Sources */,
-				E8D0020225E20761009D2482 /* MyInfoCollectionViewCell.swift in Sources */,
-				B83BA63F25EE7156005BFDAC /* DirectBreedInteractor.swift in Sources */,
 				E818FC9B25DCE9A60035E306 /* AppComponent.swift in Sources */,
+				B8A30D9025FFD5A0005466DA /* DogNameBuilder.swift in Sources */,
 				E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */,
-				B83BA66025EE71BE005BFDAC /* DirectLocalRouter.swift in Sources */,
+				B8A30D8425FFD3F2005466DA /* LoggedOutComponent+SignUp.swift in Sources */,
 				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
 				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
-				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
+				B8A30D6B25FFD0F8005466DA /* SignUpBuilder.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
-				B83BA66225EE71BE005BFDAC /* DirectLocalViewController.swift in Sources */,
 				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
-				E8D001DB25E206C8009D2482 /* DogNameCollectionViewCell.swift in Sources */,
-				B83BA67825EE7392005BFDAC /* SearchBreedViewController.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
-				B83BA64B25EE718F005BFDAC /* SearchLocalRouter.swift in Sources */,
 				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
-				E8D001F425E2073A009D2482 /* DogConcernCollectionViewCell.swift in Sources */,
-				B83BA63B25EE7156005BFDAC /* DirectBreedRouter.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
-				E8D0020925E20788009D2482 /* MyIntroductionCollectionViewCell.swift in Sources */,
-				B83BA66325EE71BE005BFDAC /* DirectLocalBuilder.swift in Sources */,
-				E827426D25E69711003BF6B7 /* WelcomeCell.swift in Sources */,
+				B8A30D6C25FFD0F8005466DA /* SignUpInteractor.swift in Sources */,
+				B8A30D8F25FFD5A0005466DA /* DogNameViewController.swift in Sources */,
+				B8A30D9125FFD5A0005466DA /* DogNameInteractor.swift in Sources */,
 				E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

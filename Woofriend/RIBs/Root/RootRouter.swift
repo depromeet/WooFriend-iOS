@@ -60,9 +60,6 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         self.loggedOutRouting = loggedOutRouting
         attachChild(loggedOutRouting)
         viewController.replaceRoot(viewControllable: loggedOutRouting.viewControllable)
-//        let navigationController = UINavigationController(root: loggedOutRouting.viewControllable)
-//        navigationController.navigationBar.isHidden = true
-//        viewController.present(viewController: navigationController)
     }
 }
 
