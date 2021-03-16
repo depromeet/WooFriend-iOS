@@ -99,6 +99,10 @@ extension SearchDogBreedsViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row != 0 else {
+            //다른 작업
+            return
+        }
         self.listener?.closeAction(dogBread: dogBreadList[indexPath.row - 1])
     }
 }

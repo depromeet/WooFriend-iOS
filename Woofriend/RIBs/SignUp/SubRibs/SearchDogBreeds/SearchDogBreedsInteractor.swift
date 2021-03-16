@@ -23,19 +23,18 @@ protocol SearchDogBreedsListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     
     func didSearchDogBreeds()
-    func closeSearchDogBreads(dogBread: String?)
+    func didEndSearchDogBreads(dogBread: String?)
 }
 
 final class SearchDogBreedsInteractor: PresentableInteractor<SearchDogBreedsPresentable>, SearchDogBreedsInteractable, SearchDogBreedsPresentableListener {
     
     func closeAction(dogBread: String?) {
-        listener?.closeSearchDogBreads(dogBread: dogBread)
+        listener?.didEndSearchDogBreads(dogBread: dogBread)
     }
     
     func directDogBreadAction() {
         
     }
-    
 
     weak var router: SearchDogBreedsRouting?
     weak var listener: SearchDogBreedsListener?

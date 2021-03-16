@@ -19,10 +19,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZQ-p1-5Pf">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZQ-p1-5Pf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ln-Rb-mMi">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ln-Rb-mMi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{멍쿠 명칭}의 특징" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWe-7w-mPk">
@@ -35,7 +35,7 @@
                                         <color key="textColor" name="black_1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{멍쿠 명칭}의 관심사" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axz-cV-gFs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="{멍쿠 명칭}의 관심사" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axz-cV-gFs">
                                         <rect key="frame" x="16" y="108" width="115" height="16"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -45,7 +45,7 @@
                                         <color key="textColor" name="black_1"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYI-z1-UXz" customClass="TagListView" customModule="TagListView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYI-z1-UXz" customClass="TagListView" customModule="TagListView">
                                         <rect key="frame" x="16" y="138" width="343" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -84,7 +84,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYa-MT-Rfj" customClass="TagListView" customModule="TagListView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYa-MT-Rfj" customClass="TagListView" customModule="TagListView">
                                         <rect key="frame" x="16" y="54" width="343" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -144,12 +144,10 @@
                             <constraint firstAttribute="bottom" secondItem="7Ln-Rb-mMi" secondAttribute="bottom" id="FNt-Es-G7r"/>
                             <constraint firstItem="7Ln-Rb-mMi" firstAttribute="centerX" secondItem="xZQ-p1-5Pf" secondAttribute="centerX" id="LwO-qD-5IZ"/>
                             <constraint firstItem="7Ln-Rb-mMi" firstAttribute="top" secondItem="xZQ-p1-5Pf" secondAttribute="top" id="P0b-GF-hK2"/>
-                            <constraint firstItem="7Ln-Rb-mMi" firstAttribute="bottom" secondItem="anr-Ib-p2Q" secondAttribute="bottom" id="PUq-Cy-uDC"/>
+                            <constraint firstItem="7Ln-Rb-mMi" firstAttribute="bottom" secondItem="xZQ-p1-5Pf" secondAttribute="bottom" id="PUq-Cy-uDC"/>
                             <constraint firstAttribute="trailing" secondItem="7Ln-Rb-mMi" secondAttribute="trailing" id="VFp-tO-Mqj"/>
                             <constraint firstItem="7Ln-Rb-mMi" firstAttribute="leading" secondItem="xZQ-p1-5Pf" secondAttribute="leading" id="tBu-TO-a4S"/>
                         </constraints>
-                        <viewLayoutGuide key="contentLayoutGuide" id="gBH-BZ-S8S"/>
-                        <viewLayoutGuide key="frameLayoutGuide" id="anr-Ib-p2Q"/>
                     </scrollView>
                 </subviews>
             </view>
@@ -170,14 +168,6 @@
             <point key="canvasLocation" x="239.85507246376812" y="139.28571428571428"/>
         </collectionViewCell>
     </objects>
-    <designables>
-        <designable name="XYa-MT-Rfj">
-            <size key="intrinsicContentSize" width="343" height="30"/>
-        </designable>
-        <designable name="uYI-z1-UXz">
-            <size key="intrinsicContentSize" width="343" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <namedColor name="black_1">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

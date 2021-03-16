@@ -15,18 +15,12 @@ protocol SignUpDependency: Dependency {
     // created by this RIB.
 }
 
-final class SignUpComponent: Component<SignUpDependency>, DogProfileDependency, DogBreadDependency,
-                             SearchLocalDependency, SearchDogBreedsDependency, DirectBreedDependency, DirectLocalDependency {
+final class SignUpComponent: Component<SignUpDependency>, DogProfileDependency, DogBreadDependency, DogAttitudeDependency, DogPhotoDependency, MyInfoDependency, MyIntroDependency , SearchLocalDependency, DirectBreedDependency, DirectLocalDependency {
+    
     // TODO: Make sure to convert the variable into lower-camelcase.
     fileprivate var signUpViewController: SignUpViewControllable {
         return dependency.signUpViewController
     }
-    
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
-    
-    //    init(dependency: SignUpDependency) {
-    //        super.init(dependency: dependency)
-    //    }
 }
 
 // MARK: - Builder
@@ -49,8 +43,11 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
         // 자식뷰 빌더
         let dogProfileBuilder       = DogProfileBuilder(dependency: component)
         let dogBreadBuilder         = DogBreadBuilder(dependency: component)
+        let dogAttitudeBuilder      = DogAttitudeBuilder(dependency: component)
+        let dogPhotoBuilder         = DogPhotoBuilder(dependency: component)
+        let myInfoBuilder           = MyInfoBuilder(dependency: component)
+        let myIntroBuilder          = MyIntroBuilder(dependency: component)
         let searchLocalBuilder      = SearchLocalBuilder(dependency: component)
-        let searchDogBreedsBuilder  = SearchDogBreedsBuilder(dependency: component)
         let directLocalBuilder      = DirectLocalBuilder(dependency: component)
         let directBreedBuilder      = DirectBreedBuilder(dependency: component)
         
@@ -59,7 +56,10 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
             viewController: component.signUpViewController,
             dogProfileBuilder: dogProfileBuilder,
             dogBreadBuilder: dogBreadBuilder,
-            searchDogBreedsBuilder: searchDogBreedsBuilder,
+            dogAttitudeBuilder: dogAttitudeBuilder,
+            dogPhotoBuilder: dogPhotoBuilder,
+            myInfoBuilder: myInfoBuilder,
+            myIntroBuilder: myIntroBuilder,
             directBreedBuilder: directBreedBuilder,
             searchLocalBuilder: searchLocalBuilder,
             directLocalBuilder: directLocalBuilder

@@ -7,15 +7,18 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 
 protocol DogBreadRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func attachToSearchBread()
+    func detachToSearchBread()
 }
 
 protocol DogBreadPresentable: Presentable {
     var listener: DogBreadPresentableListener? { get set }
     
     var dogBread: DogBread? { get set }
+    var dogName: BehaviorRelay<String> { get set }
 }
 
 protocol DogBreadListener: class {
@@ -51,6 +54,19 @@ final class DogBreadInteractor: PresentableInteractor<DogBreadPresentable>, DogB
     
     func backAction() {
         listener?.didEndBread()
+    }
+    
+    func nextSearchBread() {
+        router?.attachToSearchBread()
+    }
+    
+    func didSearchDogBreeds() {
+        
+    }
+    
+    func didEndSearchDogBreads(dogBread: String?) {
+        presenter.dogName.accept(dogBread ?? "")
+        router?.detachToSearchBread()
     }
     
 }

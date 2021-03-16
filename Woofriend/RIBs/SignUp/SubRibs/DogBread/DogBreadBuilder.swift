@@ -12,7 +12,7 @@ protocol DogBreadDependency: Dependency {
     // created by this RIB.
 }
 
-final class DogBreadComponent: Component<DogBreadDependency> {
+final class DogBreadComponent: Component<DogBreadDependency>, SearchDogBreedsDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -34,6 +34,10 @@ final class DogBreadBuilder: Builder<DogBreadDependency>, DogBreadBuildable {
         let viewController = DogBreadViewController()
         let interactor = DogBreadInteractor(presenter: viewController)
         interactor.listener = listener
-        return DogBreadRouter(interactor: interactor, viewController: viewController)
+        
+        
+        let searchDogBreedsBuilder  = SearchDogBreedsBuilder(dependency: component)
+        
+        return DogBreadRouter(interactor: interactor, viewController: viewController, searchDogBreedsBuilder: searchDogBreedsBuilder)
     }
 }

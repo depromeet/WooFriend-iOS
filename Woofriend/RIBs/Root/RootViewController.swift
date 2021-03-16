@@ -33,15 +33,4 @@ final class RootViewController: BaseViewController, RootPresentable, RootViewCon
         view.backgroundColor = UIColor.red
     }
     
-    // MARK: - RootViewControllable
-    
-    func replaceRoot(viewControllable: ViewControllable) {
-        replaceRoot(to: viewControllable.uiviewController)
-    }
-    
-    func present(viewController: ViewControllable) {
-        viewController.uiviewController.modalPresentationStyle = .fullScreen
-        present(viewController.uiviewController, animated: false, completion: nil)
-    }
-    
 }

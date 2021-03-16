@@ -56,17 +56,6 @@ final class DogProfileViewController: BaseViewController, DogProfilePresentable,
         bindUI()
     }
     
-    func present(viewController: ViewControllable) {
-        viewController.uiviewController.modalPresentationStyle = .fullScreen
-        present(viewController.uiviewController, animated: false, completion: nil)
-    }
-    
-    func dismiss(viewController: ViewControllable) {
-        if presentedViewController === viewController.uiviewController {
-            dismiss(animated: false, completion: nil)
-        }
-    }
-    
     private func keyboradHideAll() {
         self.dogNameTextField.resignFirstResponder()
         self.dogAgeTextField.resignFirstResponder()
@@ -231,15 +220,18 @@ final class DogProfileViewController: BaseViewController, DogProfilePresentable,
             .emit(onNext: { [weak self] b in
                 guard let self = self else { return }
                 
-                if !(self.dogProfile?.hasNilField() ?? true) {
-                    self.listener?.nextAction()
-                } else {
-                    self.dogNameLayerView.layer.borderColor = self.dogProfile?.name?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.dogWomenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.dogMenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.dogAgeLayerView.layer.borderColor = self.dogProfile?.age?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.dogProfileImageView.layer.borderColor = self.dogProfile?.photo == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).cgColor
-                }
+                // TODO: 테스트용으로 무조건 패스
+                self.listener?.nextAction()
+                
+//                if !(self.dogProfile?.hasNilField() ?? true) {
+//                    self.listener?.nextAction()
+//                } else {
+//                    self.dogNameLayerView.layer.borderColor = self.dogProfile?.name?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.dogWomenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.dogMenButton.layer.borderColor = self.dogProfile?.gender?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.dogAgeLayerView.layer.borderColor = self.dogProfile?.age?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.dogProfileImageView.layer.borderColor = self.dogProfile?.photo == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+//                }
             })
             .disposed(by: disposeBag)
         

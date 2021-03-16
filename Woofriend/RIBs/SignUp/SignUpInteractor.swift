@@ -15,10 +15,18 @@ protocol SignUpRouting: Routing {
     func detachToDogProfile()
     func attachToDogBread()
     func detachToDogBread()
+    func attachToDogAttitude(dogName: String)
+    func detachToDogAttitude()
+    func attachToDogPhoto()
+    func detachToDogPhoto()
+    func attachToMyInfo()
+    func detachToMyInfo()
+    func attachToMyIntro()
+    func detachToMyIntro()
+    func attachToWelcome()
+    func detachToWelcome()
     //
     func routeChild(step: Int)
-    func routeSearchDogBreeds()
-    func detachToSearchDogBreeds()
 }
 
 // 상위 노드가 구현함.
@@ -58,26 +66,46 @@ final class SignUpInteractor: Interactor, SignUpInteractable {
     }
     
     func didDogAttitude() {
-        
+//        dogProfile
+        router?.attachToDogAttitude(dogName: dogProfile?.name ?? "")
     }
     
     func setDogProfile(_ profile: DogProfile?) {
         dogProfile = profile
     }
     
+    func didDogPhoto() {
+        router?.attachToDogPhoto()
+    }
     
-
-
-    func closeSearchDogBreads(dogBread: String?) {
-        router?.detachToSearchDogBreeds()
+    func didEndAttitude() {
+        router?.detachToDogAttitude()
     }
-
-    func closeSearchDogBreads() {
-        router?.detachToSearchDogBreeds()
+    
+    func didMyInfo() {
+        router?.attachToMyInfo()
     }
-
-    func didSearchDogBreeds() {
-        router?.routeSearchDogBreeds()
+    
+    func didMyIntro() {
+        router?.attachToMyIntro()
     }
-
+    
+    func didEndmyInfo() {
+        router?.detachToMyInfo()
+    }
+    
+    func didEndMyIntro() {
+        router?.detachToMyIntro()
+    }
+    
+    func didEndPhoto() {
+        router?.detachToDogPhoto()
+    }
+    
+    func didWelcome() {
+        router?.attachToWelcome()
+    }
+    
+    
+    
 }

@@ -7,15 +7,16 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 import UIKit
 
 protocol DogBreadPresentableListener: class {
     func nextAction()
     func backAction()
+    func nextSearchBread()
 }
 
 final class DogBreadViewController: BaseViewController, DogBreadPresentable, DogBreadViewControllable {
-    
     weak var listener: DogBreadPresentableListener?
     
     @IBOutlet weak var dogNameLabel: UILabel!
@@ -28,8 +29,9 @@ final class DogBreadViewController: BaseViewController, DogBreadPresentable, Dog
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var indicatiorTrailingConstraint: NSLayoutConstraint!
     
+    var dogName: BehaviorRelay<String> = BehaviorRelay(value: "견종을 선택해주세요")
     var dogBread: DogBread? = DogBread() {
-        willSet {
+        didSet {
             self.nextButton.backgroundColor = !(self.dogBread?.hasNilField() ?? true) ? #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1) : #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
         }
     }
@@ -52,8 +54,15 @@ final class DogBreadViewController: BaseViewController, DogBreadPresentable, Dog
             .emit(onNext: { [weak self] _ in
                 guard let self = self else { return }
                 
-                //                self.breadAction?()
+                self.listener?.nextSearchBread()
             })
+            .disposed(by: disposeBag)
+        
+        dogName
+            .do(onNext: { [weak self] text in
+                self?.dogBread?.bread = text
+            })
+            .bind(to: dogNameLabel.rx.text)
             .disposed(by: disposeBag)
         
         // MARK: 중성화
@@ -118,15 +127,17 @@ final class DogBreadViewController: BaseViewController, DogBreadPresentable, Dog
             .emit(onNext: { [weak self] b in
                 guard let self = self else { return }
                 
-                if !(self.dogBread?.hasNilField() ?? true) {
-                    self.listener?.nextAction()
-                } else {
-                    self.dogNameTapView.layer.borderColor = self.dogBread?.bread?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.neutralCompleteButton.layer.borderColor = self.dogBread?.isNeutered == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.neutralDoNotButton.layer.borderColor = self.dogBread?.isNeutered == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.vaccinatedCompleteButton.layer.borderColor = self.dogBread?.isVaccinated == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                    self.vaccinatedDoNotButton.layer.borderColor = self.dogBread?.isVaccinated == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :    #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                }
+                self.listener?.nextAction()
+                
+                //TODO: 테스트용
+//                if !(self.dogBread?.hasNilField() ?? true) {
+//                    self.listener?.nextAction()
+//                } else {
+//                    self.neutralCompleteButton.layer.borderColor = self.dogBread?.isNeutered == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.neutralDoNotButton.layer.borderColor = self.dogBread?.isNeutered == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.vaccinatedCompleteButton.layer.borderColor = self.dogBread?.isVaccinated == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.vaccinatedDoNotButton.layer.borderColor = self.dogBread?.isVaccinated == nil ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :    #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                }
             })
             .disposed(by: disposeBag)
         
