@@ -42,13 +42,15 @@ extension LoggedOutRouter: LoggedOutRouting {
         let signUpRouting = signUpBuilder.build(withListener: interactor)
         self.signUpRouting = signUpRouting
         attachChild(signUpRouting)
-        viewController.present(viewController: signUpRouting.viewControllable)
+        
+//        viewController.present(viewController: signUpRouting.viewControllable)
     }
     
     func detachToSignUpRIB() {
         guard let signUpRouting = signUpRouting else { return }
         detachChild(signUpRouting)
-        viewController.dismiss(viewController: signUpRouting.viewControllable)
+        
+//        viewController.dismiss(viewController: signUpRouting.viewControllable)
     }
     
 }

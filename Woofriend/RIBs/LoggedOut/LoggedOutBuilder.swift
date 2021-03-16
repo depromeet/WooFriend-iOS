@@ -13,7 +13,18 @@ protocol LoggedOutDependency: Dependency {
 }
 
 final class LoggedOutComponent: Component<LoggedOutDependency>, SignUpDependency {
+    
+    // signUp RIBs는 화면이 없기 때문에 이전 화면을 상속????
+    var signUpViewController: SignUpViewControllable {
+        return loggedOutViewController
+    }
+    
+    let loggedOutViewController: LoggedOutViewController
 
+    init(dependency: LoggedOutDependency, loggedOutViewController: LoggedOutViewController) {
+        self.loggedOutViewController = loggedOutViewController
+        super.init(dependency: dependency)
+    }
     // MARK: #네트워크 1. LoggedOut 여기서 생성되는 컴포넌트를 생성
     var networkTest: TestResponeType {
         return shared {
@@ -37,8 +48,8 @@ final class LoggedOutBuilder: Builder<LoggedOutDependency>, LoggedOutBuildable {
 
     // RIB(하위 노드)를 생성해야함.
     func build(withListener listener: LoggedOutListener) -> LoggedOutRouting {
-        let component = LoggedOutComponent(dependency: dependency)
         let viewController = LoggedOutViewController.instantiate()
+        let component = LoggedOutComponent(dependency: dependency, loggedOutViewController: viewController)
         let interactor = LoggedOutInteractor(presenter: viewController, test: component.networkTest)
         interactor.listener = listener
         

@@ -50,6 +50,11 @@
 		E831A1FC25F8EDFF00D21451 /* NaverInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */; };
 		E849084925F9A31C006A9E6A /* DogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849084825F9A31C006A9E6A /* DogProfile.swift */; };
 		E849085625F9A475006A9E6A /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849085525F9A475006A9E6A /* Encodable+Extension.swift */; };
+		E84AFF5C26003102007D980A /* DogProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF5826003102007D980A /* DogProfileRouter.swift */; };
+		E84AFF5D26003102007D980A /* DogProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF5926003102007D980A /* DogProfileViewController.swift */; };
+		E84AFF5E26003102007D980A /* DogProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF5A26003102007D980A /* DogProfileBuilder.swift */; };
+		E84AFF5F26003102007D980A /* DogProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF5B26003102007D980A /* DogProfileInteractor.swift */; };
+		E84AFF6426003117007D980A /* DogProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84AFF6326003117007D980A /* DogProfileViewController.xib */; };
 		E853285825FA340000283405 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E853285725FA340000283405 /* GoogleService-Info.plist */; };
 		E860255825F9BD0F0068D243 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860255725F9BD0F0068D243 /* UITextField+Extension.swift */; };
 		E860257725F9FC7B0068D243 /* DogBread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860257625F9FC7B0068D243 /* DogBread.swift */; };
@@ -93,10 +98,8 @@
 		E8659FFB25F913190036A2AF /* OtherDogsInfoPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FF925F913190036A2AF /* OtherDogsInfoPopupView.xib */; };
 		E8659FFC25F913190036A2AF /* OtherDogsInfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FFA25F913190036A2AF /* OtherDogsInfoPopupView.swift */; };
 		E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879E25DE76AD005575BF /* SignUpRouter.swift */; };
-		E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872879F25DE76AD005575BF /* SignUpViewController.swift */; };
 		E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A025DE76AD005575BF /* SignUpBuilder.swift */; };
 		E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A125DE76AD005575BF /* SignUpInteractor.swift */; };
-		E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */; };
 		E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */; };
 		E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872880425DEAAEE005575BF /* UIView+Extension.swift */; };
 		E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */; };
@@ -175,6 +178,11 @@
 		E831A1FB25F8EDFF00D21451 /* NaverInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverInfo.swift; sourceTree = "<group>"; };
 		E849084825F9A31C006A9E6A /* DogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfile.swift; sourceTree = "<group>"; };
 		E849085525F9A475006A9E6A /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		E84AFF5826003102007D980A /* DogProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileRouter.swift; sourceTree = "<group>"; };
+		E84AFF5926003102007D980A /* DogProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileViewController.swift; sourceTree = "<group>"; };
+		E84AFF5A26003102007D980A /* DogProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileBuilder.swift; sourceTree = "<group>"; };
+		E84AFF5B26003102007D980A /* DogProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileInteractor.swift; sourceTree = "<group>"; };
+		E84AFF6326003117007D980A /* DogProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogProfileViewController.xib; sourceTree = "<group>"; };
 		E853285725FA340000283405 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E860255725F9BD0F0068D243 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		E860257625F9FC7B0068D243 /* DogBread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBread.swift; sourceTree = "<group>"; };
@@ -218,10 +226,8 @@
 		E8659FF925F913190036A2AF /* OtherDogsInfoPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherDogsInfoPopupView.xib; sourceTree = "<group>"; };
 		E8659FFA25F913190036A2AF /* OtherDogsInfoPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherDogsInfoPopupView.swift; sourceTree = "<group>"; };
 		E872879E25DE76AD005575BF /* SignUpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
-		E872879F25DE76AD005575BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E87287A025DE76AD005575BF /* SignUpBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
 		E87287A125DE76AD005575BF /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
-		E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
 		E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+Extension.swift"; sourceTree = "<group>"; };
 		E872880425DEAAEE005575BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
@@ -493,6 +499,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E84AFF4E26003066007D980A /* DogProfile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DogProfile;
+			sourceTree = "<group>";
+		};
+		E84AFF4F260030C3007D980A /* DogProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E84AFF5826003102007D980A /* DogProfileRouter.swift */,
+				E84AFF5926003102007D980A /* DogProfileViewController.swift */,
+				E84AFF5A26003102007D980A /* DogProfileBuilder.swift */,
+				E84AFF5B26003102007D980A /* DogProfileInteractor.swift */,
+				E84AFF6326003117007D980A /* DogProfileViewController.xib */,
+			);
+			path = DogProfile;
+			sourceTree = "<group>";
+		};
 		E860258325FA1C600068D243 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +552,7 @@
 		E8659FC525F9130E0036A2AF /* SubRibs */ = {
 			isa = PBXGroup;
 			children = (
+				E84AFF4F260030C3007D980A /* DogProfile */,
 				E8659FC625F9130E0036A2AF /* DirectLocal */,
 				E8659FCC25F9130E0036A2AF /* DirectBreed */,
 				E8659FD225F9130E0036A2AF /* SearchLocal  */,
@@ -587,6 +613,7 @@
 		E8659FF825F913190036A2AF /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				E84AFF4E26003066007D980A /* DogProfile */,
 				E8659FF925F913190036A2AF /* OtherDogsInfoPopupView.xib */,
 				E8659FFA25F913190036A2AF /* OtherDogsInfoPopupView.swift */,
 			);
@@ -601,10 +628,8 @@
 				E8659FC525F9130E0036A2AF /* SubRibs */,
 				E8659FA125F912FD0036A2AF /* Cell */,
 				E872879E25DE76AD005575BF /* SignUpRouter.swift */,
-				E872879F25DE76AD005575BF /* SignUpViewController.swift */,
 				E87287A025DE76AD005575BF /* SignUpBuilder.swift */,
 				E87287A125DE76AD005575BF /* SignUpInteractor.swift */,
-				E87287AC25DE76C1005575BF /* SignUpViewController.storyboard */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -725,13 +750,13 @@
 				E8659FB625F912FD0036A2AF /* PhotoAddCell.xib in Resources */,
 				E8659FB525F912FD0036A2AF /* DogConcernCollectionViewCell.xib in Resources */,
 				E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */,
+				E84AFF6426003117007D980A /* DogProfileViewController.xib in Resources */,
 				E8659FE325F9130E0036A2AF /* DirectBreedViewController.storyboard in Resources */,
 				E8659FEB25F9130E0036A2AF /* SearchLocalViewController.storyboard in Resources */,
 				E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */,
 				E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */,
 				E8659FC125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib in Resources */,
 				E8659FE225F9130E0036A2AF /* DirectLocalViewController.storyboard in Resources */,
-				E87287AD25DE76C1005575BF /* SignUpViewController.storyboard in Resources */,
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
 				E8659FFB25F913190036A2AF /* OtherDogsInfoPopupView.xib in Resources */,
 				E8659FED25F9130E0036A2AF /* SearchDogBreedsViewController.storyboard in Resources */,
@@ -918,8 +943,8 @@
 				E818FD3225DD06860035E306 /* LoggedOutBuilder.swift in Sources */,
 				E831A1CE25F8E9F300D21451 /* DDLogFlag.swift in Sources */,
 				E8659FF125F9130E0036A2AF /* SearchDogBreedsBuilder.swift in Sources */,
-				E87287A325DE76AD005575BF /* SignUpViewController.swift in Sources */,
 				E8659FDE25F9130E0036A2AF /* DirectLocalBuilder.swift in Sources */,
+				E84AFF5E26003102007D980A /* DogProfileBuilder.swift in Sources */,
 				E8659FEE25F9130E0036A2AF /* SearchDogBreedsRouter.swift in Sources */,
 				E8659FE625F9130E0036A2AF /* DirectBreedBuilder.swift in Sources */,
 				E8659FB325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift in Sources */,
@@ -929,6 +954,7 @@
 				E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */,
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
 				E8659FB225F912FD0036A2AF /* DogNameCollectionViewCell.swift in Sources */,
+				E84AFF5C26003102007D980A /* DogProfileRouter.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
 				E8659FE525F9130E0036A2AF /* DirectBreedViewController.swift in Sources */,
 				E8659FF025F9130E0036A2AF /* SearchDogBreedsInteractor.swift in Sources */,
@@ -953,6 +979,7 @@
 				E8659FEA25F9130E0036A2AF /* SearchLocalInteractor.swift in Sources */,
 				E831A18525F8DD9F00D21451 /* TestRepositoy.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
+				E84AFF5D26003102007D980A /* DogProfileViewController.swift in Sources */,
 				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
 				E860257725F9FC7B0068D243 /* DogBread.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
@@ -965,6 +992,7 @@
 				E8659FB825F912FD0036A2AF /* DogBreadCollectionViewCell.swift in Sources */,
 				E8659FBB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift in Sources */,
 				E831A19325F8E47400D21451 /* TestRespone.swift in Sources */,
+				E84AFF5F26003102007D980A /* DogProfileInteractor.swift in Sources */,
 				E8659FBF25F912FD0036A2AF /* PhotoAddCell.swift in Sources */,
 				E831A18B25F8DECB00D21451 /* NaverLoginService.swift in Sources */,
 				E8659FE825F9130E0036A2AF /* SearchLocalRouter.swift in Sources */,

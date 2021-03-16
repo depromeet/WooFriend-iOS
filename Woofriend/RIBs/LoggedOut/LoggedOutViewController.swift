@@ -77,7 +77,7 @@ extension LoggedOutViewController: PopUpViewControllerListener {
     }
     
     private func bindUI() {
-        appleLoginButton.rx.tap.asSignal()
+        appleLoginButton?.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
                 //                let alert = PopUpViewController.instantiate()
                 //                alert.modalPresentationStyle = .overCurrentContext
@@ -87,7 +87,7 @@ extension LoggedOutViewController: PopUpViewControllerListener {
             .disposed(by: disposeBag)
         
         
-        kakaoLoginButton.rx.tap.asSignal()
+        kakaoLoginButton?.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
                 
                 if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -123,7 +123,7 @@ extension LoggedOutViewController: PopUpViewControllerListener {
             .disposed(by: disposeBag)
         
         
-        naverLoginButton.rx.tap.asSignal()
+        naverLoginButton?.rx.tap.asSignal()
             .emit(onNext: { [weak self] in
                 guard let self = self else { return }
                 
@@ -166,3 +166,6 @@ extension LoggedOutViewController: NaverThirdPartyLoginConnectionDelegate {
     
     
 }
+
+// MARK: ViewLess Rib을 사용하려면 부모 RIbs에 ViewControllable 프로토콜이 채택되어야 함.
+extension LoggedOutViewController: SignUpViewControllable { }

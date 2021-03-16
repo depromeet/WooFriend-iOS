@@ -32,6 +32,11 @@ protocol LoggedOutListener: class {
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
     
+    func testttt() {
+        router?.detachToSignUpRIB()
+    }
+    
+    
     weak var router: LoggedOutRouting?
     weak var listener: LoggedOutListener?
     weak var naverLogin = NaverThirdPartyLoginConnection.getSharedInstance()
@@ -82,6 +87,7 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
     
     func closeSignUp() {
         router?.detachToSignUpRIB()
+        
     }
     
     func getNaverUserInfo(auth: String) {
