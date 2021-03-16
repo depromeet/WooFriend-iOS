@@ -32,10 +32,9 @@ protocol LoggedOutListener: class {
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
     
-    func testttt() {
+    func didEndSignUp() {
         router?.detachToSignUpRIB()
     }
-    
     
     weak var router: LoggedOutRouting?
     weak var listener: LoggedOutListener?

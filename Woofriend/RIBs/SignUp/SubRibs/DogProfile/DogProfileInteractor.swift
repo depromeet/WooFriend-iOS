@@ -22,12 +22,14 @@ protocol DogProfilePresentable: Presentable {
 protocol DogProfileListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     func closeSignUp()
+    func didDogBread()
     func setDogProfile(_ profile: DogProfile?)
 }
 
 final class DogProfileInteractor: PresentableInteractor<DogProfilePresentable>, DogProfileInteractable, DogProfilePresentableListener {
     
     func nextAction() {
+        listener?.didDogBread()
         listener?.setDogProfile(presenter.dogProfile)
     }
     

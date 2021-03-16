@@ -33,6 +33,7 @@ target 'Woofriend' do
 	pod 'TagListView'	# 태그
 	pod 'ZLPhotoBrowser'	# 사진 크롭, 멀티 등
 	pod 'CropViewController'
+	pod 'Hero'
 
   target 'WoofriendTests' do
     inherit! :search_paths

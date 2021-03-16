@@ -82,6 +82,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.2.2):
     - GoogleUtilities/Logger
+  - Hero (1.6.1)
   - KakaoSDK (2.4.1):
     - KakaoSDKAuth (= 2.4.1)
     - KakaoSDKCommon (= 2.4.1)
@@ -153,6 +154,7 @@ DEPENDENCIES:
   - Firebase/Analytics (= 7.8.0)
   - Firebase/Crashlytics
   - Firebase/RemoteConfig
+  - Hero
   - KakaoSDK
   - Moya
   - naveridlogin-sdk-ios
@@ -183,6 +185,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - Hero
     - KakaoSDK
     - KakaoSDKAuth
     - KakaoSDKCommon
@@ -222,6 +225,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: dccff6095ea1cd8972a8b96d0ee38b9e6d67acbb
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
   GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
   KakaoSDK: 1e80d6877c0eac6a310f93c73fb15ca56c05f2bd
   KakaoSDKAuth: fcba1c9ede431683f5bdd84c835a96981cb115a5
   KakaoSDKCommon: 0912aa0c7db051ae8dc07a35395cf644f7728f95
@@ -245,6 +249,6 @@ SPEC CHECKSUMS:
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
   ZLPhotoBrowser: 7595658e8e5266efb8aed85c134d0a08fb6fed8f
 
-PODFILE CHECKSUM: a3ffe346564fd836e8fd9e5ff85180d002311252
+PODFILE CHECKSUM: 56cb71d8d2c3ff87b50943f92c3b8226d412b242
 
 COCOAPODS: 1.10.1

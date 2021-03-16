@@ -10,6 +10,7 @@ import RxSwift
 import UIKit
 import NaverThirdPartyLogin
 import KakaoSDKUser
+import Hero
 
 protocol LoggedOutPresentableListener: class {
     func loginAppleID()
@@ -59,6 +60,13 @@ final class LoggedOutViewController: BaseViewController, LoggedOutPresentable, L
     func present(viewController: ViewControllable) {
         viewController.uiviewController.modalPresentationStyle = .fullScreen
         present(viewController.uiviewController, animated: false, completion: nil)
+    }
+    
+    func pageIn(viewController: ViewControllable, type: HeroDefaultAnimationType) {
+        viewController.uiviewController.hero.isEnabled = true
+        viewController.uiviewController.modalPresentationStyle = .fullScreen
+        viewController.uiviewController.hero.modalAnimationType = .push(direction: .left)
+        present(viewController.uiviewController, animated: true, completion: nil)
     }
     
     func dismiss(viewController: ViewControllable) {

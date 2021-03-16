@@ -41,6 +41,8 @@ final class DogProfileViewController: BaseViewController, DogProfilePresentable,
     
     let imagePickerController = UIImagePickerController()
     weak var listener: DogProfilePresentableListener?
+    
+    //FIXME: 옵저버블 구조체로 하면 acept...개별로 어떡게???!
     var dogProfile: DogProfile? = DogProfile() {
         didSet {
             self.nextButton.backgroundColor = !(self.dogProfile?.hasNilField() ?? true) ? #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1) : #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)

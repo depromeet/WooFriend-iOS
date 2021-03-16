@@ -55,6 +55,11 @@
 		E84AFF5E26003102007D980A /* DogProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF5A26003102007D980A /* DogProfileBuilder.swift */; };
 		E84AFF5F26003102007D980A /* DogProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF5B26003102007D980A /* DogProfileInteractor.swift */; };
 		E84AFF6426003117007D980A /* DogProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84AFF6326003117007D980A /* DogProfileViewController.xib */; };
+		E84AFF9326009562007D980A /* DogBreadRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF8F26009562007D980A /* DogBreadRouter.swift */; };
+		E84AFF9426009562007D980A /* DogBreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF9026009562007D980A /* DogBreadViewController.swift */; };
+		E84AFF9526009562007D980A /* DogBreadBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF9126009562007D980A /* DogBreadBuilder.swift */; };
+		E84AFF9626009562007D980A /* DogBreadInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84AFF9226009562007D980A /* DogBreadInteractor.swift */; };
+		E84AFF9E2600957D007D980A /* DogBreadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84AFF9D2600957D007D980A /* DogBreadViewController.xib */; };
 		E853285825FA340000283405 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E853285725FA340000283405 /* GoogleService-Info.plist */; };
 		E860255825F9BD0F0068D243 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860255725F9BD0F0068D243 /* UITextField+Extension.swift */; };
 		E860257725F9FC7B0068D243 /* DogBread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860257625F9FC7B0068D243 /* DogBread.swift */; };
@@ -183,6 +188,11 @@
 		E84AFF5A26003102007D980A /* DogProfileBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileBuilder.swift; sourceTree = "<group>"; };
 		E84AFF5B26003102007D980A /* DogProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileInteractor.swift; sourceTree = "<group>"; };
 		E84AFF6326003117007D980A /* DogProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogProfileViewController.xib; sourceTree = "<group>"; };
+		E84AFF8F26009562007D980A /* DogBreadRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreadRouter.swift; sourceTree = "<group>"; };
+		E84AFF9026009562007D980A /* DogBreadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreadViewController.swift; sourceTree = "<group>"; };
+		E84AFF9126009562007D980A /* DogBreadBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreadBuilder.swift; sourceTree = "<group>"; };
+		E84AFF9226009562007D980A /* DogBreadInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreadInteractor.swift; sourceTree = "<group>"; };
+		E84AFF9D2600957D007D980A /* DogBreadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogBreadViewController.xib; sourceTree = "<group>"; };
 		E853285725FA340000283405 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E860255725F9BD0F0068D243 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		E860257625F9FC7B0068D243 /* DogBread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBread.swift; sourceTree = "<group>"; };
@@ -509,13 +519,32 @@
 		E84AFF4F260030C3007D980A /* DogProfile */ = {
 			isa = PBXGroup;
 			children = (
+				E84AFF5A26003102007D980A /* DogProfileBuilder.swift */,
 				E84AFF5826003102007D980A /* DogProfileRouter.swift */,
 				E84AFF5926003102007D980A /* DogProfileViewController.swift */,
-				E84AFF5A26003102007D980A /* DogProfileBuilder.swift */,
 				E84AFF5B26003102007D980A /* DogProfileInteractor.swift */,
 				E84AFF6326003117007D980A /* DogProfileViewController.xib */,
 			);
 			path = DogProfile;
+			sourceTree = "<group>";
+		};
+		E84AFF8E2600954E007D980A /* DogBread */ = {
+			isa = PBXGroup;
+			children = (
+				E84AFF8F26009562007D980A /* DogBreadRouter.swift */,
+				E84AFF9026009562007D980A /* DogBreadViewController.swift */,
+				E84AFF9126009562007D980A /* DogBreadBuilder.swift */,
+				E84AFF9226009562007D980A /* DogBreadInteractor.swift */,
+				E84AFF9D2600957D007D980A /* DogBreadViewController.xib */,
+			);
+			path = DogBread;
+			sourceTree = "<group>";
+		};
+		E84AFFA226009D02007D980A /* DogAttitude */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DogAttitude;
 			sourceTree = "<group>";
 		};
 		E860258325FA1C600068D243 /* Cell */ = {
@@ -552,6 +581,8 @@
 		E8659FC525F9130E0036A2AF /* SubRibs */ = {
 			isa = PBXGroup;
 			children = (
+				E84AFFA226009D02007D980A /* DogAttitude */,
+				E84AFF8E2600954E007D980A /* DogBread */,
 				E84AFF4F260030C3007D980A /* DogProfile */,
 				E8659FC625F9130E0036A2AF /* DirectLocal */,
 				E8659FCC25F9130E0036A2AF /* DirectBreed */,
@@ -760,6 +791,7 @@
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
 				E8659FFB25F913190036A2AF /* OtherDogsInfoPopupView.xib in Resources */,
 				E8659FED25F9130E0036A2AF /* SearchDogBreedsViewController.storyboard in Resources */,
+				E84AFF9E2600957D007D980A /* DogBreadViewController.xib in Resources */,
 				E8659FB725F912FD0036A2AF /* MyInfoCollectionViewCell.xib in Resources */,
 				E853285825FA340000283405 /* GoogleService-Info.plist in Resources */,
 				E8659FBD25F912FD0036A2AF /* DogNameCollectionViewCell.xib in Resources */,
@@ -953,6 +985,7 @@
 				E818FE0525DD39EC0035E306 /* BaseViewController.swift in Sources */,
 				E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */,
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
+				E84AFF9426009562007D980A /* DogBreadViewController.swift in Sources */,
 				E8659FB225F912FD0036A2AF /* DogNameCollectionViewCell.swift in Sources */,
 				E84AFF5C26003102007D980A /* DogProfileRouter.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
@@ -970,16 +1003,19 @@
 				E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */,
 				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
 				E8659FBC25F912FD0036A2AF /* WelcomeCell.swift in Sources */,
+				E84AFF9626009562007D980A /* DogBreadInteractor.swift in Sources */,
 				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
 				E831A0B725F8C3B700D21451 /* APIManager.swift in Sources */,
 				E87287A225DE76AD005575BF /* SignUpRouter.swift in Sources */,
 				E818FE4A25DD4F1A0035E306 /* PopUpViewController.swift in Sources */,
+				E84AFF9326009562007D980A /* DogBreadRouter.swift in Sources */,
 				E860255825F9BD0F0068D243 /* UITextField+Extension.swift in Sources */,
 				E849085625F9A475006A9E6A /* Encodable+Extension.swift in Sources */,
 				E8659FEA25F9130E0036A2AF /* SearchLocalInteractor.swift in Sources */,
 				E831A18525F8DD9F00D21451 /* TestRepositoy.swift in Sources */,
 				E80337F325BEBE34008580CA /* woofriend.xcdatamodeld in Sources */,
 				E84AFF5D26003102007D980A /* DogProfileViewController.swift in Sources */,
+				E84AFF9526009562007D980A /* DogBreadBuilder.swift in Sources */,
 				E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */,
 				E860257725F9FC7B0068D243 /* DogBread.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
