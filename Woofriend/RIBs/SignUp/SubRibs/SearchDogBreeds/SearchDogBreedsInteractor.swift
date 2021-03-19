@@ -22,7 +22,7 @@ protocol SearchDogBreedsPresentable: Presentable {
 protocol SearchDogBreedsListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     
-    func didSearchDogBreeds()
+    func didDirectDogBreads()
     func didEndSearchDogBreads(dogBread: String?)
 }
 
@@ -33,7 +33,7 @@ final class SearchDogBreedsInteractor: PresentableInteractor<SearchDogBreedsPres
     }
     
     func directDogBreadAction() {
-        
+        listener?.didDirectDogBreads()
     }
 
     weak var router: SearchDogBreedsRouting?

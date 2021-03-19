@@ -12,6 +12,8 @@ import RxCocoa
 protocol DogBreadRouting: ViewableRouting {
     func attachToSearchBread()
     func detachToSearchBread()
+    func attachToDirectBread()
+    func detachToDirectBread()
 }
 
 protocol DogBreadPresentable: Presentable {
@@ -27,7 +29,7 @@ protocol DogBreadListener: class {
 }
 
 final class DogBreadInteractor: PresentableInteractor<DogBreadPresentable>, DogBreadInteractable, DogBreadPresentableListener {
-
+    
     weak var router: DogBreadRouting?
     weak var listener: DogBreadListener?
 
@@ -60,13 +62,27 @@ final class DogBreadInteractor: PresentableInteractor<DogBreadPresentable>, DogB
         router?.attachToSearchBread()
     }
     
-    func didSearchDogBreeds() {
-        
+    
+    func didSeachBread() {
+        router?.attachToSearchBread()
     }
     
     func didEndSearchDogBreads(dogBread: String?) {
         presenter.dogName.accept(dogBread ?? "")
         router?.detachToSearchBread()
+    }
+    
+    func didDirectDogBreads() {
+        router?.attachToDirectBread()
+    }
+    
+    func didEndDirectBread(dogBread: String?) {
+        presenter.dogName.accept(dogBread ?? "")
+        router?.detachToSearchBread()
+    }
+    
+    func didBack() {
+        router?.detachToDirectBread()
     }
     
 }

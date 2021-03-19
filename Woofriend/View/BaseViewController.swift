@@ -27,11 +27,22 @@ class BaseViewController: UIViewController, Presentable {
         self.present(viewController.uiviewController, animated: false, completion: nil)
     }
     
+    
+    func push(viewController: ViewControllable) {
+        viewController.uiviewController.modalPresentationStyle = .fullScreen
+        self.present(viewController.uiviewController, animated: false, completion: nil)
+    }
+    
     func pageIn(viewController: ViewControllable) {
         viewController.uiviewController.hero.isEnabled = true
         viewController.uiviewController.modalPresentationStyle = .fullScreen
         viewController.uiviewController.hero.modalAnimationType = .push(direction: .left)
         present(viewController.uiviewController, animated: true, completion: nil)
+    }
+    
+    func overView(viewController: ViewControllable) {
+        viewController.uiviewController.modalPresentationStyle = .overFullScreen
+        self.present(viewController.uiviewController, animated: false, completion: nil)
     }
     
     func dismiss(viewController: ViewControllable) {

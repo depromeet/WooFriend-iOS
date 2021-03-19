@@ -7,7 +7,7 @@
 
 import RIBs
 
-protocol SignUpInteractable: Interactable, DogProfileListener, DogBreadListener, DogAttitudeListener, DogPhotoListener, MyInfoListener, MyIntroListener, SearchLocalListener, DirectBreedListener, DirectLocalListener {
+protocol SignUpInteractable: Interactable, DogProfileListener, DogBreadListener, DogAttitudeListener, DogPhotoListener, MyInfoListener, MyIntroListener, SearchLocalListener {
     var router: SignUpRouting? { get set }
     var listener: SignUpListener? { get set }
 }
@@ -38,20 +38,23 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
     private let myIntroBuilder: MyIntroBuilder
     private var myIntroRouting: MyIntroRouting?
     
-    private let directBreedBuilder: DirectBreedBuilder
-    private var directBreedRouting: DirectBreedRouting?
+//    private let directBreedBuilder: DirectBreedBuilder
+//    private var directBreedRouting: DirectBreedRouting?
     
     private let searchLocalBuilder: SearchLocalBuilder
     private var searchLocalRouting: SearchLocalRouting?
     
-    private let directLocalBuilder: DirectLocalBuilder
-    private var directLocalRouting: DirectLocalRouting?
+//    private let directLocalBuilder: DirectLocalBuilder
+//    private var directLocalRouting: DirectLocalRouting?
     
     init(interactor: SignUpInteractable, viewController: SignUpViewControllable,
          dogProfileBuilder: DogProfileBuilder, dogBreadBuilder: DogBreadBuilder,
          dogAttitudeBuilder: DogAttitudeBuilder, dogPhotoBuilder: DogPhotoBuilder,
-         myInfoBuilder: MyInfoBuilder, myIntroBuilder: MyIntroBuilder, directBreedBuilder: DirectBreedBuilder,
-         searchLocalBuilder: SearchLocalBuilder, directLocalBuilder: DirectLocalBuilder) {
+         myInfoBuilder: MyInfoBuilder, myIntroBuilder: MyIntroBuilder,
+         searchLocalBuilder: SearchLocalBuilder) {
+    
+         // directBreedBuilder: DirectBreedBuilder,
+         //, directLocalBuilder: DirectLocalBuilder) { {
         
         self.viewController         = viewController
         self.dogBreadBuilder        = dogBreadBuilder
@@ -61,8 +64,8 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
         self.myInfoBuilder          = myInfoBuilder
         self.myIntroBuilder         = myIntroBuilder
         self.searchLocalBuilder     = searchLocalBuilder
-        self.directBreedBuilder     = directBreedBuilder
-        self.directLocalBuilder     = directLocalBuilder
+//        self.directBreedBuilder     = directBreedBuilder
+//        self.directLocalBuilder     = directLocalBuilder
         
         super.init(interactor: interactor)
         interactor.router = self

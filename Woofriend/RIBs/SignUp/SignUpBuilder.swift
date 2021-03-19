@@ -48,8 +48,8 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
         let myInfoBuilder           = MyInfoBuilder(dependency: component)
         let myIntroBuilder          = MyIntroBuilder(dependency: component)
         let searchLocalBuilder      = SearchLocalBuilder(dependency: component)
-        let directLocalBuilder      = DirectLocalBuilder(dependency: component)
-        let directBreedBuilder      = DirectBreedBuilder(dependency: component)
+//        let directLocalBuilder      = DirectLocalBuilder(dependency: component)
+//        let directBreedBuilder      = DirectBreedBuilder(dependency: component)
         
         return SignUpRouter(
             interactor: interactor,
@@ -60,9 +60,10 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
             dogPhotoBuilder: dogPhotoBuilder,
             myInfoBuilder: myInfoBuilder,
             myIntroBuilder: myIntroBuilder,
-            directBreedBuilder: directBreedBuilder,
-            searchLocalBuilder: searchLocalBuilder,
-            directLocalBuilder: directLocalBuilder
+            searchLocalBuilder: searchLocalBuilder
+            
+//            directBreedBuilder: directBreedBuilder,
+//            directLocalBuilder: directLocalBuilder
         )
     }
 }

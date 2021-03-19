@@ -78,9 +78,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkC-aH-dED">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkC-aH-dED">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="black_1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="uEx-l3-3YG"/>
                                 </constraints>
@@ -90,16 +90,55 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7f-JZ-Hx6">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7f-JZ-Hx6">
                                 <rect key="frame" x="0.0" y="105" width="375" height="103"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="bjO-OK-Eia">
+                                        <rect key="frame" x="16" y="51" width="343" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="edG-KB-u66"/>
+                                        </constraints>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                        <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <scopeButtonTitles>
+                                            <string>Title</string>
+                                            <string>Title</string>
+                                        </scopeButtonTitles>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="black_4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견종선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ao-OW-Cf6">
+                                        <rect key="frame" x="16" y="16" width="52" height="18"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bjO-OK-Eia" secondAttribute="bottom" constant="8" id="0Wh-U7-DE4"/>
+                                    <constraint firstItem="6ao-OW-Cf6" firstAttribute="top" secondItem="D7f-JZ-Hx6" secondAttribute="top" constant="16" id="8TT-1k-NEV"/>
+                                    <constraint firstItem="bjO-OK-Eia" firstAttribute="leading" secondItem="D7f-JZ-Hx6" secondAttribute="leading" constant="16" id="VsJ-yE-dos"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjO-OK-Eia" secondAttribute="trailing" constant="16" id="W0c-LO-5xk"/>
+                                    <constraint firstItem="6ao-OW-Cf6" firstAttribute="leading" secondItem="D7f-JZ-Hx6" secondAttribute="leading" constant="16" id="bfS-oz-JKL"/>
                                     <constraint firstAttribute="height" constant="103" id="y7r-Af-CFP"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="CkC-aH-dED" secondAttribute="trailing" id="46w-QD-kHB"/>
                             <constraint firstItem="D7f-JZ-Hx6" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" id="FRi-e1-Ylz"/>
@@ -115,6 +154,7 @@
                     </view>
                     <connections>
                         <outlet property="dimView" destination="CkC-aH-dED" id="lNK-ex-67r"/>
+                        <outlet property="sarchBarView" destination="bjO-OK-Eia" id="A1d-Jx-pTC"/>
                         <outlet property="searchBaseView" destination="D7f-JZ-Hx6" id="mmD-xQ-7q8"/>
                         <outlet property="tableView" destination="mId-81-Efd" id="knb-0e-S3m"/>
                     </connections>
@@ -127,6 +167,9 @@
     <resources>
         <namedColor name="black_1">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black_4">
+            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
