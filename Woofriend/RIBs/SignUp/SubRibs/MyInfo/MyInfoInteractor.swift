@@ -7,14 +7,20 @@
 
 import RIBs
 import RxSwift
+import RxCocoa
 
 protocol MyInfoRouting: ViewableRouting {
-    
+    func attachToSearchLocal()
+    func detachToSearchLocal()
+    func attachToDirectLocal()
+    func detachToDirectLocal()
+    func didMyInfo()
 }
 
 protocol MyInfoPresentable: Presentable {
     var listener: MyInfoPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
+    var address: BehaviorRelay<String?> { get set }
+    var myProfile: MyProfile? { get set }
 }
 
 protocol MyInfoListener: class {
@@ -22,7 +28,7 @@ protocol MyInfoListener: class {
     func didEndmyInfo()
 }
 
-final class MyInfoInteractor: PresentableInteractor<MyInfoPresentable>, MyInfoInteractable, MyInfoPresentableListener {
+final class MyInfoInteractor: PresentableInteractor<MyInfoPresentable>, MyInfoInteractable, MyInfoPresentableListener, SearchLocalListener, DirectLocalListener {
     
     weak var router: MyInfoRouting?
     weak var listener: MyInfoListener?
@@ -50,6 +56,28 @@ final class MyInfoInteractor: PresentableInteractor<MyInfoPresentable>, MyInfoIn
     
     func backAction() {
         listener?.didEndmyInfo()
+    }
+    
+    func nextLocal() {
+        router?.attachToSearchLocal()
+    }
+    
+    func didDirectLocal() {
+        router?.attachToDirectLocal()
+    }
+    
+    func didEndSearchLocal(address: String?) {
+        router?.detachToSearchLocal()
+    }
+    
+    func didBack() {
+        router?.detachToDirectLocal()
+    }
+    
+    func didEndDirect(adress: String) {
+        router?.didMyInfo()
+        presenter.myProfile?.region = adress
+        presenter.address.accept(adress)
     }
     
 }

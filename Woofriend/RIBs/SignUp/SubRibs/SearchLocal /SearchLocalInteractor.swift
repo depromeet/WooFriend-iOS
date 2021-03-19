@@ -18,7 +18,9 @@ protocol SearchLocalPresentable: Presentable {
 }
 
 protocol SearchLocalListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    
+    func didDirectLocal()
+    func didEndSearchLocal(address: String?)
 }
 
 final class SearchLocalInteractor: PresentableInteractor<SearchLocalPresentable>, SearchLocalInteractable, SearchLocalPresentableListener {
@@ -42,4 +44,13 @@ final class SearchLocalInteractor: PresentableInteractor<SearchLocalPresentable>
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    func currentLocalAction() {
+        listener?.didDirectLocal()
+    }
+    
+    func backAction() {
+        listener?.didEndSearchLocal(address: "")
+    }
+    
 }

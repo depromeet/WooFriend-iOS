@@ -2,12 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>프로필 사진을 위해 앨범을 허용합니다.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>KAKAO_APP_KEY</key>
-	<string>a05e3ce686fef3f616ff4d92d857f5fb</string>
 	<key>CFBundleDisplayName</key>
 	<string>Woofriend</string>
 	<key>CFBundleExecutable</key>
@@ -49,6 +45,8 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>KAKAO_APP_KEY</key>
+	<string>a05e3ce686fef3f616ff4d92d857f5fb</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -60,9 +58,17 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NMFClientId</key>
+	<string>lbgpmg6f3w</string>
 	<key>NSCameraUsageDescription</key>
 	<string>프로필 사진을 위해 카메라를 허용합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>"사용자의 위치를 받습니다."</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>"사용자의 위치를 받습니다."</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>프로필 사진을 위해 앨범을 허용합니다.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
 	<string>프로필 사진을 위해 앨범을 허용합니다.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>

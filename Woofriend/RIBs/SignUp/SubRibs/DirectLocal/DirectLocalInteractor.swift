@@ -14,11 +14,12 @@ protocol DirectLocalRouting: ViewableRouting {
 
 protocol DirectLocalPresentable: Presentable {
     var listener: DirectLocalPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
+    var address: String { get set }
 }
 
 protocol DirectLocalListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didBack()
+    func didEndDirect(adress: String)
 }
 
 final class DirectLocalInteractor: PresentableInteractor<DirectLocalPresentable>, DirectLocalInteractable, DirectLocalPresentableListener {
@@ -42,4 +43,13 @@ final class DirectLocalInteractor: PresentableInteractor<DirectLocalPresentable>
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    func nextAcion() {
+        listener?.didEndDirect(adress: presenter.address)
+    }
+    
+    func backAction() {
+        listener?.didBack()
+    }
+    
 }

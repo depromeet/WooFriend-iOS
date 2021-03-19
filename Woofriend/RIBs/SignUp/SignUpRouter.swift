@@ -7,7 +7,7 @@
 
 import RIBs
 
-protocol SignUpInteractable: Interactable, DogProfileListener, DogBreadListener, DogAttitudeListener, DogPhotoListener, MyInfoListener, MyIntroListener, SearchLocalListener {
+protocol SignUpInteractable: Interactable, DogProfileListener, DogBreadListener, DogAttitudeListener, DogPhotoListener, MyInfoListener, MyIntroListener {
     var router: SignUpRouting? { get set }
     var listener: SignUpListener? { get set }
 }
@@ -38,20 +38,10 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
     private let myIntroBuilder: MyIntroBuilder
     private var myIntroRouting: MyIntroRouting?
     
-//    private let directBreedBuilder: DirectBreedBuilder
-//    private var directBreedRouting: DirectBreedRouting?
-    
-    private let searchLocalBuilder: SearchLocalBuilder
-    private var searchLocalRouting: SearchLocalRouting?
-    
-//    private let directLocalBuilder: DirectLocalBuilder
-//    private var directLocalRouting: DirectLocalRouting?
-    
     init(interactor: SignUpInteractable, viewController: SignUpViewControllable,
          dogProfileBuilder: DogProfileBuilder, dogBreadBuilder: DogBreadBuilder,
          dogAttitudeBuilder: DogAttitudeBuilder, dogPhotoBuilder: DogPhotoBuilder,
-         myInfoBuilder: MyInfoBuilder, myIntroBuilder: MyIntroBuilder,
-         searchLocalBuilder: SearchLocalBuilder) {
+         myInfoBuilder: MyInfoBuilder, myIntroBuilder: MyIntroBuilder) {
     
          // directBreedBuilder: DirectBreedBuilder,
          //, directLocalBuilder: DirectLocalBuilder) { {
@@ -63,9 +53,6 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
         self.dogPhotoBuilder        = dogPhotoBuilder
         self.myInfoBuilder          = myInfoBuilder
         self.myIntroBuilder         = myIntroBuilder
-        self.searchLocalBuilder     = searchLocalBuilder
-//        self.directBreedBuilder     = directBreedBuilder
-//        self.directLocalBuilder     = directLocalBuilder
         
         super.init(interactor: interactor)
         interactor.router = self
@@ -111,7 +98,10 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
         detachChild(dogBreadRouting)
         viewController.dismiss(viewController: dogBreadRouting.viewControllable)
         
-        attachChild(dogProfileRouting)
+        if self.dogProfileRouting == nil {
+            attachChild(dogProfileRouting)
+        }
+        
         viewController.present(viewController: dogProfileRouting.viewControllable)
     }
     

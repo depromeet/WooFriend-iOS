@@ -1,16 +1,22 @@
 //
-//  DogAttitude.swift
+//  MyProfile.swift
 //  Woofriend
 //
-//  Created by 이규현 on 2021/03/17.
+//  Created by 이규현 on 2021/03/19.
 //
 
 import Foundation
+import UIKit
 
-struct DogAttitude {
+struct MyProfile {
     
-    var character: [String]?
-    var Interest: [String]?
+    var photo: UIImage?
+    var name: String?
+    var gender: String? // M, W
+    var year: String?
+    var month: String?
+    var day: String?
+    var region: String?
     
     func hasNilField() -> Bool {
         Mirror(reflecting: self).children.contains(where: {

@@ -35,7 +35,6 @@ final class DogBreadBuilder: Builder<DogBreadDependency>, DogBreadBuildable {
         let interactor = DogBreadInteractor(presenter: viewController)
         interactor.listener = listener
         
-        
         let searchDogBreedsBuilder  = SearchDogBreedsBuilder(dependency: component)
         let directBreedBuilder = DirectBreedBuilder(dependency: component)
         

@@ -12,7 +12,7 @@ protocol MyInfoDependency: Dependency {
     // created by this RIB.
 }
 
-final class MyInfoComponent: Component<MyInfoDependency> {
+final class MyInfoComponent: Component<MyInfoDependency>, SearchLocalDependency, DirectLocalDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -34,6 +34,10 @@ final class MyInfoBuilder: Builder<MyInfoDependency>, MyInfoBuildable {
         let viewController = MyInfoViewController()
         let interactor = MyInfoInteractor(presenter: viewController)
         interactor.listener = listener
-        return MyInfoRouter(interactor: interactor, viewController: viewController)
+        
+        let searchLocalBuilder  = SearchLocalBuilder(dependency: component)
+        let directLocalBuilder = DirectLocalBuilder(dependency: component)
+        
+        return MyInfoRouter(interactor: interactor, viewController: viewController, searchLocalBuilder: searchLocalBuilder, directLocalBuilder: directLocalBuilder)
     }
 }

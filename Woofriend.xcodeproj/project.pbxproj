@@ -70,27 +70,11 @@
 		E860255825F9BD0F0068D243 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860255725F9BD0F0068D243 /* UITextField+Extension.swift */; };
 		E860257725F9FC7B0068D243 /* DogBread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860257625F9FC7B0068D243 /* DogBread.swift */; };
 		E860258825FA1F9B0068D243 /* DogBreadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860258725FA1F9B0068D243 /* DogBreadTableViewCell.swift */; };
-		E8659FB225F912FD0036A2AF /* DogNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */; };
-		E8659FB325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */; };
-		E8659FB425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */; };
-		E8659FB525F912FD0036A2AF /* DogConcernCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA525F912FD0036A2AF /* DogConcernCollectionViewCell.xib */; };
-		E8659FB625F912FD0036A2AF /* PhotoAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA625F912FD0036A2AF /* PhotoAddCell.xib */; };
-		E8659FB725F912FD0036A2AF /* MyInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA725F912FD0036A2AF /* MyInfoCollectionViewCell.xib */; };
-		E8659FB825F912FD0036A2AF /* DogBreadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FA825F912FD0036A2AF /* DogBreadCollectionViewCell.swift */; };
-		E8659FB925F912FD0036A2AF /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FA925F912FD0036A2AF /* WelcomeCell.xib */; };
-		E8659FBA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift */; };
-		E8659FBB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift */; };
-		E8659FBC25F912FD0036A2AF /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAC25F912FD0036A2AF /* WelcomeCell.swift */; };
-		E8659FBD25F912FD0036A2AF /* DogNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FAD25F912FD0036A2AF /* DogNameCollectionViewCell.xib */; };
-		E8659FBE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FAE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib */; };
 		E8659FBF25F912FD0036A2AF /* PhotoAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FAF25F912FD0036A2AF /* PhotoAddCell.swift */; };
-		E8659FC025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FB025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift */; };
-		E8659FC125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8659FB125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib */; };
 		E8659FDE25F9130E0036A2AF /* DirectLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FC725F9130E0036A2AF /* DirectLocalBuilder.swift */; };
 		E8659FDF25F9130E0036A2AF /* DirectLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FC825F9130E0036A2AF /* DirectLocalRouter.swift */; };
 		E8659FE025F9130E0036A2AF /* DirectLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FC925F9130E0036A2AF /* DirectLocalInteractor.swift */; };
 		E8659FE125F9130E0036A2AF /* DirectLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FCA25F9130E0036A2AF /* DirectLocalViewController.swift */; };
-		E8659FE225F9130E0036A2AF /* DirectLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8659FCB25F9130E0036A2AF /* DirectLocalViewController.storyboard */; };
 		E8659FE425F9130E0036A2AF /* DirectBreedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FCE25F9130E0036A2AF /* DirectBreedRouter.swift */; };
 		E8659FE525F9130E0036A2AF /* DirectBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FCF25F9130E0036A2AF /* DirectBreedViewController.swift */; };
 		E8659FE625F9130E0036A2AF /* DirectBreedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD025F9130E0036A2AF /* DirectBreedBuilder.swift */; };
@@ -98,7 +82,6 @@
 		E8659FE825F9130E0036A2AF /* SearchLocalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD325F9130E0036A2AF /* SearchLocalRouter.swift */; };
 		E8659FE925F9130E0036A2AF /* SearchLocalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD425F9130E0036A2AF /* SearchLocalBuilder.swift */; };
 		E8659FEA25F9130E0036A2AF /* SearchLocalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD525F9130E0036A2AF /* SearchLocalInteractor.swift */; };
-		E8659FEB25F9130E0036A2AF /* SearchLocalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8659FD625F9130E0036A2AF /* SearchLocalViewController.storyboard */; };
 		E8659FEC25F9130E0036A2AF /* SearchLocalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FD725F9130E0036A2AF /* SearchLocalViewController.swift */; };
 		E8659FED25F9130E0036A2AF /* SearchDogBreedsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8659FD925F9130E0036A2AF /* SearchDogBreedsViewController.storyboard */; };
 		E8659FEE25F9130E0036A2AF /* SearchDogBreedsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8659FDA25F9130E0036A2AF /* SearchDogBreedsRouter.swift */; };
@@ -130,6 +113,10 @@
 		E8D1753326011FC900C271EC /* MyInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1753226011FC900C271EC /* MyInfoViewController.xib */; };
 		E8D3E02325E21AD3008B87FA /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3E02225E21AD3008B87FA /* BaseCollectionViewCell.swift */; };
 		E8FB10072604984B003858F4 /* DirectBreedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FB10062604984B003858F4 /* DirectBreedViewController.xib */; };
+		E8FB10152604A970003858F4 /* SearchLocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FB10142604A970003858F4 /* SearchLocalViewController.xib */; };
+		E8FB10382604ADBC003858F4 /* PhotoAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FB10292604ADBC003858F4 /* PhotoAddCell.xib */; };
+		E8FB10442604B2A5003858F4 /* DirectLocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FB10432604B2A5003858F4 /* DirectLocalViewController.xib */; };
+		E8FB107F2604E07C003858F4 /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB107E2604E07C003858F4 /* MyProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,27 +211,11 @@
 		E860255725F9BD0F0068D243 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		E860257625F9FC7B0068D243 /* DogBread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBread.swift; sourceTree = "<group>"; };
 		E860258725FA1F9B0068D243 /* DogBreadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreadTableViewCell.swift; sourceTree = "<group>"; };
-		E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogNameCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8659FA525F912FD0036A2AF /* DogConcernCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogConcernCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8659FA625F912FD0036A2AF /* PhotoAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoAddCell.xib; sourceTree = "<group>"; };
-		E8659FA725F912FD0036A2AF /* MyInfoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyInfoCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8659FA825F912FD0036A2AF /* DogBreadCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogBreadCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8659FA925F912FD0036A2AF /* WelcomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
-		E8659FAA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogConcernCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8659FAB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8659FAC25F912FD0036A2AF /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
-		E8659FAD25F912FD0036A2AF /* DogNameCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogNameCollectionViewCell.xib; sourceTree = "<group>"; };
-		E8659FAE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DogBreadCollectionViewCell.xib; sourceTree = "<group>"; };
 		E8659FAF25F912FD0036A2AF /* PhotoAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAddCell.swift; sourceTree = "<group>"; };
-		E8659FB025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIntroductionCollectionViewCell.swift; sourceTree = "<group>"; };
-		E8659FB125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyIntroductionCollectionViewCell.xib; sourceTree = "<group>"; };
 		E8659FC725F9130E0036A2AF /* DirectLocalBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalBuilder.swift; sourceTree = "<group>"; };
 		E8659FC825F9130E0036A2AF /* DirectLocalRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalRouter.swift; sourceTree = "<group>"; };
 		E8659FC925F9130E0036A2AF /* DirectLocalInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalInteractor.swift; sourceTree = "<group>"; };
 		E8659FCA25F9130E0036A2AF /* DirectLocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLocalViewController.swift; sourceTree = "<group>"; };
-		E8659FCB25F9130E0036A2AF /* DirectLocalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectLocalViewController.storyboard; sourceTree = "<group>"; };
 		E8659FCE25F9130E0036A2AF /* DirectBreedRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectBreedRouter.swift; sourceTree = "<group>"; };
 		E8659FCF25F9130E0036A2AF /* DirectBreedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectBreedViewController.swift; sourceTree = "<group>"; };
 		E8659FD025F9130E0036A2AF /* DirectBreedBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectBreedBuilder.swift; sourceTree = "<group>"; };
@@ -252,7 +223,6 @@
 		E8659FD325F9130E0036A2AF /* SearchLocalRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalRouter.swift; sourceTree = "<group>"; };
 		E8659FD425F9130E0036A2AF /* SearchLocalBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalBuilder.swift; sourceTree = "<group>"; };
 		E8659FD525F9130E0036A2AF /* SearchLocalInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalInteractor.swift; sourceTree = "<group>"; };
-		E8659FD625F9130E0036A2AF /* SearchLocalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchLocalViewController.storyboard; sourceTree = "<group>"; };
 		E8659FD725F9130E0036A2AF /* SearchLocalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchLocalViewController.swift; sourceTree = "<group>"; };
 		E8659FD925F9130E0036A2AF /* SearchDogBreedsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchDogBreedsViewController.storyboard; sourceTree = "<group>"; };
 		E8659FDA25F9130E0036A2AF /* SearchDogBreedsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDogBreedsRouter.swift; sourceTree = "<group>"; };
@@ -284,6 +254,10 @@
 		E8D1753226011FC900C271EC /* MyInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoViewController.xib; sourceTree = "<group>"; };
 		E8D3E02225E21AD3008B87FA /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8FB10062604984B003858F4 /* DirectBreedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectBreedViewController.xib; sourceTree = "<group>"; };
+		E8FB10142604A970003858F4 /* SearchLocalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocalViewController.xib; sourceTree = "<group>"; };
+		E8FB10292604ADBC003858F4 /* PhotoAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoAddCell.xib; sourceTree = "<group>"; };
+		E8FB10432604B2A5003858F4 /* DirectLocalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectLocalViewController.xib; sourceTree = "<group>"; };
+		E8FB107E2604E07C003858F4 /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
 		E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.debug.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -548,6 +522,7 @@
 				E849084825F9A31C006A9E6A /* DogProfile.swift */,
 				E860257625F9FC7B0068D243 /* DogBread.swift */,
 				E80546E026010ECF008912B4 /* DogAttitude.swift */,
+				E8FB107E2604E07C003858F4 /* MyProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -606,22 +581,8 @@
 		E8659FA125F912FD0036A2AF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				E8659FA225F912FD0036A2AF /* DogNameCollectionViewCell.swift */,
-				E8659FA325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift */,
-				E8659FA425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib */,
-				E8659FA525F912FD0036A2AF /* DogConcernCollectionViewCell.xib */,
-				E8659FA625F912FD0036A2AF /* PhotoAddCell.xib */,
-				E8659FA725F912FD0036A2AF /* MyInfoCollectionViewCell.xib */,
-				E8659FA825F912FD0036A2AF /* DogBreadCollectionViewCell.swift */,
-				E8659FA925F912FD0036A2AF /* WelcomeCell.xib */,
-				E8659FAA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift */,
-				E8659FAB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift */,
-				E8659FAC25F912FD0036A2AF /* WelcomeCell.swift */,
-				E8659FAD25F912FD0036A2AF /* DogNameCollectionViewCell.xib */,
-				E8659FAE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib */,
+				E8FB10292604ADBC003858F4 /* PhotoAddCell.xib */,
 				E8659FAF25F912FD0036A2AF /* PhotoAddCell.swift */,
-				E8659FB025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift */,
-				E8659FB125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -650,7 +611,7 @@
 				E8659FC825F9130E0036A2AF /* DirectLocalRouter.swift */,
 				E8659FC925F9130E0036A2AF /* DirectLocalInteractor.swift */,
 				E8659FCA25F9130E0036A2AF /* DirectLocalViewController.swift */,
-				E8659FCB25F9130E0036A2AF /* DirectLocalViewController.storyboard */,
+				E8FB10432604B2A5003858F4 /* DirectLocalViewController.xib */,
 			);
 			path = DirectLocal;
 			sourceTree = "<group>";
@@ -673,8 +634,8 @@
 				E8659FD325F9130E0036A2AF /* SearchLocalRouter.swift */,
 				E8659FD425F9130E0036A2AF /* SearchLocalBuilder.swift */,
 				E8659FD525F9130E0036A2AF /* SearchLocalInteractor.swift */,
-				E8659FD625F9130E0036A2AF /* SearchLocalViewController.storyboard */,
 				E8659FD725F9130E0036A2AF /* SearchLocalViewController.swift */,
+				E8FB10142604A970003858F4 /* SearchLocalViewController.xib */,
 			);
 			path = "SearchLocal ";
 			sourceTree = "<group>";
@@ -862,30 +823,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8659FBE25F912FD0036A2AF /* DogBreadCollectionViewCell.xib in Resources */,
 				E8D1753326011FC900C271EC /* MyInfoViewController.xib in Resources */,
-				E8659FB925F912FD0036A2AF /* WelcomeCell.xib in Resources */,
-				E8659FB425F912FD0036A2AF /* DogPhotoCollectionViewCell.xib in Resources */,
 				E8D174C5260111FF00C271EC /* MyIntroViewController.xib in Resources */,
 				E8D174AA260111D600C271EC /* DogPhotoViewController.xib in Resources */,
-				E8659FB625F912FD0036A2AF /* PhotoAddCell.xib in Resources */,
-				E8659FB525F912FD0036A2AF /* DogConcernCollectionViewCell.xib in Resources */,
+				E8FB10382604ADBC003858F4 /* PhotoAddCell.xib in Resources */,
 				E80337F825BEBE36008580CA /* LaunchScreen.storyboard in Resources */,
+				E8FB10152604A970003858F4 /* SearchLocalViewController.xib in Resources */,
 				E84AFF6426003117007D980A /* DogProfileViewController.xib in Resources */,
-				E8659FEB25F9130E0036A2AF /* SearchLocalViewController.storyboard in Resources */,
 				E818FE4B25DD4F1A0035E306 /* PopUpView.xib in Resources */,
 				E818FE5025DD673D0035E306 /* PopUpViewController.storyboard in Resources */,
-				E8659FC125F912FD0036A2AF /* MyIntroductionCollectionViewCell.xib in Resources */,
-				E8659FE225F9130E0036A2AF /* DirectLocalViewController.storyboard in Resources */,
 				E84AFFEB2600D010007D980A /* DogAttitudeViewController.xib in Resources */,
 				E818FD5625DD0CB30035E306 /* LoggedOutViewController.storyboard in Resources */,
+				E8FB10442604B2A5003858F4 /* DirectLocalViewController.xib in Resources */,
 				E8659FFB25F913190036A2AF /* OtherDogsInfoPopupView.xib in Resources */,
 				E8659FED25F9130E0036A2AF /* SearchDogBreedsViewController.storyboard in Resources */,
 				E8FB10072604984B003858F4 /* DirectBreedViewController.xib in Resources */,
 				E84AFF9E2600957D007D980A /* DogBreadViewController.xib in Resources */,
-				E8659FB725F912FD0036A2AF /* MyInfoCollectionViewCell.xib in Resources */,
 				E853285825FA340000283405 /* GoogleService-Info.plist in Resources */,
-				E8659FBD25F912FD0036A2AF /* DogNameCollectionViewCell.xib in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1067,6 +1021,7 @@
 				E8659FE425F9130E0036A2AF /* DirectBreedRouter.swift in Sources */,
 				E8D174B2260111E800C271EC /* DogPhotoRouter.swift in Sources */,
 				E8D174B3260111E800C271EC /* DogPhotoViewController.swift in Sources */,
+				E8FB107F2604E07C003858F4 /* MyProfile.swift in Sources */,
 				E8659FE125F9130E0036A2AF /* DirectLocalViewController.swift in Sources */,
 				E8659FFC25F913190036A2AF /* OtherDogsInfoPopupView.swift in Sources */,
 				E8659FDF25F9130E0036A2AF /* DirectLocalRouter.swift in Sources */,
@@ -1079,14 +1034,12 @@
 				E8D174B4260111E800C271EC /* DogPhotoBuilder.swift in Sources */,
 				E8659FEE25F9130E0036A2AF /* SearchDogBreedsRouter.swift in Sources */,
 				E8659FE625F9130E0036A2AF /* DirectBreedBuilder.swift in Sources */,
-				E8659FB325F912FD0036A2AF /* DogPhotoCollectionViewCell.swift in Sources */,
 				E8659FEF25F9130E0036A2AF /* SearchDogBreedsViewController.swift in Sources */,
 				E8659FEC25F9130E0036A2AF /* SearchLocalViewController.swift in Sources */,
 				E818FE0525DD39EC0035E306 /* BaseViewController.swift in Sources */,
 				E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */,
 				E818FCE625DCEF910035E306 /* RootInteractor.swift in Sources */,
 				E84AFF9426009562007D980A /* DogBreadViewController.swift in Sources */,
-				E8659FB225F912FD0036A2AF /* DogNameCollectionViewCell.swift in Sources */,
 				E84AFFE62600CFF8007D980A /* DogAttitudeInteractor.swift in Sources */,
 				E84AFF5C26003102007D980A /* DogProfileRouter.swift in Sources */,
 				E818FD3E25DD06B00035E306 /* MainRouter.swift in Sources */,
@@ -1100,10 +1053,8 @@
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,
 				E818FC9B25DCE9A60035E306 /* AppComponent.swift in Sources */,
-				E8659FBA25F912FD0036A2AF /* DogConcernCollectionViewCell.swift in Sources */,
 				E80337E925BEBE34008580CA /* AppDelegate.swift in Sources */,
 				E818FD4025DD06B00035E306 /* MainBuilder.swift in Sources */,
-				E8659FBC25F912FD0036A2AF /* WelcomeCell.swift in Sources */,
 				E84AFF9626009562007D980A /* DogBreadInteractor.swift in Sources */,
 				E818FDEE25DD37250035E306 /* RootLoggedOut.swift in Sources */,
 				E80546E126010ECF008912B4 /* DogAttitude.swift in Sources */,
@@ -1126,15 +1077,12 @@
 				E860257725F9FC7B0068D243 /* DogBread.swift in Sources */,
 				E818FD3125DD06860035E306 /* LoggedOutViewController.swift in Sources */,
 				E8D1752826011FB900C271EC /* MyInfoRouter.swift in Sources */,
-				E8659FC025F912FD0036A2AF /* MyIntroductionCollectionViewCell.swift in Sources */,
 				E818FDFC25DD39390035E306 /* Storyboard.swift in Sources */,
 				E831A1C125F8E9D700D21451 /* LogFormatter.swift in Sources */,
 				E831A17C25F8D84B00D21451 /* Single+Response.swift in Sources */,
 				E8D174B5260111E800C271EC /* DogPhotoInteractor.swift in Sources */,
 				E818FCE525DCEF910035E306 /* RootBuilder.swift in Sources */,
 				E8659FE925F9130E0036A2AF /* SearchLocalBuilder.swift in Sources */,
-				E8659FB825F912FD0036A2AF /* DogBreadCollectionViewCell.swift in Sources */,
-				E8659FBB25F912FD0036A2AF /* MyInfoCollectionViewCell.swift in Sources */,
 				E831A19325F8E47400D21451 /* TestRespone.swift in Sources */,
 				E84AFF5F26003102007D980A /* DogProfileInteractor.swift in Sources */,
 				E8659FBF25F912FD0036A2AF /* PhotoAddCell.swift in Sources */,
@@ -1350,7 +1298,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend.together;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -1405,7 +1353,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.woofriend.together;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;

@@ -21,6 +21,9 @@ target 'Woofriend' do
 	pod 'naveridlogin-sdk-ios'
 	pod 'KakaoSDK'
 
+	#
+	pod 'NMapsMap'
+
 	# 네트워크
 	# KaKao 디펜던시 있음 Alamofire  5.4.1
 	pod 'Moya'

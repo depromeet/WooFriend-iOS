@@ -57,14 +57,13 @@ final class DogPhotoViewController: BaseViewController, DogPhotoPresentable, Dog
                 
                 self.listener?.nextAction()
                 
-                //TODO: 테스트용
-                //                if !(self.dogBread?.hasNilField() ?? true) {
-                //                    self.listener?.nextAction()
-                //                } else {
-                //
-                //                    self.characterView.layer.borderColor = self.dogBread?.bread?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                //                    self.interestView.layer.borderColor = self.dogBread?.bread?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-                //                }
+//                if !(self.dogBread?.hasNilField() ?? true) {
+//                    self.listener?.nextAction()
+//                } else {
+//                    
+//                    self.characterView.layer.borderColor = self.dogBread?.bread?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                    self.interestView.layer.borderColor = self.dogBread?.bread?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
+//                }
             })
             .disposed(by: disposeBag)
         

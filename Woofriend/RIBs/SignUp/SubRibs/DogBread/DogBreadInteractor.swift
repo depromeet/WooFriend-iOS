@@ -62,7 +62,6 @@ final class DogBreadInteractor: PresentableInteractor<DogBreadPresentable>, DogB
         router?.attachToSearchBread()
     }
     
-    
     func didSeachBread() {
         router?.attachToSearchBread()
     }

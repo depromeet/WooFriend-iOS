@@ -36,11 +36,6 @@ protocol SignUpListener: class {
 
 final class SignUpInteractor: Interactor, SignUpInteractable {
     
-    func didEndDirectDogBreads(dogBread: String?) {
-        // TODO: 다음 스텝이 뭐더라
-    }
-    
-    
     weak var router: SignUpRouting?
     weak var listener: SignUpListener?
     var dogProfile: DogProfile?

@@ -15,7 +15,7 @@ protocol SignUpDependency: Dependency {
     // created by this RIB.
 }
 
-final class SignUpComponent: Component<SignUpDependency>, DogProfileDependency, DogBreadDependency, DogAttitudeDependency, DogPhotoDependency, MyInfoDependency, MyIntroDependency , SearchLocalDependency, DirectBreedDependency, DirectLocalDependency {
+final class SignUpComponent: Component<SignUpDependency>, DogProfileDependency, DogBreadDependency, DogAttitudeDependency, DogPhotoDependency, MyInfoDependency, MyIntroDependency{
     
     // TODO: Make sure to convert the variable into lower-camelcase.
     fileprivate var signUpViewController: SignUpViewControllable {
@@ -47,9 +47,6 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
         let dogPhotoBuilder         = DogPhotoBuilder(dependency: component)
         let myInfoBuilder           = MyInfoBuilder(dependency: component)
         let myIntroBuilder          = MyIntroBuilder(dependency: component)
-        let searchLocalBuilder      = SearchLocalBuilder(dependency: component)
-//        let directLocalBuilder      = DirectLocalBuilder(dependency: component)
-//        let directBreedBuilder      = DirectBreedBuilder(dependency: component)
         
         return SignUpRouter(
             interactor: interactor,
@@ -59,11 +56,7 @@ final class SignUpBuilder: Builder<SignUpDependency>, SignUpBuildable {
             dogAttitudeBuilder: dogAttitudeBuilder,
             dogPhotoBuilder: dogPhotoBuilder,
             myInfoBuilder: myInfoBuilder,
-            myIntroBuilder: myIntroBuilder,
-            searchLocalBuilder: searchLocalBuilder
-            
-//            directBreedBuilder: directBreedBuilder,
-//            directLocalBuilder: directLocalBuilder
+            myIntroBuilder: myIntroBuilder
         )
     }
 }
