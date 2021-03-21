@@ -19,12 +19,6 @@ class PhotoAddCell: BaseCollectionViewCell  {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        addImageView.rx.tapGesture().asSignal()
-            .emit(onNext: { [weak self] _ in
-                self?.addAction?()
-            })
-            .disposed(by: disposeBag)
-        
         deleteButton.rx.tapGesture().asSignal()
             .emit(onNext: { [weak self] _ in
                 self?.deleteAction?()
@@ -33,8 +27,20 @@ class PhotoAddCell: BaseCollectionViewCell  {
         
     }
     
-    func setData(image: UIImage?) {
-        guard let image = image else { return }
+    func setData(image: UIImage?, isNext: Bool) {
+        guard let image = image else {
+            if isNext {
+                deleteButton.isHidden = true
+                addImageView.highlightedImage = UIImage(named: "highlightPhoto")
+                addImageView.isHighlighted = true
+            } else {
+                deleteButton.isHidden = true
+                addImageView.isHighlighted = false
+                addImageView.image = UIImage(named: "needPhoto")
+            }
+            return
+        }
+        deleteButton.isHidden = false
         addImageView.image = image
         
     }

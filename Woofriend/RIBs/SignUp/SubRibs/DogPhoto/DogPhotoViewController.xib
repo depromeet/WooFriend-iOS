@@ -97,27 +97,22 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZT-6d-OSu">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dog_profile" translatesAutoresizingMaskIntoConstraints="NO" id="pFe-AZ-x6b">
-                                    <rect key="frame" x="146.5" y="38" width="80" height="83"/>
-                                </imageView>
-                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 사진을 등록하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMl-hK-FWB">
-                            <rect key="frame" x="136" y="15" width="103" height="12"/>
-                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사람들에게 보여줄 사진을 3장 이상 등록해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMl-hK-FWB">
+                            <rect key="frame" x="61" y="15" width="253" height="16"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="13"/>
                             <color key="textColor" name="black_2"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사람들에게 보여줄 사진 최소 3장을 더 등록해주세요. 견주님과 함께 나온 사진을 등록하시면 더욱 좋습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-ED-Mq6">
-                            <rect key="frame" x="62.5" y="143" width="250.5" height="29"/>
-                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="견주님과 함께 나온 사진을 등록하시면 더욱 좋습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-ED-Mq6">
+                            <rect key="frame" x="52" y="31" width="271" height="16"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                             <color key="textColor" name="black_2"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YmS-hM-WUA">
-                            <rect key="frame" x="30" y="191" width="316" height="298"/>
+                            <rect key="frame" x="30" y="66" width="316" height="423"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GAL-6d-ibo">
                                 <size key="itemSize" width="128" height="128"/>
@@ -128,20 +123,18 @@
                         </collectionView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="pFe-AZ-x6b" firstAttribute="centerX" secondItem="KMl-hK-FWB" secondAttribute="centerX" constant="-1" id="1Q1-ec-7u1"/>
                         <constraint firstAttribute="trailing" secondItem="vZT-6d-OSu" secondAttribute="trailing" id="6aB-ue-Gw2"/>
                         <constraint firstAttribute="bottom" secondItem="vZT-6d-OSu" secondAttribute="bottom" id="9Mx-nd-Wyn"/>
                         <constraint firstItem="KMl-hK-FWB" firstAttribute="top" secondItem="dz7-Vk-jxe" secondAttribute="top" constant="15" id="Azz-0U-ckW"/>
                         <constraint firstItem="Bph-ED-Mq6" firstAttribute="centerX" secondItem="KMl-hK-FWB" secondAttribute="centerX" id="DvH-bF-ahx"/>
                         <constraint firstItem="YmS-hM-WUA" firstAttribute="top" secondItem="Bph-ED-Mq6" secondAttribute="bottom" constant="19" id="HdS-Bv-u4o"/>
                         <constraint firstItem="vZT-6d-OSu" firstAttribute="top" secondItem="0Yp-WM-Xua" secondAttribute="top" id="Jeb-pV-WMq"/>
-                        <constraint firstItem="pFe-AZ-x6b" firstAttribute="top" secondItem="KMl-hK-FWB" secondAttribute="bottom" constant="11" id="M9Q-4u-5E8"/>
                         <constraint firstItem="vZT-6d-OSu" firstAttribute="bottom" secondItem="dz7-Vk-jxe" secondAttribute="bottom" id="P7M-x2-jlO"/>
                         <constraint firstItem="vZT-6d-OSu" firstAttribute="centerX" secondItem="0Yp-WM-Xua" secondAttribute="centerX" id="PrU-yS-W3g"/>
                         <constraint firstItem="YmS-hM-WUA" firstAttribute="leading" secondItem="dz7-Vk-jxe" secondAttribute="leading" constant="30" id="etV-rD-fYj"/>
                         <constraint firstItem="vZT-6d-OSu" firstAttribute="leading" secondItem="0Yp-WM-Xua" secondAttribute="leading" id="hC9-qm-UvA"/>
-                        <constraint firstItem="Bph-ED-Mq6" firstAttribute="top" secondItem="pFe-AZ-x6b" secondAttribute="bottom" constant="22" id="j5H-g6-goj"/>
                         <constraint firstItem="KMl-hK-FWB" firstAttribute="centerX" secondItem="vZT-6d-OSu" secondAttribute="centerX" id="mUF-o5-jmo"/>
+                        <constraint firstItem="Bph-ED-Mq6" firstAttribute="top" secondItem="KMl-hK-FWB" secondAttribute="bottom" id="moU-FA-9wA"/>
                         <constraint firstItem="dz7-Vk-jxe" firstAttribute="bottom" secondItem="YmS-hM-WUA" secondAttribute="bottom" constant="39" id="p0g-vv-3lt"/>
                         <constraint firstItem="dz7-Vk-jxe" firstAttribute="trailing" secondItem="YmS-hM-WUA" secondAttribute="trailing" constant="29" id="tEo-dI-ffw"/>
                     </constraints>
@@ -168,7 +161,6 @@
     </objects>
     <resources>
         <image name="ic_back_nor" width="24" height="24"/>
-        <image name="img_dog_profile" width="80" height="83"/>
         <namedColor name="black_2">
             <color red="0.44699999690055847" green="0.44699999690055847" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

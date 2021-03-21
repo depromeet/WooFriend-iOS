@@ -16,8 +16,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="233" height="276"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mmK-Fu-UQL">
-                        <rect key="frame" x="0.0" y="7" width="229" height="269"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mmK-Fu-UQL">
+                        <rect key="frame" x="0.0" y="7" width="217" height="269"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mmK-Fu-UQL" secondAttribute="height" multiplier="1:1.24" id="myL-Gh-bZP"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="8"/>
@@ -38,7 +41,6 @@
             <constraints>
                 <constraint firstItem="mmK-Fu-UQL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9xw-bQ-qda"/>
                 <constraint firstAttribute="bottom" secondItem="mmK-Fu-UQL" secondAttribute="bottom" id="DxZ-QU-mlB"/>
-                <constraint firstItem="mmK-Fu-UQL" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" constant="-4" id="IMd-Jo-Bdn"/>
                 <constraint firstAttribute="top" secondItem="mmK-Fu-UQL" secondAttribute="top" constant="-7" id="SJz-sy-kQG"/>
                 <constraint firstAttribute="trailing" secondItem="7cu-Qb-jR1" secondAttribute="trailing" id="jgI-Fb-wW1"/>
                 <constraint firstItem="7cu-Qb-jR1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nc6-Hm-edD"/>

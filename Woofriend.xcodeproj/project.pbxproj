@@ -95,6 +95,7 @@
 		E87287A525DE76AD005575BF /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287A125DE76AD005575BF /* SignUpInteractor.swift */; };
 		E87287B525DE8577005575BF /* UINavigationContoller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */; };
 		E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872880425DEAAEE005575BF /* UIView+Extension.swift */; };
+		E89B4FD12607161100C25C3E /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B4FD02607161100C25C3E /* Array+Extension.swift */; };
 		E8A1340E25E4B9DA00C7E1EC /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */; };
 		E8D174AA260111D600C271EC /* DogPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D174A9260111D600C271EC /* DogPhotoViewController.xib */; };
 		E8D174B2260111E800C271EC /* DogPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D174AE260111E800C271EC /* DogPhotoRouter.swift */; };
@@ -117,6 +118,7 @@
 		E8FB10382604ADBC003858F4 /* PhotoAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FB10292604ADBC003858F4 /* PhotoAddCell.xib */; };
 		E8FB10442604B2A5003858F4 /* DirectLocalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FB10432604B2A5003858F4 /* DirectLocalViewController.xib */; };
 		E8FB107F2604E07C003858F4 /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB107E2604E07C003858F4 /* MyProfile.swift */; };
+		E8FB10872604F723003858F4 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8FB10862604F723003858F4 /* SignUpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +238,7 @@
 		E87287A125DE76AD005575BF /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		E87287B425DE8577005575BF /* UINavigationContoller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContoller+Extension.swift"; sourceTree = "<group>"; };
 		E872880425DEAAEE005575BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		E89B4FD02607161100C25C3E /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		E8D174A9260111D600C271EC /* DogPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogPhotoViewController.xib; sourceTree = "<group>"; };
 		E8D174AE260111E800C271EC /* DogPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogPhotoRouter.swift; sourceTree = "<group>"; };
@@ -258,6 +261,7 @@
 		E8FB10292604ADBC003858F4 /* PhotoAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoAddCell.xib; sourceTree = "<group>"; };
 		E8FB10432604B2A5003858F4 /* DirectLocalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectLocalViewController.xib; sourceTree = "<group>"; };
 		E8FB107E2604E07C003858F4 /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
+		E8FB10862604F723003858F4 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		E910FF1BD6DCD532FEA110AF /* Pods-WoofriendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WoofriendTests.debug.xcconfig"; path = "Target Support Files/Pods-WoofriendTests/Pods-WoofriendTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -469,6 +473,7 @@
 				E8A1340D25E4B9DA00C7E1EC /* UIApplication+Extension.swift */,
 				E849085525F9A475006A9E6A /* Encodable+Extension.swift */,
 				E860255725F9BD0F0068D243 /* UITextField+Extension.swift */,
+				E89B4FD02607161100C25C3E /* Array+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -673,6 +678,7 @@
 				E872879E25DE76AD005575BF /* SignUpRouter.swift */,
 				E87287A025DE76AD005575BF /* SignUpBuilder.swift */,
 				E87287A125DE76AD005575BF /* SignUpInteractor.swift */,
+				E8FB10862604F723003858F4 /* SignUpViewController.xib */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -838,6 +844,7 @@
 				E8659FFB25F913190036A2AF /* OtherDogsInfoPopupView.xib in Resources */,
 				E8659FED25F9130E0036A2AF /* SearchDogBreedsViewController.storyboard in Resources */,
 				E8FB10072604984B003858F4 /* DirectBreedViewController.xib in Resources */,
+				E8FB10872604F723003858F4 /* SignUpViewController.xib in Resources */,
 				E84AFF9E2600957D007D980A /* DogBreadViewController.xib in Resources */,
 				E853285825FA340000283405 /* GoogleService-Info.plist in Resources */,
 				E80337F525BEBE36008580CA /* Assets.xcassets in Resources */,
@@ -1049,6 +1056,7 @@
 				E818FE0B25DD3FB30035E306 /* UIViewController+Extension.swift in Sources */,
 				E872880525DEAAEE005575BF /* UIView+Extension.swift in Sources */,
 				E87287A425DE76AD005575BF /* SignUpBuilder.swift in Sources */,
+				E89B4FD12607161100C25C3E /* Array+Extension.swift in Sources */,
 				E831A17B25F8D84B00D21451 /* MoyaProvider+Rx.swift in Sources */,
 				E818FD3025DD06860035E306 /* LoggedOutRouter.swift in Sources */,
 				E818FD4125DD06B00035E306 /* MainInteractor.swift in Sources */,

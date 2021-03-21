@@ -43,8 +43,8 @@ final class DogAttitudeViewController: BaseViewController, TagListViewDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        dogCharacterLabel.text = "\(dogName)의 특징"
-        //        dogInterestLabel.text = "\(dogName)의 관심사"
+//        dogCharacterLabel.text = "\(dogName)의 특징"
+//        dogInterestLabel.text = "\(dogName)의 관심사"
         setUI()
         bindUI()
     }

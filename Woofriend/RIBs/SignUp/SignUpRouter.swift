@@ -20,10 +20,8 @@ protocol SignUpViewControllable: ViewControllable {
 }
 
 
-final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
-    // View-less
-    private let viewController: SignUpViewControllable
-    
+final class SignUpRouter: ViewableRouter<SignUpInteractable, SignUpViewControllable>, SignUpRouting {
+        
     // MARK: 자식 RIB
     private let dogProfileBuilder: DogProfileBuilder
     private var dogProfileRouting: DogProfileRouting?
@@ -42,11 +40,8 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
          dogProfileBuilder: DogProfileBuilder, dogBreadBuilder: DogBreadBuilder,
          dogAttitudeBuilder: DogAttitudeBuilder, dogPhotoBuilder: DogPhotoBuilder,
          myInfoBuilder: MyInfoBuilder, myIntroBuilder: MyIntroBuilder) {
-    
-         // directBreedBuilder: DirectBreedBuilder,
-         //, directLocalBuilder: DirectLocalBuilder) { {
         
-        self.viewController         = viewController
+//        self.viewController         = viewController
         self.dogBreadBuilder        = dogBreadBuilder
         self.dogProfileBuilder      = dogProfileBuilder
         self.dogAttitudeBuilder     = dogAttitudeBuilder
@@ -54,7 +49,7 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
         self.myInfoBuilder          = myInfoBuilder
         self.myIntroBuilder         = myIntroBuilder
         
-        super.init(interactor: interactor)
+        super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
         
     }
@@ -74,6 +69,14 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
     // MARK: 바로 부모 해제 하면 leak
     func detachToDogProfile() {
         guard let dogProfileRouting = dogProfileRouting else { return }
+        
+        self.dogProfileRouting = nil
+        dogBreadRouting = nil
+        dogAttitudeRouting = nil
+        dogPhotoRouting = nil
+        myInfoRouting = nil
+        myIntroRouting = nil
+        
         detachChild(dogProfileRouting)
         viewController.dismiss(viewController: dogProfileRouting.viewControllable)
     }
@@ -98,10 +101,7 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
         detachChild(dogBreadRouting)
         viewController.dismiss(viewController: dogBreadRouting.viewControllable)
         
-        if self.dogProfileRouting == nil {
-            attachChild(dogProfileRouting)
-        }
-        
+        attachChild(dogProfileRouting)
         viewController.present(viewController: dogProfileRouting.viewControllable)
     }
     
@@ -134,7 +134,6 @@ final class SignUpRouter: Router<SignUpInteractable>, SignUpRouting {
         
         detachChild(dogAttitudeRouting)
         viewController.dismiss(viewController: dogAttitudeRouting.viewControllable)
-        // self.loggedOutRouting = nil
         
         let dogPhotoRouting = dogPhotoBuilder.build(withListener: interactor)
         self.dogPhotoRouting = dogPhotoRouting

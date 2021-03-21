@@ -127,8 +127,6 @@ final class DogBreadViewController: BaseViewController, DogBreadPresentable, Dog
             .emit(onNext: { [weak self] b in
                 guard let self = self else { return }
                 
-                self.listener?.nextAction()
-                
                 if !(self.dogBread?.hasNilField() ?? true) {
                     self.listener?.nextAction()
                 } else {

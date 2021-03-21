@@ -9,6 +9,7 @@ import RIBs
 import RxSwift
 import RxCocoa
 import UIKit
+import ZLPhotoBrowser
 
 protocol DogPhotoPresentableListener: class {
     func nextAction()
@@ -24,10 +25,16 @@ final class DogPhotoViewController: BaseViewController, DogPhotoPresentable, Dog
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var indicatiorTrailingConstraint: NSLayoutConstraint!
     
+    let ps = ZLPhotoPreviewSheet()
     let imagePickerController = UIImagePickerController()
     var currentIdx = -1
     
-    private var photoList: [UIImage?] = [UIImage(named: "photoOne"), UIImage(named: "photoTwo"), UIImage(named: "photoThree"), UIImage(named: "photoAdd")]
+    private var selectedImages = [UIImage?](repeating: nil, count: 6) {
+        didSet {
+            self.nextButton.backgroundColor = selectedImages.count > 2 ? #colorLiteral(red: 0.0862745098, green: 0.8196078431, blue: 0.5882352941, alpha: 1) : #colorLiteral(red: 0.7176470588, green: 0.7176470588, blue: 0.7176470588, alpha: 1)
+        }
+    }
+    private var isNext = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +49,6 @@ final class DogPhotoViewController: BaseViewController, DogPhotoPresentable, Dog
         collectionView.register(UINib(nibName: "PhotoAddCell", bundle: nil), forCellWithReuseIdentifier: "PhotoAddCell")
         imagePickerController.delegate = self
         imagePickerController.sourceType = .savedPhotosAlbum
-        imagePickerController.allowsEditing = true
-        //        imagePickerController.videoQuality = .type640x480
-        //        imagePickerController.
         let current = self.view.bounds.width / 6
         self.indicatiorTrailingConstraint.constant = current * CGFloat((5 - 3))
     }
@@ -53,17 +57,16 @@ final class DogPhotoViewController: BaseViewController, DogPhotoPresentable, Dog
         
         nextButton.rx.tap.asSignal()
             .emit(onNext: { [weak self] b in
+                
                 guard let self = self else { return }
+                self.isNext = true
+                print(self.selectedImages.compactMap({ $0 }).count)
                 
-                self.listener?.nextAction()
-                
-//                if !(self.dogBread?.hasNilField() ?? true) {
-//                    self.listener?.nextAction()
-//                } else {
-//                    
-//                    self.characterView.layer.borderColor = self.dogBread?.bread?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-//                    self.interestView.layer.borderColor = self.dogBread?.bread?.isEmpty ?? true ?  #colorLiteral(red: 1, green: 0.4666666667, blue: 0.5294117647, alpha: 1).cgColor :  #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.8980392157, alpha: 1).cgColor
-//                }
+                if self.selectedImages.compactMap({ $0 }).count > 2 {
+                    self.listener?.nextAction()
+                } else {
+                    self.collectionView.reloadData()
+                }
             })
             .disposed(by: disposeBag)
         
@@ -81,20 +84,14 @@ final class DogPhotoViewController: BaseViewController, DogPhotoPresentable, Dog
 extension DogPhotoViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photoList.count
+        selectedImages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoAddCell", for: indexPath) as? PhotoAddCell else { return UICollectionViewCell() }
-        
-        cell.setData(image: photoList[indexPath.row])
-        cell.addAction = { [weak self] in
-            guard let self = self else { return }
-            
-            self.currentIdx = indexPath.row
-            UIApplication.topViewController()?.present(self.imagePickerController, animated: true, completion: nil)
-        }
+                
+        cell.setData(image: selectedImages[indexPath.row], isNext: self.isNext)
         // FIXME: 직접 접근 말고 ..
         cell.deleteAction = { [weak self] in
             guard let self = self else { return }
@@ -102,13 +99,52 @@ extension DogPhotoViewController: UICollectionViewDataSource, UICollectionViewDe
             self.currentIdx = indexPath.row
             let idx = IndexPath(row: self.currentIdx, section: 0)
             let targetCell = self.collectionView.cellForItem(at: idx) as? PhotoAddCell
-            targetCell?.addImageView.contentMode = .scaleAspectFit
+            cell.setData(image: nil, isNext: self.isNext)
+            self.selectedImages[indexPath.row] = nil
             targetCell?.deleteButton.isHidden = true
             self.collectionView.reloadItems(at: [idx])
         }
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let targetCell = self.collectionView.cellForItem(at: indexPath) as? PhotoAddCell, targetCell.deleteButton.isHidden else { return }
+        selectPhotos()
+    }
+    
+    func selectPhotos() {
+        let config = ZLPhotoConfiguration.default()
+        config.allowSelectImage = true
+        config.allowSelectGif = false
+        config.allowSelectLivePhoto = false
+        config.allowSelectVideo = false
+        config.allowSelectOriginal = false
+        config.allowMixSelect = false
+        let a = selectedImages.compactMap { $0 }
+        config.maxSelectCount = 6 - a.count
+        
+        let photoPicker = ZLPhotoPreviewSheet()
+        
+        photoPicker.selectImageBlock = { [weak self] (images, assets, _) in
+            guard let self = self else { return }
+            let images = self.resize(imageList: images)
+            
+            if self.selectedImages.compactMap({ $0 }).count == 0 {
+                for (idx, value) in images.enumerated() {
+                    self.selectedImages[idx] = value
+                }
+            } else {
+                // TODO: 추가하는 케이스
+            }
+            
+            self.collectionView.reloadData()
+        }
+        
+        photoPicker.showPhotoLibrary(sender: self)
+    }
+    
     // 위 아래 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 11
@@ -127,37 +163,19 @@ extension DogPhotoViewController: UICollectionViewDataSource, UICollectionViewDe
         return CGSize(width: frameWidht, height: frameWidht * 1.24)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            photoList[currentIdx] = image
-        } else if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            photoList[currentIdx] = image
-        }
-        
-        imagePickerController.dismiss(animated: true) { [weak self] in
-            guard let self = self else { return }
-            let index = IndexPath(row: self.currentIdx, section: 0)
-            
-            // FIXME: 직접 접근 말고 ..
-            let targetCell = self.collectionView.cellForItem(at: index) as? PhotoAddCell
-            targetCell?.addImageView.contentMode = .scaleAspectFill
-            targetCell?.deleteButton.isHidden = false
-            self.collectionView.reloadItems(at: [index])
-        }
-    }
-    
     // TODO: 나중에 고쳐써야지..
-    func resize(image: UIImage, completionHandler: ((UIImage?) -> Void)) {
-        let transform = CGAffineTransform(scaleX: 1, y: 1.24)
-        let size = image.size.applying(transform)
-        UIGraphicsBeginImageContext(size)
+    func resize(imageList: [UIImage]) -> [UIImage] {
         
-        image.draw(in: CGRect(origin: .zero, size: size))
-        let resultImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        completionHandler(resultImage)
+        var valueList = [UIImage]()
+        for image in imageList {
+            let transform = CGAffineTransform(scaleX: 1, y: 1.24)
+            let size = image.size.applying(transform)
+            UIGraphicsBeginImageContext(size)
+            image.draw(in: CGRect(origin: .zero, size: size))
+            UIGraphicsEndImageContext()
+            valueList.append(image)
+        }
+        return valueList
     }
 }
 
