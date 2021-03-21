@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleName</key>
+	<string>com.depromeet.woofriend</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -14,8 +16,6 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
@@ -63,9 +63,9 @@
 	<key>NSCameraUsageDescription</key>
 	<string>프로필 사진을 위해 카메라를 허용합니다.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>"사용자의 위치를 받습니다."</string>
+	<string>&quot;사용자의 위치를 받습니다.&quot;</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>"사용자의 위치를 받습니다."</string>
+	<string>&quot;사용자의 위치를 받습니다.&quot;</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>프로필 사진을 위해 앨범을 허용합니다.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -80,6 +80,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
