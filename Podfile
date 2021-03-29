@@ -6,7 +6,7 @@ target 'Woofriend' do
   use_modular_headers!
 
   # Pods for Woofriend
-	pod 'Firebase/Analytics', '7.8.0'
+	pod 'Firebase/Analytics' # , '7.8.0'
 	pod 'Firebase/Crashlytics'
 	pod 'Firebase/RemoteConfig'
 
